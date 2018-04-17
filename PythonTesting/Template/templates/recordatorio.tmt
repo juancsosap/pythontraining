@@ -1,0 +1,7 @@
+Saludos ${user}.
+
+Netec lo invita a participar en el curso de ${session} sobre ${description} el proximo ${date} a las ${time} en nuestras instalaciones. Agradecemos su preferencia y le pedimos que confirme su asistencia al evento contactandose directamente conmigo.
+
+Lo esperamos.
+${advisor}
+${email}

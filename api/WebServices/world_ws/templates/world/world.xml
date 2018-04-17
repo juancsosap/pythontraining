@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<world xmlns="http://localhost/api/">
+    {% block content %}
+    {% endblock %}
+	<urls>
+		{% for (key, val) in value['urls'].items() %}
+		<{{ key }}>{{ val }}</{{ key }}>
+		{% endfor %}
+	</urls>
+</world>

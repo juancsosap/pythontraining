@@ -1,0 +1,8 @@
+{% extends 'base.xml' %}
+{% block content %}
+	<infos>
+		{% for info in infos %}
+		<info>{{ info }}</info>
+		{% endfor %}
+	</infos>
+{% endblock %}

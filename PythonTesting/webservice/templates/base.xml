@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basic xmlns="http://localhost/api/v1/">
+	{% block content %}
+	{% endblock %}
+</basic>

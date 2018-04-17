@@ -1,0 +1,8 @@
+{% extends 'world/world.xml' %}
+{% block content %}
+	<city>
+		{% for (key, val) in value['city'].items() %}
+		<{{ key }}>{{ val }}</{{ key }}>
+		{% endfor %}
+	</city>
+{% endblock %}

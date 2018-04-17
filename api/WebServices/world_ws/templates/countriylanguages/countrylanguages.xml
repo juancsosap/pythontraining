@@ -1,0 +1,14 @@
+{% extends 'world/world.xml' %}
+{% block content %}
+	<count>{{ value['count'] }}</count>
+  <country_code>{{ value['country_code'] }}</country_code>
+	<languages>
+		{% for language in value['languages'] %}
+		<language>
+			<name>{{ language['language'] }}</name>
+			<is_official>{{ language['is_official'] }}</is_official>
+			<percentage>{{ language['percentage'] }}</percentage>
+		</language>
+		{% endfor %}
+	</languages>
+{% endblock %}
