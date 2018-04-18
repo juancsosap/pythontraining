@@ -1,7 +1,16 @@
 class Persona:
+    __cantidad = 0
+    __last_id = 0
+
     def __init__(self, nombre, edad=0):
         self.__set_nombre(nombre)
         self.__set_edad(edad)
+        self.__id = Persona._Persona__last_id + 1
+        Persona._Persona__cantidad += 1
+        Persona._Persona__last_id += 1
+
+    def get_id(self):
+        return self.__id
 
     def __set_nombre(self, nombre):
         if(isinstance(nombre, str)):
@@ -37,7 +46,11 @@ class Persona:
         return Persona(self.__name, self.__age)
 
     def __str__(self):
-        return 'Nombre: {}\nEdad: {}'.format(self.__name, self.__age)
+        return 'ID: {}\nNombre: {}\nEdad: {}'.format(self.__id, self.__name, self.__age)
+
+    @classmethod
+    def get_cantidad(cls):
+        return cls._Persona__cantidad
 
 
 if __name__ == '__main__':

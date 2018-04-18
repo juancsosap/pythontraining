@@ -28,6 +28,6 @@ class Empleado(Persona):
 
 
 if __name__ == '__main__':
-    print('Loading Cliente')
+    print('Loading Empleado')
 else:
-    print('Importing Cliente')
+    print('Importing Empleado')

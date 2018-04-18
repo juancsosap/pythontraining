@@ -23,3 +23,5 @@ print()
 
 pepe = Empleado("Pepe", 21, "Vendedor")
 pepe.atender(juan)
+
+print(Persona.get_cantidad())
