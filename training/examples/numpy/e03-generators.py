@@ -51,5 +51,5 @@ print('Numpy Array\n{}'.format(arreglo))
 print()
 
 # Default dtype float64
-arreglo = np.linspace(1, 10, 10, dtype=np.int8)
+arreglo = np.linspace(1, 5, 10, dtype=np.int8)
 print('Numpy Array\n{}'.format(arreglo))

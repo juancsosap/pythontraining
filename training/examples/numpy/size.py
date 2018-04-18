@@ -4,7 +4,7 @@ import numpy as np
 import sys
 
 
-size = 100
+size = 200_000_000
 
 lista = range(size)
 print(sys.getsizeof(1) * len(lista))
