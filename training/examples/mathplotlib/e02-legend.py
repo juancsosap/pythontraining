@@ -11,6 +11,7 @@ for n in range(1, 10):
 plt.xlabel('Value')
 plt.ylabel('Result Value')
 plt.title('Values Graph')
+plt.grid(True)
 plt.legend()
 
 plt.show()

@@ -2,9 +2,9 @@ import numpy as np
 # pip install numpy
 
 
-BASEDIR = 'C:\\Users\\juanc\\OneDrive\\Documentos\\GitHub\\pythontraining\\training\\examples\\numpy'
-FILE_INPUT = BASEDIR + '\\data_input.csv'
-FILE_OUTPUT = BASEDIR + '\\data_output.csv'
+BASEDIR = 'C:\\Users\\juanc\\OneDrive\\Documentos\\GitHub\\pythontraining\\training\\examples\\numpy\\'
+FILE_INPUT = BASEDIR + 'data_input.csv'
+FILE_OUTPUT = BASEDIR + 'data_output.csv'
 
 arreglo = np.loadtxt(FILE_INPUT, delimiter=',')
 print(arreglo)

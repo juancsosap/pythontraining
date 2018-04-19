@@ -5,16 +5,16 @@ import numpy as np
 # Creating Serie from Python List
 days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
 days_serie = pd.Series(days)
-print(days_serie.head(), end='\n\n')
+print(days_serie, end='\n\n')
 
 # Creating Serie from Numpy Array
 drivers = np.random.randint(0, 100, 7)
 drivers_serie = pd.Series(drivers)
-print(drivers_serie.head(), end='\n\n')
+print(drivers_serie, end='\n\n')
 
 # Creating Serie and asigning index
 drivers_serie = pd.Series(drivers, index=days)
-print(drivers_serie.head(), end='\n\n')
+print(drivers_serie, end='\n\n')
 
 # Creating Serie from a Dictionary
 professions = {'Juan': 'Doctor',
@@ -24,7 +24,7 @@ professions = {'Juan': 'Doctor',
                'Emma': 'Publicista',
                'Pepe': 'Ingeniero'}
 prof_serie = pd.Series(professions)
-print(prof_serie.head(), end='\n\n')
+print(prof_serie, end='\n\n')
 
 # Creating Serie from a Dictionary selecting the rows to include
 prof_serie = pd.Series(professions, index=['Juan', 'Paco', 'Pepe'])

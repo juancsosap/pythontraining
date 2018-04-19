@@ -34,7 +34,7 @@ data['Location'] = data.City + ', ' + data.State
 print(data.Location.head(), end='\n\n')
 
 # Reading only selected DataFrame columns' from URL
-data = pd.read_csv(url, usecols=[0, 3])
+data = pd.read_csv(url, usecols=['City', 'State'])
 print(data.head())
 print(data.shape, end='\n\n')
 
