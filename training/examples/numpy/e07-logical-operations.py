@@ -1,4 +1,5 @@
 import numpy as np
+# pip install numpy
 
 
 arregloA = np.array([True, True, False, False])

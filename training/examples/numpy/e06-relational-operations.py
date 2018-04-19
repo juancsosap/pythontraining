@@ -1,4 +1,5 @@
 import numpy as np
+# pip install numpy
 
 
 arreglo1 = np.arange(1, 10, dtype=np.int32).reshape((3, 3))

@@ -1,4 +1,5 @@
 import numpy as np
+# pip install numpy
 
 
 # 1D Numpy Array

@@ -1,4 +1,5 @@
 import numpy as np
+# pip install numpy
 
 
 arreglo = np.zeros((6, ))
@@ -28,7 +29,6 @@ lista = range(10)
 print('Python List\n{}'.format(lista))
 arreglo = np.arange(10)
 print('Numpy Array\n{}'.format(arreglo))
-
 print()
 
 lista = range(1, 10)
@@ -52,4 +52,14 @@ print()
 
 # Default dtype float64
 arreglo = np.linspace(1, 5, 10, dtype=np.int8)
+print('Numpy Array\n{}'.format(arreglo))
+
+print()
+
+arreglo = np.random.random((2, 3))
+print('Numpy Array\n{}'.format(arreglo))
+
+print()
+
+arreglo = np.random.randint(1, 10, (2, 10))
 print('Numpy Array\n{}'.format(arreglo))

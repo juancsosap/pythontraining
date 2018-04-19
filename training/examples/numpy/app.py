@@ -18,9 +18,11 @@ print(a1 / a2)
 
 print()
 
+# m1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 m1 = np.arange(1, 10, dtype=np.int32).reshape((3, 3))
 print("MATRIX 1")
 print(m1)
+# m2 = np.array([[1, 3, 5], [7, 9, 2], [4, 6, 8]])
 m2 = np.hstack((np.arange(1, 10, 2, dtype=np.int32),
                 np.arange(2, 10, 2, dtype=np.int32))).reshape((3, 3))
 print("MATRIX 2")
