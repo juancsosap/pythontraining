@@ -3,8 +3,14 @@
 # folder that must be referenced in the Environment Variables
 # as PYTHONPATH
 
+# WINDOWS
 # set GETTEXT=%PYTHONPATH%\Tools\i18n\pygettext.py
 # python %GETTEXT% -d <file_name> <script-name>.py
+
+# LINUX
+# GETTEXT=$PYTHONPATH\Tools\i18n\pygettext.py
+# python $GETTEXT -d <file_name> <script-name>.py
+
 
 import gettext
 import os

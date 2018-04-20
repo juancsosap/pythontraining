@@ -9,6 +9,10 @@ from datetime import datetime
 start = datetime(2016, 1, 1)
 stop = datetime(2018, 4, 20)
 
-data = pddr.DataReader('AAPL', 'iex', start, stop)
+data = pddr.DataReader('GOOG', 'iex', start, stop)
 
-print(data.head())
+print(type(data), '\n')
+
+print(data.head(), '\n')
+
+print(data.tail(), '\n')

@@ -17,7 +17,7 @@ when = 'begin'
 # The result represent the initial amound that must be invested today to
 # receive the FV ($150.000) expected after 15 years, with an investment
 # of $200 at the begining of each month
-pv = np.pv(rate, nper, pmt, fv, when)
+pv = np.pv(rate=rate, nper=nper, pmt=pmt, fv=fv, when=when)
 print('PV: {pvv:,.2f}$'.format(pvv=pv))
 # As it is an investment the result is negative (-$50.227,88)
 

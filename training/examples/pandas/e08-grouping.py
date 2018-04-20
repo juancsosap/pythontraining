@@ -21,7 +21,7 @@ print()
 
 print('AFRICA GROUP:\n', data.groupby('continent').get_group('Africa').country.head())
 
-print('MEAN Total: ', data.beer_servings.mean(), '\n')
+print('\nMEAN Total: ', data.beer_servings.mean(), '\n')
 
 print('MEAN Europe: ', data[data.continent == 'Europe'].beer_servings.mean(), '\n')
 
@@ -31,5 +31,7 @@ print('MIN:\n', data.groupby('continent').beer_servings.min(), '\n')
 print('COUNT:\n', data.groupby('continent').beer_servings.count(), '\n')
 
 print('AGG:\n', data.groupby('continent').beer_servings.agg(['count', 'max', 'min', 'mean']), '\n')
+
+print('MEAN:\n', data.groupby('continent').beer_servings.describe(), '\n')
 
 print('MEAN:\n', data.groupby('continent').mean(), '\n')
