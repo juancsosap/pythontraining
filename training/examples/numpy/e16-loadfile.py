@@ -1,10 +1,11 @@
 import numpy as np
 # pip install numpy
+import os
 
 
-BASEDIR = 'C:\\Users\\juanc\\OneDrive\\Documentos\\GitHub\\pythontraining\\training\\examples\\numpy\\'
-FILE_INPUT = BASEDIR + 'data_input.csv'
-FILE_OUTPUT = BASEDIR + 'data_output.csv'
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+FILE_INPUT = os.path.join(BASEDIR, 'data_input.csv')
+FILE_OUTPUT = os.path.join(BASEDIR, 'data_input.csv')
 
 arreglo = np.loadtxt(FILE_INPUT, delimiter=',')
 print(arreglo)

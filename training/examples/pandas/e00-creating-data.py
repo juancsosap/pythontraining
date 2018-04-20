@@ -85,3 +85,31 @@ dfj = df1.join(df2, how='outer')
 print(dfj, end='\n\n')
 dfj = df1.join(df2, how='inner')
 print(dfj, end='\n\n')
+
+# Creating DataFrame merging DataFrames
+personas = {'nombre': ['Juan', 'Luis', 'Pepe', 'Maria'],
+            'apellido': ['Sosa', 'Perez', 'Lopez', 'Silva'],
+            'edad': [10, 20, 30, 40]}
+usuarios = {'nombre': ['Juan', 'Luis', 'Pepe'],
+            'apellido': ['Sosa', 'Perez', 'Lopez'],
+            'password': ['S0s@', 'P3r3$', 'L0P3Z']}
+
+df_personas = pd.DataFrame(personas)
+df_usuarios = pd.DataFrame(usuarios)
+df_full = df_personas.merge(df_usuarios, on=['nombre', 'apellido'], how='outer')
+print(df_full, end='\n\n')
+
+# Creating DataFrame merging DataFrames
+personas = {'nombre': ['Juan', 'Luis', 'Pepe', 'Maria'],
+            'apellido': ['Sosa', 'Perez', 'Lopez', 'Silva'],
+            'edad': [10, 20, 30, 40]}
+usuarios = {'name': ['Juan', 'Luis', 'Pepe'],
+            'surname': ['Sosa', 'Perez', 'Lopez'],
+            'password': ['S0s@', 'P3r3$', 'L0P3Z']}
+
+df_personas = pd.DataFrame(personas)
+df_usuarios = pd.DataFrame(usuarios)
+df_full = df_personas.merge(df_usuarios, how='left', left_on=[
+                            'nombre', 'apellido'], right_on=['name', 'surname'])
+df_full.drop(['name', 'surname'], axis=1, inplace=True)
+print(df_full, end='\n\n')

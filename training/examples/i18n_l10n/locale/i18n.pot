@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-04-20 06:19-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+msgid "What is your Name?"
+msgstr ""
+
+msgid "Hello, {name}."
+msgstr ""
+
+msgid "How old are you?"
+msgstr ""
+
+msgid "Then, you are {age} year old."
+msgstr ""
+
+msgid "Then, you are {age} years old."
+msgstr ""
+
+msgid "How much do you earn?"
+msgstr ""
+
+msgid "{salary:n} USD is good."
+msgstr ""
+
+msgid "When did your born?"
+msgstr ""
+
+msgid "You were born on {birthday}!!."
+msgstr ""
+
+msgid "Thanks, see you later."
+msgstr ""
