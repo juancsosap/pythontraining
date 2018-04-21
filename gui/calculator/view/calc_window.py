@@ -11,4 +11,6 @@ class WindowCalc(Tk):
         self.buttons = ButtonsCalc(self, 2)
         self.buttons.addcontroller(self)
 
+        self.title('Calculadora')
+
         self.mainloop()

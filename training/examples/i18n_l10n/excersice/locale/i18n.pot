@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-04-20 12:27-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.0.6\n"
+
+msgid "Project Estimation Tool"
+msgstr ""
+
+msgid "Project Name"
+msgstr ""
+
+msgid "Project Begin"
+msgstr ""
+
+msgid "Project End"
+msgstr ""
+
+msgid "Cost per Day"
+msgstr ""
+
+msgid "The total cost will be {cost:n} USD."
+msgstr ""
+
+msgid "The project will have a duration of {days:,d} day."
+msgstr ""
+
+msgid "The project will have a duration of {days:,d} days."
+msgstr ""
+
+msgid "Thanks for you election"
+msgstr ""

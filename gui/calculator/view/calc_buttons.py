@@ -14,7 +14,10 @@ class ButtonsCalc(Frame):
 
         for i in range(4):
             for j in range(4):
-                self.buttons[i].append(Button(self, text=self.buttons_texts[i][j], width=3))
+                boton = Button(self, text=self.buttons_texts[i][j])
+                boton.config(width=10, height=5)
+                boton.config(font='Arial')
+                self.buttons[i].append(boton)
                 self.buttons[i][j].grid(row=(i + 2), column=(j + 1))
 
         self.grid(row=row, column=1, padx=10, pady=10)

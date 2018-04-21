@@ -6,5 +6,4 @@ def printer():
     print('Hello World from {name}'.format(name=thread_name))
 
 
-t = th.Thread(target=printer, name='PRINTER')
-t.start()
+printer()

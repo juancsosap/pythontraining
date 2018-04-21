@@ -7,7 +7,8 @@ class DisplayCalc(Entry):
         super(DisplayCalc, self).__init__(window)
 
         self.grid(row=row, column=1, padx=10, pady=10)
-        self.config(bg="black", fg="#03f943", justify="right")
+        self.config(bg="black", fg="white", justify="right")
+        self.config(width=60)
 
     def addcontroller(self, window):
         self.controller = DisplayCalcController(window)
