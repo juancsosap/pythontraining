@@ -8,12 +8,12 @@ app = fl.Flask(__name__)
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return 'Hello World Home'
+    return fl.render_template('home.html')
 
 
-@app.route('/about', methods=['POST'])
+@app.route('/about', methods=['GET'])
 def about():
-    return 'This page was made for training propouses'
+    return fl.render_template('about.html')
 
 
 @app.route('/users', methods=['GET'])
@@ -24,7 +24,7 @@ def users():
 
 @app.route('/users/<string:user_name>', methods=['GET'])
 def user_by_name(user_name):
-    return 'Welcome {name}'.format(name=user_name)
+    return fl.render_template('user_by_name.html', name=user_name.capitalize())
 
 
 @app.route('/users/<int:user_id>', methods=['GET'])

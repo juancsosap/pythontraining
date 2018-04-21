@@ -8,7 +8,7 @@ app = fl.Flask(__name__)
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET', 'POST'])
 def home():
-    return 'Hello World Home'
+    return fl.render_template('basic_home.html')
 
 
 @app.route('/about', methods=['POST'])
