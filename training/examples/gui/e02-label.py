@@ -15,4 +15,8 @@ label3 = tk.Label(window, text='This is my third Label widgets in TKinter')
 label3.config(bg='brown', fg='yellow')
 label3.pack(fill='y', side='left')
 
+label4 = tk.Label(window, text='This is my Fourth Label widgets in TKinter')
+label4.config(bg='purple', fg='pink')
+label4.pack(fill='y', expand=True)
+
 window.mainloop()

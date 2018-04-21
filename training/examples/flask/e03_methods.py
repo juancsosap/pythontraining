@@ -5,13 +5,13 @@ import flask as fl
 app = fl.Flask(__name__)
 
 
-@app.route('/')
-@app.route('/home')
+@app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET', 'POST'])
 def home():
     return 'Hello World Home'
 
 
-@app.route('/about')
+@app.route('/about', methods=['POST'])
 def about():
     return 'This page was made for training propouses'
 

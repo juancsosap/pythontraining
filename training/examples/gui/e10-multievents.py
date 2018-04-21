@@ -24,7 +24,7 @@ label_password.grid(row=1, column=0, sticky='E')
 entry_nick = tk.Entry(window)
 entry_nick.grid(row=0, column=1)
 
-entry_password = tk.Entry(window)
+entry_password = tk.Entry(window, show='*')
 entry_password.grid(row=1, column=1)
 
 check_logged = tk.Checkbutton(window, text='Keep me logged in')

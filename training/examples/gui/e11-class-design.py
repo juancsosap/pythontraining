@@ -24,7 +24,7 @@ class MainWindow(tk.Tk):
     def __add_entry_elements(self):
         self.entry_nick = tk.Entry(self)
         self.entry_nick.grid(row=0, column=1)
-        self.entry_password = tk.Entry(self)
+        self.entry_password = tk.Entry(self, show='*')
         self.entry_password.grid(row=1, column=1)
 
     def __add_checkbox_elements(self):
@@ -47,11 +47,11 @@ class MainController():
 
     def __initial_config(self):
         self.window.button_close.bind('<Button-1>', self.close_window)
-        self.window.button_clean.bind('<Button-1>', self.clean_entries)
+        self.window.button_clean.bind('<Button-1>', self.paint_entries)
 
-    def clean_entries(self, event):
-        self.window.entry_nick.text = ''
-        self.window.entry_password.text = ''
+    def paint_entries(self, event):
+        self.window.entry_nick.config(bg='red', fg='white')
+        self.window.entry_password.config(bg='red', fg='white')
 
     def close_window(self, event):
         self.window.destroy()

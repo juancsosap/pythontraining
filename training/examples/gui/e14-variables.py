@@ -55,7 +55,7 @@ class MainController():
     def __init_variables(self):
         self.num_a = tk.IntVar()
         self.window.entry_A.config(textvariable=self.num_a)
-        self.num_b = tk.IntVar()
+        self.num_b = tk.StringVar()
         self.window.entry_B.config(textvariable=self.num_b)
 
     def __init_button_commands(self):
@@ -66,11 +66,11 @@ class MainController():
         self.window.destroy()
 
     def add(self):
-        result = self.num_a.get() + self.num_b.get()
+        result = self.num_a.get() + int(self.num_b.get())
         tkm.showinfo("Result", "The Addition result is {result}".format(result=result))
 
     def sub(self):
-        result = self.num_a.get() - self.num_b.get()
+        result = self.num_a.get() - int(self.num_b.get())
         tkm.showinfo("Result", "The Substraction result is {result}".format(result=result))
 
 

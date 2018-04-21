@@ -48,7 +48,7 @@ class MainController():
         tkm.showwarning("Printing", "Thanks, for click me")
 
     def about(self):
-        tkm.showinfo("About", "This is a good program")
+        tkm.showerror("About", "This is a good program")
 
     def info(self):
         tkm.showinfo("Info", "The author are you")

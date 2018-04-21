@@ -31,12 +31,16 @@ print('Duration: {time}'.format(time=delta))
 print(primes)
 
 primes = []
+ts = []
 start = time.time()
 for n in range(1, max):
     t = th.Thread(target=isprimo, args=(n, primes))
     t.start()
-for n in range(1, max):
+    ts.append(t)
+
+for t in ts:
     t.join()
+
 end = time.time()
 delta = (end - start) * 1000
 print('Duration: {time}'.format(time=delta))

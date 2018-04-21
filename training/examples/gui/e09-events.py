@@ -1,9 +1,9 @@
 import tkinter as tk
 
 
-def clean_entries(event):
-    entry_nick.text = ''
-    entry_password.text = ''
+def paint_entries(event):
+    entry_nick.config(bg='red', fg='white')
+    entry_password.config(bg='red', fg='white')
 
 
 def close_window(event):
@@ -21,7 +21,7 @@ label_password.grid(row=1, column=0, sticky='E')
 entry_nick = tk.Entry(window)
 entry_nick.grid(row=0, column=1)
 
-entry_password = tk.Entry(window)
+entry_password = tk.Entry(window, show='*')
 entry_password.grid(row=1, column=1)
 
 check_logged = tk.Checkbutton(window, text='Keep me logged in')
@@ -33,6 +33,6 @@ button_close.bind('<Button-1>', close_window)
 
 button_clean = tk.Button(window, text='Clean')
 button_clean.grid(row=4, column=1, sticky='E')
-button_clean.bind('<Button-1>', clean_entries)
+button_clean.bind('<Button-1>', paint_entries)
 
 window.mainloop()
