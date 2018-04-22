@@ -54,7 +54,7 @@ def getpandas():
     limit = int(fl.request.args.get('limit', 10))
     offset = int(fl.request.args.get('offset', 0))
     data = pd.read_csv('http://bit.ly/drinksbycountry', nrows=limit, skiprows=offset).to_html()
-    return fl.render_template('pandas.html', data=data)
+    return fl.render_template('pandas_w_css.html', data=data)
 
 
 @app.errorhandler(400)

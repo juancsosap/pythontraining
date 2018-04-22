@@ -8,6 +8,8 @@ class MainWindow(tk.Tk):
         super().__init__()
 
         self.__add_menus()
+        self.__add_toolbar()
+        self.__add_statusbar()
 
         self.controller = MainController(self)
 
@@ -29,6 +31,24 @@ class MainWindow(tk.Tk):
         self.helpmenu.add_separator()
         self.helpmenu.add_command(label='Info')
 
+    def __add_toolbar(self):
+        self.toolbar = tk.Frame(self, bg='blue')
+        self.toolbar.pack(side='top', fill='x')
+
+        self.button_close = tk.Button(self.toolbar, text="Close")
+        self.button_close.pack(side='left', padx=2, pady=2)
+        self.button_print = tk.Button(self.toolbar, text="Print")
+        self.button_print.pack(side='left', padx=2, pady=2)
+        self.button_about = tk.Button(self.toolbar, text="About")
+        self.button_about.pack(side='left', padx=2, pady=2)
+        self.button_info = tk.Button(self.toolbar, text="Info")
+        self.button_info.pack(side='left', padx=2, pady=2)
+
+    def __add_statusbar(self):
+        self.statusbar = tk.Label(self, text='Application Active',
+                                  bd=1, relief='sunken', anchor='w')
+        self.statusbar.pack(side='bottom', fill='x')
+
 
 class MainController():
 
@@ -44,6 +64,11 @@ class MainController():
         self.window.filemenu.entryconfigure('Close', command=self.quit)
         self.window.helpmenu.entryconfigure('About', command=self.about)
         self.window.helpmenu.entryconfigure('Info', command=self.info)
+
+        self.window.button_close.config(command=self.quit)
+        self.window.button_print.config(command=self.print)
+        self.window.button_about.config(command=self.about)
+        self.window.button_info.config(command=self.info)
 
     def quit(self):
         if(tkm.askokcancel("Closing", "The windows will be close\nAre you sure?")):
