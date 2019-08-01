@@ -1,0 +1,7 @@
+$ python nxosv_rest_cli_python_solution_1.py
+codes are 200 and 200
+state is down
+
+$ python nxosv_rest_cli_python_solution_2.py
+messages are Success, Success and Success
+best is non-bestpath

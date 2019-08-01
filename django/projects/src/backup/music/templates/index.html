@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Viberr - Home Page{% endblock %}
+
+{% block body %}
+	<!--
+	<h1>Here are all my Albums</h1><br>
+	{% if all_albums %}
+		{% for album in all_albums %}
+			<a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a><br>
+		{% endfor %}
+	{% else %}
+		<h3>You don't have any album</h3>
+	{% endif %}
+	-->
+	<ul>
+		{% for album in object_list %}
+			<li>
+				<a href="{% url 'music:detail' album.id %}">{{ album.album_title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+			
+{% endblock %}			

@@ -1,0 +1,179 @@
+{
+	"variables": [],
+	"info": {
+		"name": "APIC-DC",
+		"_postman_id": "904c7445-daff-4cce-e008-ea2c4b312bf4",
+		"description": "Example requests for ACI APIC.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "APIC-DC Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"postman.setGlobalVariable(\"APIC-Cookie\", data.imdata[0].aaaLogin.attributes.token);",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://apic.cisco.com/api/aaaLogin.json",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"aaaUser\" : {\n    \"attributes\" : {\n      \"name\" : \"admin\",\n      \"pwd\" : \"cisco123\"\n    }\n  }\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get node identities",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/class/topology/pod-1/node-1/dhcpClient.json?query-target-filter=or(eq(dhcpClient.nodeRole,\"leaf\"),eq(dhcpClient.nodeRole,\"spine\"),eq(dhcpClient.nodeRole,\"unsupported\"))",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Get all of the node identities."
+			},
+			"response": []
+		},
+		{
+			"name": "Update nodep-TEP-1-101",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/uni/controller/nodeidentpol.json",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"fabricNodeIdentP\":\n \t{\"attributes\":\n \t\t{\"dn\":\"uni/controller/nodeidentpol/nodep-TEP-1-101\",\n \t\t\"serial\":\"TEP-1-101\",\n \t\t\"nodeId\":\"201\",\n \t\t\"name\":\"leaf201\",\n \t\t\"status\":\"created,modified\"},\n \t\t\"children\":[]\n \t}\n }"
+				},
+				"description": "Update node with id 201 and name leaf201."
+			},
+			"response": []
+		},
+		{
+			"name": "GET node-201",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/topology/pod-1/node-201.json?query-target=self",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Get the fabric node 201."
+			},
+			"response": []
+		},
+		{
+			"name": "Update nodep-TEP-1-103",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/uni/controller/nodeidentpol.json",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"fabricNodeIdentP\":\n \t{\"attributes\":\n \t\t{\"dn\":\"uni/controller/nodeidentpol/nodep-TEP-1-103\",\n \t\t\"serial\":\"TEP-1-103\",\n \t\t\"nodeId\":\"101\",\n \t\t\"name\":\"spine101\",\n \t\t\"status\":\"created,modified\"},\n \t\t\"children\":[]\n \t}\n }"
+				},
+				"description": "Update node with id 101 and name spine101."
+			},
+			"response": []
+		},
+		{
+			"name": "GET node-101",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/topology/pod-1/node-101.json?query-target=self",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Get the fabric node 101."
+			},
+			"response": []
+		},
+		{
+			"name": "Update nodep-TEP-1-102",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/uni/controller/nodeidentpol.json",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"fabricNodeIdentP\":\n \t{\"attributes\":\n \t\t{\"dn\":\"uni/controller/nodeidentpol/nodep-TEP-1-102\",\n \t\t\"serial\":\"TEP-1-102\",\n \t\t\"nodeId\":\"202\",\n \t\t\"name\":\"leaf202\",\n \t\t\"status\":\"created,modified\"},\n \t\t\"children\":[]\n \t}\n }"
+				},
+				"description": "Update node with id 202 and name leaf202."
+			},
+			"response": []
+		},
+		{
+			"name": "GET node-202",
+			"request": {
+				"url": "https://apic.cisco.com/api/node/mo/topology/pod-1/node-202.json?query-target=self",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "APIC-Cookie={{APIC-Cookie}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": "Get the fabric node 202."
+			},
+			"response": []
+		}
+	]
+}

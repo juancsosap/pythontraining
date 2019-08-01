@@ -1,0 +1,39 @@
+nxosv# python
+Copyright (c) 2001-2012 Python Software Foundation; All Rights Reserved
+
+nxosv# >>> import cisco
+nxosv# >>> cli('configure terminal ; vlan 3000 ; name vlan_3000 ')
+''
+nxosv(config-vlan)# >>> cli('end ')
+''
+nxosv# >>> 
+nxosv# >>> vlan_text = clid('show vlan name vlan_3000 ')
+
+nxosv# >>> #Print the value of the VLAN media type
+nxosv# ... for pair in vlan_text.split(',') :
+nxosv# ...   if 'vlanshowinfo-media-type' in pair:
+nxosv# ...     result = pair[pair.index(':')+2:len(pair)]
+nxosv# ...     print("result is " + result)
+nxosv# ... 
+result is "enet"
+nxosv# >>> cli('configure terminal ; no vlan 3000 ')
+''
+nxosv(config)# >>> cli('end ')
+''
+nxosv# >>> import cisco
+nxosv# >>> 
+nxosv# >>> cli('configure terminal ; interface Ethernet4/38 ; no shutdown ')
+''
+nxosv(config-if)# >>> cli('end ')
+''
+nxosv# >>> 
+nxosv# >>> interface_text = clid('show interface Ethernet4/38 ')
+nxosv# >>> 
+nxosv# >>> #Print the value of the Administrative State Reason
+nxosv# ... for pair in interface_text.split(',') :
+nxosv# ...   if 'state_rsn_desc' in pair:
+nxosv# ...     result = pair[pair.index(':')+2:len(pair)]
+nxosv# ...     print("result is " + result)
+nxosv# ... 
+result is "Link not connected"
+nxosv# >>> 

@@ -1,0 +1,58 @@
+{
+    "login": {
+        "user": "cisco",
+        "pswd": "cisco"    
+    },
+    "scripts": [
+        {
+            "url": "http://{host}/restconf/api/config/native/interface",
+            "method": "get",
+            "result": "results/xe/xe_result_intf_get_01.xml",
+            "description": "Show which interfaces exist"
+        },
+        {
+            "url": "http://{host}/restconf/api/config/native/interface",
+            "method": "post",
+            "request": "requests/xe/xe_request_intf_config.xml",
+            "result": "results/xe/xe_result_intf_config.xml",
+            "description": "Config interfaces",
+            "data": 0
+        },
+        {
+            "url": "http://{host}/restconf/api/config/native/interface",
+            "method": "get",
+            "result": "results/xe/xe_result_intf_get_02.xml",
+            "description": "Show which interfaces exist"
+        },
+        {
+            "url": "http://{host}/restconf/api/config/native/interface/Loopback/1",
+            "method": "put",
+            "result": "results/xe/xe_result_intf_add.xml",
+            "description": "Add interface",
+            "data": 1
+        },
+        {
+            "url": "http://{host}/restconf/api/config/native/interface",
+            "method": "get",
+            "result": "results/xe/xe_result_intf_get_02.xml",
+            "description": "Show which interfaces exist"
+        }
+    ],
+    "hosts": [
+        {
+            "name": "csr1kv",
+            "data": [
+                {
+                    "id": 1
+                },
+                {
+                    "id": 1,
+                    "ip_primary": "10.101.1.2",
+                    "mask_primary": "255.255.255.0",
+                    "ip_secondary": "10.101.1.3",
+                    "mask_secondary": "255.255.255.0"
+                }
+            ] 
+        }
+    ]
+}

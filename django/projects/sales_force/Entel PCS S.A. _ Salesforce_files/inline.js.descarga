@@ -1,0 +1,398 @@
+
+    ;(function() { window.Aura = window.Aura || {}; window.Aura.beforeFrameworkInit = Aura.beforeFrameworkInit || []; window.Aura.beforeFrameworkInit.push(function() { /*
+ * This code is for Internal Salesforce use only, and subject to change without notice.
+ * Customers shouldn't reference this file in any web pages.
+ */
+var RecordGlobalValueProvider=function(a,b,c,d,e){this._cmp=null;this.configs={refresh:1E3*a,expiration:1E3*b,maxSize:c,version:d,previousVersion:e,minSaveToStorageInterval:1E4};Object.freeze(this.configs)};RecordGlobalValueProvider.prototype.getValues=function(){return{}};RecordGlobalValueProvider.prototype.merge=function(a){$A.util.isEmpty(a)||(this._createCmp(),this._cmp.helper.recordLib.records._receiveFrom$RecordGvp(a))};
+RecordGlobalValueProvider.prototype.get=function(a,b){if("configs"===a)return this.configs;this._requestFromServer(a)};RecordGlobalValueProvider.prototype._requestFromServer=function(a){if(this._createCmp()){var b=this._cmp.get("c.getRecord");b.setParams({recordDescriptor:a});b.setCallback(this,$A.getCallback(function(b){"INCOMPLETE"===b.getState()&&this._cmp.helper.handleIncomplete.call(this._cmp.helper,a)}));$A.enqueueAction(b);$A.run(function(){},"RecordGlobalValueProvider._requestFromServer")}};
+RecordGlobalValueProvider.prototype._createCmp=function(){this._cmp||(this._cmp=$A.createComponentFromConfig({descriptor:"markup://force:recordGlobalValueProvider",attributes:null}));return!$A.util.isUndefinedOrNull(this._cmp)};
+
+//# sourceMappingURL=/javascript/1500538370000/ui-sfdc-javascript-impl/source/RecordGVP.js.map
+
+$A.addValueProvider('$Record', new RecordGlobalValueProvider(30, 900, 5120, '40.0', '39.0')) ; });  }());
+(function () {
+    window.pageStartTime = (new Date()).getTime();
+    window.Aura || (window.Aura = {});
+    window.Aura.bootstrap || (window.Aura.bootstrap = {});
+
+    var time = window.performance && window.performance.now ? window.performance.now.bind(performance) : function(){return Date.now();};
+    window.Aura.bootstrap.execInlineJs = time();
+
+    window.Aura.inlineJsLoaded = true;
+    var auraConfig = {"deftype":"APPLICATION","ns":{"privileged":["FSC","FSC1","FSC10gs0","FSC11","FSC12","FSC13","FSC14","FSC15","FSC2","FSC3","FSC4","FSC5","FSC6gs0","FSC8gs0","FSC9gs0","FSC_RB","FinServ","FinServWaveExt","FinServ_CB","FinServ_CB_Pre","FinServ_CB_SB","FinServ_INS_Pre","FinServ_INS_SB","FinServ_RB","FinServ_RB_Pre","FinServ_RB_SB","FinServ_SB","FinServ_WM","FinServ_WM_SB","HC10gs0","HC11","HC12","HC13","HC14","HC15","HC4","HC4a","HC5","HC6","HC6gs0","HC7","HC7gs0","HC8","HC8gs0","HC9","HC9gs0","HealthCloud","HealthCloudGA","HealthCloud_SB","einsteinservice","et4ae5","fsc1_r1","fsc2_r1","fsc3_r1","fscfma","fscprerelease","fscwealth","fscwealthE","fscwealthfuture","fscwealthpatch","fscwmmain","hc1_r1","hc2_r1","hc3_r1","hcfma","mcdm_15","mcdm_8","mcsocsel","mcsocsel_1","mcsocsel_10","mcsocsel_2","mcsocsel_3","mcsocsel_4","mcsocsel_5","mcsocsel_6","mcsocsel_7","mcsocsel_8","mcsocsel_9","wealthone","wealthoneblitz","wealthonep"],"internal":["adminui","aloha_sales_forecasting","aloha_sales_opptysplit","aloha_sales_tm2","analytics","analyticsHome","anikodev","aotp","aotp_demo","apex","appexUi","appexUiDev","assistantFramework","assistantFrameworkModules","aura","auraScl","auraStorage","auradev","auradocs","aurajstest","auraplat","builder_industries_survey","builder_platform_process","calendar","clients","commerce","communitySetup","console","cooper","cordaDashboards","dashboards","dataImporter","ddcProspector","desktopDashboards","dutchdev","emailStream","emailui","embeddedService","environmenthub","externalServicesSetup","fieldService","flexipage","flexipageEditor","flowruntime","force","forceChatter","forceCommunity","forceContent","forceDiscovery","forceKnowledge","forceSearch","forceTopic","gaterTest","googleConnector","hammerSetup","home","instrumentation","iot","kbmanagement","knowledgeone","lcperf","lcwizard","lightning","liveAgent","ltng","ltngdoc","ltngtools","ltngx","macros","mcdm","mcdm_1","mcdm_10","mcdm_2","mcdm_3","mcdm_4","mcdm_5","mcdm_6","mcdm_7","mcdm_9","module","myday","native","notes","objectManager","offline","omni","onboarding","onboardingTest","one","onesetup","opencti","packagingSetupUI","platformencryption","processui","processuiappr","processuicommon","processuimgnt","processuirule","processuitest","reports","runtime_all_walkthroughs","runtime_all_walkthroughsTest","runtime_approval_process","runtime_industries_survey","runtime_ladybug","runtime_marketing_btobma","runtime_platform_testhistory","runtime_platformservices_transactionSecurity","runtime_retail_commerce","runtime_rtc","runtime_rtc_spark","runtime_sales_activities","runtime_sales_ade","runtime_sales_campaign","runtime_sales_commerce","runtime_sales_forecasting","runtime_sales_insights","runtime_sales_lead","runtime_sales_leadiq","runtime_sales_merge","runtime_sales_pathassistant","runtime_sales_pipelineboard","runtime_sales_quotes","runtime_sales_skype","runtime_sales_social","runtime_sales_xclean","runtime_search_federated","runtime_service_liveagent","runtime_service_omnichannel","runtime_service_predictions","runtime_service_trials","s1wizard","salesforceIdentity","securityHealth","securitycentral","selfService","serviceCommunity","setup","setupAssistant","setup_lightning_visualforce","setup_platform_notifications","setup_platform_sfdx","setup_platformservices_customplatform","setup_sales_actionplan","setup_sales_insights","setup_sales_leadiq","setup_sales_pardot","setup_sales_pathassistant","setup_service","setupnav","setupwizard","sfa","siteforce","siteforceBuilder","skipdev","socialService","support","survey","templatesetup","today","ui","uiExamples","uns","userProvisioningUI","visualEditor","voice","wave","wits","work","workAloha"]},"host":"","context":{"mode":"PROD","app":"one:one","fwuid":"HbiHlokP8ngGntuPI-9lcw","loaded":{"APPLICATION@markup://one:one":"49DycdkPhU8byoS9xSPJtg"},"requestedLocales":["en_US","en","es"],"pathPrefix":"","ls":"YY","m":1},"attributes":{"jwt":"24909902961b42a21bcd4fd4178027f7aba9d67f2ae8bdf5c88a55e327fc4d7a"},"descriptor":"markup://one:one","pathPrefix":"","token":"HCQAHBgEMTAwMBQCGAcxMDAwMjA0GAcxMDAwMjA0ABQCGfMQcmmQb6vAH_fSETOvApE1thaSzPmxrFcAGfMgubmvUUG0Gva65GdgkyQyr9D870aHIqnhtGOVW6hSkvEA","MaxParallelXHRCount":6,"XHRExclusivity":false};
+    var initSafeEvalWorker;
+    function initLocker () {
+        if (auraConfig["safeEvalWorker"] && !window['$$safe-eval$$'] && !/^(.*?:)?\/\//.test(auraConfig["host"])) {
+            initSafeEvalWorker = true;
+            
+            // Check if strict-csp is being enforced by the browser
+            var isEvalAllowed = true;
+            try { 
+                eval("(function(){})();");
+            }catch (e) {
+                isEvalAllowed = false;
+            }
+            
+            var isInlineAllowed;
+            if (isEvalAllowed){
+                var inlineAllowedProp = "$unsafeInlineAllowed$";
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.appendChild(document.createTextNode("(function(){ window['"+inlineAllowedProp+"']=true; })();"));
+                isInlineAllowed = true;
+                document.body.appendChild(script);
+                document.body.removeChild(script);
+                isInlineAllowed = window[inlineAllowedProp] || false;
+                window[inlineAllowedProp] = undefined;
+            }
+            
+            if(isEvalAllowed && isInlineAllowed){
+                // No need for the worker as main frame has no restriction
+                initSafeEvalWorker = false;
+            }
+        }
+
+        if (initSafeEvalWorker) {
+            var safeEvalWorkerLoaded = {};
+                        
+            function rendezvousWorkersThenInitFramework() {
+                var id = this;
+                
+                safeEvalWorkerLoaded[id] = true;
+                
+                if (safeEvalWorkerLoaded.System && safeEvalWorkerLoaded.Custom) {
+                    initFramework();
+                }
+            }
+            
+            function createWorker(id) {
+                var workerId = "safeEvalWorker" + id;
+                var props = {
+                    src: auraConfig.safeEvalWorker + "?id=" + id,
+                    id: workerId, width: "0", height: "0", tabIndex: "-1", "aura-hidden": "true", title:"scripts" + id
+                };
+    
+                var el = document.getElementById(workerId);
+                if (!el) {
+                    if (!auraConfig["safeEvalWorker"]) {
+                        throw new Error("Aura(): Missing 'safeEvalWorker' configuration.");
+                    }
+                    
+                    el = document.createElement("iframe");
+                    el.style.display = "none";
+                    for (var i in props) { el.setAttribute(i, props[i]); }
+                    document.body.appendChild(el);
+
+                    el.addEventListener('load', rendezvousWorkersThenInitFramework.bind(id));
+                    el.addEventListener("error", function () { throw new Error("Aura(): Failed to load locker worker.");});
+                }
+            }
+            
+            createWorker("System");
+            createWorker("Custom");
+        } else {
+            setTimeout(initFramework, 0); // ensure async
+        }
+    }
+
+    function auraPreInitBlock () {
+        
+            $A.storageService.setIsolation("00D58000000t8Dk00000000000000000541000002alHl");
+            $A.storageService.setVersion("40.0");
+        (function(debug, key){
+function setCryptoKey(key) {
+    var buffer, view;
+    if (Array.isArray(key) && (key.length === 32 || key.length === 16)) {
+        try {
+            buffer = new ArrayBuffer(key.length);
+            view = new Uint8Array(buffer);
+            view.set(key);
+        } catch (ignored) {}
+    }
+    CryptoAdapter.setKey(buffer);
+}
+debug && $A.log('CryptoAdapter registering');
+var CryptoAdapter = $A.storageService.CryptoAdapter;
+CryptoAdapter.register();
+if (!$A.storageService.isRegisteredAdapter(CryptoAdapter.NAME)) {
+    $A.log('CryptoAdapter was not registered');
+    return;
+}
+setCryptoKey(key);
+
+}(true,[5, 97, 57, 117, -27, -106, 114, -32, -44, -113, -45, 70, 38, 41, -51, 92, 71, 44, 106, -88, -66, -121, 41, -125, -27, 81, -39, -40, 70, -43, 90, 100]));
+            $A.clientService.setParallelBootstrapLoad(true);
+        $A.storageService.initStorage({name: 'actions', persistent: true, secure: true, maxSize: 10485760, expiration: 900, autoRefreshInterval: 30, debugLogging: false, clearOnInit: false, version: ''});
+$A.storageService.initStorage({name: 'ComponentDefStorage', persistent: true, secure: false, maxSize: 15728640, expiration: 900, autoRefreshInterval: 900, debugLogging: false, clearOnInit: false, version: ''});
+
+            $A.log("one/template.cmp: aura.js and app.js not loaded yet");
+            window.FORCE=$A.one=(function(Aura){
+                var CONTAINER_CLASS='.center',
+                    PREFIX=(function () {
+                    var styles=window.getComputedStyle(document.documentElement, ''),
+                        pre=(Array.prototype.slice.call(styles).join('').match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o']))[1],
+                        dom=('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+                    /*W-2599121*/ if(window.navigator.userAgent.indexOf('Edge')!=-1){ pre = 'webkit';}
+                    return {dom:dom,lowercase:pre,css:'-'+pre+'-',js:pre[0].toUpperCase()+pre.substr(1)};
+                })();
+                var ANIMATION_END_EVENT_NAMES={webkit:"webkitAnimationEnd",o:"oAnimationEnd",moz:"animationend",ms:"animationend"},
+                    TRANSITION_END_EVENT_NAMES={webkit:"webkitTransitionEnd",o:"oTransitionEnd",moz:"transitionend",ms:"transitionend"},
+                    ONE_OBJ={
+                    getPrefixCSS:function (){return PREFIX.css;},
+                    getPrefixJS:function(){return PREFIX.js;},
+                    getPrefix: function (upperCase) {var prefix=PREFIX.lowercase,up=$A.util.isIE && upperCase;return up ? prefix.toUpperCase() : prefix;},
+                    getAnimationEndEventName: function () { return ANIMATION_END_EVENT_NAMES[this.getPrefix()] || 'animationend';},
+                    getTransitionEndEventName: function () {return TRANSITION_END_EVENT_NAMES[this.getPrefix()] || 'transitionend';},
+                    layouts : { PHONE: "phone", TABLET: "tablet", DESKTOP: "desktop" },
+                    mark:function(msg) {if(window.console && window.console.markTimeline) window.console.markTimeline(msg);},
+                    cookies:{
+                        getCookie:function(e){for(var t,o=e+"=",i=document.cookie.split(";"),n=0;n < i.length;n++)for(t=i[n];" "==t.charAt(0);)if(t=t.substring(1,t.length),0==t.indexOf(o))return t.substring(o.length,t.length);return null},
+                        setCookie:function(e,t,o){var i;if(o){var n=new Date;n.setTime(n.getTime()+24*o*60*60*1e3),i="; expires="+n.toGMTString()}else i="";document.cookie=e+"="+t+i+"; path=/"},
+                        removeCookie:function(e){this.setCookie(e,"",-1)}
+                    },
+                    getContainer:function () {return document.querySelector(CONTAINER_CLASS);},
+                    getContainerWidth: function () {var container=document.querySelector(CONTAINER_CLASS);if (container) { return container.offsetWidth;}},
+                    getContainerHeight: function () {var container = document.querySelector(CONTAINER_CLASS);if(container){return container.offsetHeight;}},
+                    spinnerLagTime: {spinner:300,toast:9000}
+                };
+                window.addEventListener('beforeinstallprompt', function (e) { ONE_OBJ.androidBannerPromise = e.userChoice; }); // W-2900934
+                return ONE_OBJ;
+            }($A));
+        
+    }
+
+    function initFramework () {
+        window.Aura = window.Aura || {}; 
+        window.Aura.beforeFrameworkInit = Aura.beforeFrameworkInit || [];
+        window.Aura.beforeFrameworkInit.push(auraPreInitBlock);
+        window.Aura.inlineJsReady = time();
+        window.Aura.initSafeEvalWorker = initSafeEvalWorker;
+
+        if (!window.Aura.frameworkJsReady) {
+            window.Aura.initConfig = auraConfig;
+        } else {
+            // scripts inside custom templates with Locker active are stored until now since we need FW and safeEval
+            // loaded before running
+            var scripts = window.Aura.inlineJsLocker;
+            if (scripts) {
+                for (var i = 0; i < scripts.length; i++) {
+                    $A.lockerService.runScript(scripts[i]["callback"], scripts[i]["namespace"]);
+                }
+                delete window.Aura.inlineJsLocker;
+            }
+
+            if (true) {
+                $A.initAsync(auraConfig);
+            } else if (false) {
+                $A.initConfig(auraConfig);
+            }
+        }
+    }
+
+    // Error msg
+    var x = document.getElementById('dismissError');
+    if (x) {
+        x.addEventListener("click", function () {
+            var auraErrorMask = document.getElementById('auraErrorMask');
+            if (window['$A']) {
+                $A.util.removeClass(auraErrorMask, 'auraForcedErrorBox');
+                $A.util.removeClass($A.util.getElement('auraErrorReload'), 'show');
+            } else {
+                document.body.removeChild(auraErrorMask);
+            }
+        });
+    }
+
+    initLocker();
+
+    
+    Aura.PreloadLayout = (function (config) {
+        function buildParams(o) {
+            return Object.keys(o).reduce(function (r, k) {
+                r.push(encodeURIComponent(k) + '=' + encodeURIComponent(o[k]));
+                return r;
+            }, []).join('&');
+        }
+
+        function prefetchAuraActions(actions, callback) {
+            var ctx = config.context; 
+            var contextToSend = { mode : ctx.mode, fwuid : ctx.fwuid, loaded : ctx.loaded, app : ctx.app };
+            if (ctx.m) {
+                contextToSend["m"] = 1;
+            }
+            var payload = {
+                "aura.token": config.token, 
+                "aura.context": JSON.stringify(contextToSend), 
+                message: JSON.stringify({ actions: actions }) 
+            };
+
+            function onPrefetchError(e) { 
+                callback(e, this); 
+            }
+            var params = buildParams(payload);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", config.host + "/aura?preloadActions");
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+
+            xhr.addEventListener('error', onPrefetchError);
+            xhr.addEventListener('timeout', onPrefetchError);
+            xhr.addEventListener('load', function (e) {
+                if (this.status === 200) {
+                    callback(null, this);
+                } else {
+                    onPrefetchError.call(this, e);
+                }
+            });
+
+            xhr.send(params);
+        }
+
+        function hookAfterDefsReady(callback) {
+            if (Aura.afterAppDefsReady) {
+                callback();
+            } else {
+                Aura.afterAppDefsReady = Aura.afterAppDefsReady || [];
+                Aura.afterAppDefsReady.push(callback);
+            }
+        }
+
+        function preloadActionMap(actions, actionsToPreload) {
+            var map = {};
+
+            for (var i in actions) {
+                var action = actions[i];
+                var key = action.getStorageKey();
+
+                if (!actionsToPreload[key]) {
+                    return;
+                }
+
+                map[action.getId()] = actionsToPreload[key].id;
+            }
+
+            return map;
+        }
+
+        function enqueueActions (actions) {
+            actions.forEach(function (action) {
+                $A.enqueueAction(action);
+            });
+        }
+
+        return {
+            // state
+            actionsKeys: {},
+            actionsToPreload: {},
+            actionsPrefetched: false,
+            actionsStorageChecked: false,
+            actionsDispatched: false,
+            actionsOnStorage: null,
+            queueActionsHydration : null,
+            preloadFromCache : false,
+
+            preload: function (actions) {
+                actions.forEach(function (action, i) {
+                    var key = action.descriptor + ":" + JSON.stringify(action.params);
+                    action.id = i + ";p";
+                    this.actionsKeys[key] = true;
+                    this.actionsToPreload[key] = action;
+                }.bind(this));
+
+                prefetchAuraActions(actions, this._afterPrefetch.bind(this));
+                hookAfterDefsReady(this._afterDefsReady.bind(this));
+            },
+            _afterPrefetch: function (error, xhr) {
+                this.actionsPrefetched = true;
+                this.xhrResponse = xhr;
+
+                if (!this.actionsDispatched && this.queueActionsHydration) {
+                    if (this.actionsOnStorage === null) { 
+                        // network arrive earlier than cache so is kind of cached
+                        this.preloadFromCache = true;
+                    }
+                     
+                    return this.queueActionsHydration();
+                }
+            },
+            _afterDefsReady: function () {
+                var actionStorage = $A.storageService.getStorage('actions');
+                var actionKeys = Object.keys(this.actionsKeys);
+
+                if (actionStorage) {
+                    actionStorage.getAll(actionKeys).then(function (storedActions) {
+                        this.actionsStorageChecked = true;
+                        if (Object.keys(storedActions).length === actionKeys.length) {
+                            this.actionsOnStorage = true;
+                            this.preloadFromCache = true;
+                            if (!this.actionsDispatched && this.queueActions) {
+                                this.queueActions();
+                            }
+                        }
+                    }.bind(this));
+                } else {
+                    this.actionsStorageChecked = true;
+                }
+            },
+            enqueue: function (actions) {
+                var actionsToPreload = this.actionsToPreload;
+                var preloadMapId = preloadActionMap(actions, actionsToPreload);
+                
+                var hydrate = function () {
+                    this.actionsDispatched = true;
+                    $A.clientService.hydrateActions(actions, preloadMapId, this.xhrResponse);
+                }.bind(this);
+
+                var enqueue = function () {
+                    this.actionsDispatched = true;
+                    enqueueActions(actions);
+                }.bind(this);
+
+                if (preloadMapId) {
+                    // If we already got the results from the server, just hydrate
+                    if (this.actionsPrefetched) {
+                        this.preloadFromCache = true;
+                        setTimeout($A.getCallback(hydrate), 0); // ensure asyncronizity
+                        return;
+                    } else {
+                        this.queueActionsHydration = hydrate;
+                    }
+
+                    if (this.actionsStorageChecked) {
+                        if (this.actionsOnStorage) {
+                            enqueue();
+                            return;
+                        }
+                    } else {
+                        this.queueActions = enqueue;
+                    }
+
+                } else {
+                    $A.log('Preloads not found for the give actions, doing regular enqueing');
+                    this.actionsDispatched = true;
+                    enqueueActions(actions);
+                }
+            }
+        };
+
+    })(auraConfig);
+
+    
+            var key = 'appContextId';
+            var appId;
+            try {
+                appId = window.sessionStorage.getItem(key) || window.localStorage.getItem(key);
+            } catch (e) {
+                appId = null; 
+            }
+            
+            Aura.PreloadLayout.preload([{
+                descriptor:"serviceComponent://ui.global.components.one.one.controller.OneController/ACTION$getCurrentApp",
+                params:{ appContextId: appId }
+            }]);
+        
+
+}());
+
+    

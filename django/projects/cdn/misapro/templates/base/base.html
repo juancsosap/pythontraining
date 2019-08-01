@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>
+			{% block title %}
+				Sistema de Administración de Propiedades (Misapro)
+			{% endblock %}
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="widtg=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		{% load staticfiles %}
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="{% static 'base/img/favicon.png' %}">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Static CSS -->
+		<link href="{% static 'base/css/base.css' %}" rel="stylesheet" type="text/css">
+		<!-- Google jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-sm">
+				<div class="container-fluid">
+					<!-- Header -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="{% url 'administrations:index' %}"><span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span> Misapro</a>
+					</div>
+					<!-- Items -->
+					<div class="collapse navbar-collapse" id="topNavBar">
+						<ul class="nav navbar-nav">
+							<li{% if menu == 'administration' %} class="active"{% endif %}>
+								<a href="{% url 'administrations:index' %}">
+									<span class="glyphicon glyphicon-tower" aria-hidden="true"></span> Administration
+								</a>
+							</li>
+							<li{% if menu == 'condos' %} class="active"{% endif %}>
+								<a href="{% url 'condos:index' %}">
+									<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Condos
+								</a>
+							</li>
+							<li{% if menu == 'properties' %} class="active"{% endif %}>
+								<a href="{% url 'properties:index' %}">
+									<span class="glyphicon glyphicon-home" aria-hidden="true"></span> Properties
+								</a>
+							</li>
+							<li{% if menu == 'providers' %} class="active"{% endif %}>
+								<a href="{% url 'providers:index' %}">
+									<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> Providers
+								</a>
+							</li>							
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="logout">
+								<a href="#">
+									<span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="main">
+			{% block body %}
+			{% endblock %}
+		</section>
+		<footer>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<strong>Misapro - Santiago.Chile</strong>
+					</div>
+				</div>
+			</nav>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+				<div class="col-sm-5 col-sm-offset-7 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9">
+					<form action="{% url 'accounts:register' %}" method="post">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="name">{{ dic.label.name }}:</label>
+							<input class="form-control" type="text" id="name" placeholder="{{ dic.label.name }}">	
+						</div>
+						<div class="form-group">
+							<label for="surname">{{ dic.label.surname }}:</label>
+							<input class="form-control" type="text" id="surname" placeholder="{{ dic.label.surname }}">	
+						</div>
+						<div class="form-group">
+							<label for="email">{{ dic.label.email }}:</label>
+							<input class="form-control" type="email" id="email" placeholder="{{ dic.label.email }}">	
+						</div>
+						<div class="form-group">
+							<label for="username">{{ dic.label.username }}:</label>
+							<input class="form-control" type="text" id="username" placeholder="{{ dic.label.username }}">	
+						</div>
+						<div class="form-group">
+							<label for="password">{{ dic.label.password }}:</label>
+							<input class="form-control" type="password" id="password1" placeholder="{{ dic.label.password }}">
+							<input class="form-control" type="password" id="password2" placeholder="{{ dic.label.password }}">	
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-info pull-right" id="login">{{ dic.btn.register }}</button>
+						</div>
+					</form>					
+				</div>
+{% endblock %}

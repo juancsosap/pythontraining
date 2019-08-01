@@ -1,0 +1,2144 @@
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="101">
+  <data>
+    <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+      <schemas>
+	<schema>
+	  <identifier>ATM-FORUM-TC-MIB</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ATM-FORUM-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ATM-MIB</identifier>
+	  <version>1998-10-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ATM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ATM-TC-MIB</identifier>
+	  <version>1998-10-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ATM-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>BGP4-MIB</identifier>
+	  <version>1994-05-05</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:BGP4-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>BRIDGE-MIB</identifier>
+	  <version>2005-09-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:BRIDGE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-AAA-SERVER-MIB</identifier>
+	  <version>2003-11-17</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-AAA-SERVER-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-AAA-SESSION-MIB</identifier>
+	  <version>2006-03-21</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-AAA-SESSION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-AAL5-MIB</identifier>
+	  <version>2003-09-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-AAL5-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ATM-EXT-MIB</identifier>
+	  <version>2003-01-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ATM-EXT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ATM-PVCTRAP-EXTN-MIB</identifier>
+	  <version>2003-01-20</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ATM-PVCTRAP-EXTN-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ATM-QOS-MIB</identifier>
+	  <version>2002-06-10</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ATM-QOS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-BGP-POLICY-ACCOUNTING-MIB</identifier>
+	  <version>2002-07-26</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-BGP-POLICY-ACCOUNTING-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-BGP4-MIB</identifier>
+	  <version>2010-09-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-BGP4-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-BULK-FILE-MIB</identifier>
+	  <version>2002-06-10</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-BULK-FILE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CBP-TARGET-MIB</identifier>
+	  <version>2006-05-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CBP-TARGET-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CBP-TARGET-TC-MIB</identifier>
+	  <version>2006-03-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CBP-TARGET-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CBP-TC-MIB</identifier>
+	  <version>2008-06-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CBP-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CDP-MIB</identifier>
+	  <version>2005-03-21</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CDP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CEF-TC</identifier>
+	  <version>2005-09-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CEF-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CONFIG-COPY-MIB</identifier>
+	  <version>2005-04-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CONFIG-COPY-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CONFIG-MAN-MIB</identifier>
+	  <version>2007-04-27</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CONFIG-MAN-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-CONTEXT-MAPPING-MIB</identifier>
+	  <version>2008-11-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-CONTEXT-MAPPING-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-DATA-COLLECTION-MIB</identifier>
+	  <version>2002-10-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-DATA-COLLECTION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-DIAL-CONTROL-MIB</identifier>
+	  <version>2005-05-26</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-DIAL-CONTROL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-DOT3-OAM-MIB</identifier>
+	  <version>2006-05-31</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-DOT3-OAM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-DYNAMIC-TEMPLATE-MIB</identifier>
+	  <version>2007-09-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-DYNAMIC-TEMPLATE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-DYNAMIC-TEMPLATE-TC-MIB</identifier>
+	  <version>2012-01-27</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-DYNAMIC-TEMPLATE-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-EIGRP-MIB</identifier>
+	  <version>2004-11-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-EIGRP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-EMBEDDED-EVENT-MGR-MIB</identifier>
+	  <version>2006-11-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-EMBEDDED-EVENT-MGR-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ENTITY-ALARM-MIB</identifier>
+	  <version>1999-07-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ENTITY-ALARM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ENTITY-FRU-CONTROL-MIB</identifier>
+	  <version>2013-08-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ENTITY-FRU-CONTROL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ENTITY-SENSOR-MIB</identifier>
+	  <version>2015-01-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ENTITY-SENSOR-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ENTITY-VENDORTYPE-OID-MIB</identifier>
+	  <version>2014-12-09</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ENTITY-VENDORTYPE-OID-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ETHERLIKE-EXT-MIB</identifier>
+	  <version>2010-06-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ETHERLIKE-EXT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-FIREWALL-TC</identifier>
+	  <version>2006-03-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-FIREWALL-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-FTP-CLIENT-MIB</identifier>
+	  <version>2006-03-31</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-FTP-CLIENT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-HSRP-EXT-MIB</identifier>
+	  <version>2010-09-02</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-HSRP-EXT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-HSRP-MIB</identifier>
+	  <version>2010-09-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-HSRP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-ATM2-PVCTRAP-MIB</identifier>
+	  <version>1998-02-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-ATM2-PVCTRAP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-ATM2-PVCTRAP-MIB-EXTN</identifier>
+	  <version>2000-07-11</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-ATM2-PVCTRAP-MIB-EXTN</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-BFD-MIB</identifier>
+	  <version>2011-04-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-BFD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-FRR-MIB</identifier>
+	  <version>2008-04-29</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-FRR-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-ISIS-MIB</identifier>
+	  <version>2005-08-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-ISIS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-MPLS-ID-STD-03-MIB</identifier>
+	  <version>2012-06-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-MPLS-ID-STD-03-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-MPLS-TE-EXT-STD-03-MIB</identifier>
+	  <version>2012-06-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-MPLS-TE-EXT-STD-03-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-ATM-MIB</identifier>
+	  <version>2005-04-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-ATM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-ENET-MIB</identifier>
+	  <version>2002-09-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-ENET-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-MIB</identifier>
+	  <version>2004-03-17</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-MPLS-MIB</identifier>
+	  <version>2003-02-26</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-MPLS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-TC-MIB</identifier>
+	  <version>2006-07-21</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IETF-PW-TDM-MIB</identifier>
+	  <version>2006-07-21</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IETF-PW-TDM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IF-EXTENSION-MIB</identifier>
+	  <version>2013-03-13</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IF-EXTENSION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IMAGE-LICENSE-MGMT-MIB</identifier>
+	  <version>2007-10-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IMAGE-LICENSE-MGMT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IMAGE-MIB</identifier>
+	  <version>1995-08-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IMAGE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IP-LOCAL-POOL-MIB</identifier>
+	  <version>2007-11-12</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IP-LOCAL-POOL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IP-TAP-MIB</identifier>
+	  <version>2004-03-11</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IP-TAP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IP-URPF-MIB</identifier>
+	  <version>2011-12-29</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IP-URPF-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPMROUTE-MIB</identifier>
+	  <version>2005-03-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPMROUTE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSEC-FLOW-MONITOR-MIB</identifier>
+	  <version>2007-10-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSEC-FLOW-MONITOR-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSEC-POLICY-MAP-MIB</identifier>
+	  <version>2000-08-17</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSEC-POLICY-MAP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSLA-AUTOMEASURE-MIB</identifier>
+	  <version>2007-06-13</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSLA-AUTOMEASURE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSLA-ECHO-MIB</identifier>
+	  <version>2007-08-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSLA-ECHO-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSLA-JITTER-MIB</identifier>
+	  <version>2007-07-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSLA-JITTER-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-IPSLA-TC-MIB</identifier>
+	  <version>2007-03-23</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-IPSLA-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-MEDIA-GATEWAY-MIB</identifier>
+	  <version>2009-02-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-MEDIA-GATEWAY-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-MPLS-LSR-EXT-STD-MIB</identifier>
+	  <version>2012-04-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-MPLS-LSR-EXT-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-MPLS-TC-EXT-STD-MIB</identifier>
+	  <version>2012-02-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-MPLS-TC-EXT-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-NBAR-PROTOCOL-DISCOVERY-MIB</identifier>
+	  <version>2002-08-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-NBAR-PROTOCOL-DISCOVERY-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-NTP-MIB</identifier>
+	  <version>2006-07-31</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-NTP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-OSPF-MIB</identifier>
+	  <version>2003-07-18</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-OSPF-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-OSPF-TRAP-MIB</identifier>
+	  <version>2003-07-18</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-OSPF-TRAP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-PIM-MIB</identifier>
+	  <version>2000-11-02</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-PIM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-PING-MIB</identifier>
+	  <version>2001-08-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-PING-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-PRODUCTS-MIB</identifier>
+	  <version>2014-11-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-PRODUCTS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-PTP-MIB</identifier>
+	  <version>2011-01-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-PTP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-QOS-PIB-MIB</identifier>
+	  <version>2007-08-29</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-QOS-PIB-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-RADIUS-EXT-MIB</identifier>
+	  <version>2010-05-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-RADIUS-EXT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-RF-MIB</identifier>
+	  <version>2005-09-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-RF-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-RTTMON-TC-MIB</identifier>
+	  <version>2012-05-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-RTTMON-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SESS-BORDER-CTRLR-CALL-STATS-MIB</identifier>
+	  <version>2010-09-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SESS-BORDER-CTRLR-CALL-STATS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SESS-BORDER-CTRLR-STATS-MIB</identifier>
+	  <version>2010-09-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SESS-BORDER-CTRLR-STATS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SMI</identifier>
+	  <version>2012-08-29</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SMI</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SONET-MIB</identifier>
+	  <version>2003-03-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SONET-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-ST-TC</identifier>
+	  <version>2012-08-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-ST-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-STP-EXTENSIONS-MIB</identifier>
+	  <version>2013-03-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-STP-EXTENSIONS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SUBSCRIBER-IDENTITY-TC-MIB</identifier>
+	  <version>2011-12-23</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SUBSCRIBER-IDENTITY-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SUBSCRIBER-SESSION-MIB</identifier>
+	  <version>2012-08-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SUBSCRIBER-SESSION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SUBSCRIBER-SESSION-TC-MIB</identifier>
+	  <version>2012-01-27</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SUBSCRIBER-SESSION-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-SYSLOG-MIB</identifier>
+	  <version>2005-12-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-SYSLOG-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-TAP2-MIB</identifier>
+	  <version>2009-11-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-TAP2-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-TC</identifier>
+	  <version>2011-11-11</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-UBE-MIB</identifier>
+	  <version>2010-11-29</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-UBE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VLAN-IFTABLE-RELATIONSHIP-MIB</identifier>
+	  <version>2013-07-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VLAN-IFTABLE-RELATIONSHIP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VLAN-MEMBERSHIP-MIB</identifier>
+	  <version>2007-12-14</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VLAN-MEMBERSHIP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VOICE-COMMON-DIAL-CONTROL-MIB</identifier>
+	  <version>2010-06-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VOICE-COMMON-DIAL-CONTROL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VOICE-DIAL-CONTROL-MIB</identifier>
+	  <version>2012-05-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VOICE-DIAL-CONTROL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VOICE-DNIS-MIB</identifier>
+	  <version>2002-05-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VOICE-DNIS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VPDN-MGMT-MIB</identifier>
+	  <version>2009-06-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VPDN-MGMT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>CISCO-VTP-MIB</identifier>
+	  <version>2013-10-14</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:CISCO-VTP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DIAL-CONTROL-MIB</identifier>
+	  <version>1996-09-23</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DIAL-CONTROL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DIFFSERV-DSCP-TC</identifier>
+	  <version>2002-05-09</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DIFFSERV-DSCP-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DIFFSERV-MIB</identifier>
+	  <version>2002-02-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DIFFSERV-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DISMAN-EVENT-MIB</identifier>
+	  <version>2000-10-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DISMAN-EVENT-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DISMAN-EXPRESSION-MIB</identifier>
+	  <version>2000-10-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DISMAN-EXPRESSION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DRAFT-MSDP-MIB</identifier>
+	  <version>1999-12-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DRAFT-MSDP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DS1-MIB</identifier>
+	  <version>1998-08-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DS1-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>DS3-MIB</identifier>
+	  <version>1998-08-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:DS3-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ENTITY-MIB</identifier>
+	  <version>2005-08-10</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ENTITY-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ENTITY-SENSOR-MIB</identifier>
+	  <version>2002-12-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ENTITY-SENSOR-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ENTITY-STATE-MIB</identifier>
+	  <version>2005-11-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ENTITY-STATE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ENTITY-STATE-TC-MIB</identifier>
+	  <version>2005-11-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ENTITY-STATE-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ETHER-WIS</identifier>
+	  <version>2003-09-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:ETHER-WIS</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>EXPRESSION-MIB</identifier>
+	  <version>2005-11-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:EXPRESSION-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>EtherLike-MIB</identifier>
+	  <version>2003-09-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:EtherLike-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>FRAME-RELAY-DTE-MIB</identifier>
+	  <version>1997-05-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:FRAME-RELAY-DTE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>HCNUM-TC</identifier>
+	  <version>2000-06-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:HCNUM-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IANA-ADDRESS-FAMILY-NUMBERS-MIB</identifier>
+	  <version>2000-09-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IANA-ADDRESS-FAMILY-NUMBERS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IANA-RTPROTO-MIB</identifier>
+	  <version>2000-09-26</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IANA-RTPROTO-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IANAifType-MIB</identifier>
+	  <version>2006-03-31</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IANAifType-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IEEE8021-TC-MIB</identifier>
+	  <version>2008-10-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IEEE8021-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IF-MIB</identifier>
+	  <version>2000-06-14</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IF-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IGMP-STD-MIB</identifier>
+	  <version>2000-09-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IGMP-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>INET-ADDRESS-MIB</identifier>
+	  <version>2005-02-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:INET-ADDRESS-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>INT-SERV-MIB</identifier>
+	  <version>1997-10-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:INT-SERV-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>INTEGRATED-SERVICES-MIB</identifier>
+	  <version>1995-11-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:INTEGRATED-SERVICES-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IP-FORWARD-MIB</identifier>
+	  <version>1996-09-19</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IP-FORWARD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IP-MIB</identifier>
+	  <version>2006-02-02</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IPMROUTE-STD-MIB</identifier>
+	  <version>2000-09-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IPMROUTE-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>IPV6-FLOW-LABEL-MIB</identifier>
+	  <version>2003-08-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:IPV6-FLOW-LABEL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-L3VPN-STD-MIB</identifier>
+	  <version>2006-01-23</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-L3VPN-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-LDP-GENERIC-STD-MIB</identifier>
+	  <version>2004-06-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-LDP-GENERIC-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-LDP-STD-MIB</identifier>
+	  <version>2004-06-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-LDP-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-LSR-STD-MIB</identifier>
+	  <version>2004-06-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-LSR-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-TC-MIB</identifier>
+	  <version>2001-01-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-TC-STD-MIB</identifier>
+	  <version>2004-06-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-TC-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>MPLS-TE-STD-MIB</identifier>
+	  <version>2004-06-03</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:MPLS-TE-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>NHRP-MIB</identifier>
+	  <version>1999-08-26</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:NHRP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>NOTIFICATION-LOG-MIB</identifier>
+	  <version>2000-11-27</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:NOTIFICATION-LOG-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>OSPF-MIB</identifier>
+	  <version>2006-11-10</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:OSPF-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>OSPF-TRAP-MIB</identifier>
+	  <version>2006-11-10</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:OSPF-TRAP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>P-BRIDGE-MIB</identifier>
+	  <version>2006-01-09</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:P-BRIDGE-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>PIM-MIB</identifier>
+	  <version>2000-09-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:PIM-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>PerfHist-TC-MIB</identifier>
+	  <version>1998-11-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:PerfHist-TC-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>RFC-1212</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RFC-1212</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	<schema>
+	  <identifier>RFC-1215</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RFC-1215</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>RFC1155-SMI</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RFC1155-SMI</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>RFC1315-MIB</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RFC1315-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>RMON-MIB</identifier>
+	  <version>2000-05-11</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RMON-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>RSVP-MIB</identifier>
+	  <version>1998-08-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:RSVP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SNMP-FRAMEWORK-MIB</identifier>
+	  <version>2002-10-14</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SNMP-FRAMEWORK-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SNMP-PROXY-MIB</identifier>
+	  <version>2002-10-14</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SNMP-PROXY-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SNMP-TARGET-MIB</identifier>
+	  <version>1998-08-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SNMP-TARGET-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SNMPv2-MIB</identifier>
+	  <version>2002-10-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SNMPv2-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SNMPv2-TC</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SNMPv2-TC</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>SONET-MIB</identifier>
+	  <version>2003-08-11</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:SONET-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>TCP-MIB</identifier>
+	  <version>2005-02-18</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:TCP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>TOKEN-RING-RMON-MIB</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:TOKEN-RING-RMON-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>TOKENRING-MIB</identifier>
+	  <version>1994-10-23</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:TOKENRING-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>TUNNEL-MIB</identifier>
+	  <version>2005-05-16</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:TUNNEL-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>UDP-MIB</identifier>
+	  <version>2005-05-20</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:UDP-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>VPN-TC-STD-MIB</identifier>
+	  <version>2005-11-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:smiv2:VPN-TC-STD-MIB</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-acl-oper</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-acl-oper</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-acl-oper-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/cisco-acl-oper-ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-bfd-state</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-bfd-state</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-bgp-state</identifier>
+	  <version>2015-10-16</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-bgp-state</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-bgp-state-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/cisco-bgp-state-ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-bridge-common</identifier>
+	  <version>2014-09-25</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-bridge-common</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-bridge-domain</identifier>
+	  <version>2014-12-01</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-bridge-domain</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-cfm-stats</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-cfm-stats</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-cfm-stats-dev</identifier>
+	  <version>2015-05-27</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-cfm-stats-dev</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-checkpoint-archive</identifier>
+	  <version>2015-05-20</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-checkpoint-archive</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-efp-stats</identifier>
+	  <version>2015-07-07</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-efp-stats</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-environment</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-environment</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-ethernet</identifier>
+	  <version>2016-05-10</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-ethernet</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-flow-monitor</identifier>
+	  <version>2015-10-26</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-flow-monitor</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-ia</identifier>
+	  <version>2016-05-20</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/yang/cisco-ia</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	<schema>
+	  <identifier>cisco-ip-sla-stats</identifier>
+	  <version>2015-05-29</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-ip-sla-stats</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-ip-sla-stats-dev</identifier>
+	  <version>2015-06-30</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-ip-sla-stats-dev</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-lldp-state</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-lldp-state</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-memory-stats</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-memory-stats</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-mpls-fwd</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-mpls-fwd</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-odm</identifier>
+	  <version>2016-05-16</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/yang/cisco-odm</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-ospf</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:cisco-ospf</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-ospf-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/cisco-ospf/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-platform-software</identifier>
+	  <version>2015-07-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-platform-software</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-policy</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:cisco-policy</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-policy-filters</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:cisco-policy-filters</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-policy-target</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:cisco-policy-target</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-process-cpu</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-process-cpu</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-process-memory</identifier>
+	  <version>2015-04-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-process-memory</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-pw</identifier>
+	  <version>2014-12-01</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:pw</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	<schema>
+	  <identifier>cisco-qos-action-marking-cfg</identifier>
+	  <version>2015-05-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-qos-action-marking-cfg</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-qos-action-oper</identifier>
+	  <version>2015-05-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-qos-action-oper</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-qos-action-oper-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-qos-action-oper/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-qos-action-qlimit-cfg</identifier>
+	  <version>2015-05-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-qos-action-qlimit-cfg</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-qos-common</identifier>
+	  <version>2015-05-09</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-qos-common</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-routing-ext</identifier>
+	  <version>2015-05-27</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-routing-ext</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-self-mgmt</identifier>
+	  <version>2016-05-14</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/yang/cisco-self-mgmt</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-storm-control</identifier>
+	  <version>2014-09-25</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-storm-control</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-table-map</identifier>
+	  <version>2015-05-19</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:table-map</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>cisco-virtual-service</identifier>
+	  <version>2016-04-19</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:cisco-virtual-service</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>common-mpls-static</identifier>
+	  <version>2015-07-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:common-mpls-static</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>common-mpls-static-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/mpls-static/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>common-mpls-static-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/mpls-static/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>common-mpls-types</identifier>
+	  <version>2015-05-28</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:common-mpls-types</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>enable</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/example/enable</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	<schema>
+	  <identifier>govern</identifier>
+	  <version>2014-07-16</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:govern</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>iana-crypt-hash</identifier>
+	  <version>2014-04-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:iana-crypt-hash</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>iana-if-type</identifier>
+	  <version>2014-05-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:iana-if-type</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-action</identifier>
+	  <version>2015-04-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-diffserv-action</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-classifier</identifier>
+	  <version>2015-04-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-diffserv-classifier</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-classifier-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-diffserv-classifier/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-policy</identifier>
+	  <version>2015-04-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-diffserv-policy</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-policy-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-diffserv-policy/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-target</identifier>
+	  <version>2015-04-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-diffserv-target</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-diffserv-target-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-diffserv-target/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-inet-types</identifier>
+	  <version>2013-07-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-inet-types</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-interfaces</identifier>
+	  <version>2014-05-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-interfaces</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-interfaces-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-interfaces-ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-interfaces-ext</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-interfaces-ext</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ip</identifier>
+	  <version>2014-01-08</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-ip</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ip-ann</identifier>
+	  <version>2016-05-10</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ip/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ip-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ip/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv4-unicast-routing</identifier>
+	  <version>2015-05-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-ipv4-unicast-routing</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv4-unicast-routing-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ipv4-unicast-routing/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv4-unicast-routing-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ipv4-unicast-routing/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv6-unicast-routing</identifier>
+	  <version>2015-05-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-ipv6-unicast-routing</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv6-unicast-routing-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ipv6-unicast-routing/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ipv6-unicast-routing-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ipv6-unicast-routing/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-key-chain</identifier>
+	  <version>2015-02-24</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-key-chain</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-netconf</identifier>
+	  <version>2011-06-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:netconf:base:1.0</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  
+	  <identifier>ietf-netconf-acm</identifier>
+	  <version>2012-02-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-acm</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-netconf-monitoring</identifier>
+	  <version>2010-10-04</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-netconf-notifications</identifier>
+	  <version>2012-02-06</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-netconf-with-defaults</identifier>
+	  <version>2011-06-01</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ospf</identifier>
+	  <version>2015-03-09</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-ospf</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ospf-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ospf/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-ospf-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-ospf/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	
+	<schema>
+	  <identifier>ietf-routing</identifier>
+	  <version>2015-05-25</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-routing</namespace>
+	  <location>NETCONF</location>
+	</schema>
+        
+	<schema>
+	  <identifier>ietf-routing-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-routing/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-routing-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/ietf-routing/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-yang-smiv2</identifier>
+	  <version>2012-06-22</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-yang-smiv2</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ietf-yang-types</identifier>
+	  <version>2013-07-15</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:ietf-yang-types</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ned</identifier>
+	  <version>2016-06-20</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/yang/ned/ios</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ned-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ios/ned-ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>ned-asr1k</identifier>
+	  <version>2016-04-07</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/yang/ned/ios/asr1k</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>nvo</identifier>
+	  <version>2015-06-02</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:nvo</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>nvo-ann</identifier>
+	  <version>2016-03-30</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/nvo/ann</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>nvo-devs</identifier>
+	  <version>2015-09-11</version>
+	  <format>yang</format>
+	  <namespace>http://cisco.com/ns/nvo/devs</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>pim</identifier>
+	  <version>2014-06-27</version>
+	  <format>yang</format>
+	  <namespace>urn:cisco:params:xml:ns:yang:pim</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>policy-attr</identifier>
+	  <version>2015-04-27</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:policy-attr</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>policy-types</identifier>
+	  <version>2013-10-07</version>
+	  <format>yang</format>
+	  <namespace>urn:ietf:params:xml:ns:yang:c3pl-types</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-acm</identifier>
+	  <version>2013-03-07</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/acm</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-cli-extensions</identifier>
+	  <version>2015-03-19</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/common</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-common</identifier>
+	  <version>2016-01-20</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/common</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-common-monitoring</identifier>
+	  <version>2013-06-14</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/common-monitoring</namespace>
+	  <location>NETCONF</location>
+        </schema>
+	
+	<schema>
+	  <identifier>tailf-common-query</identifier>
+	  <version>2015-03-19</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/common/query</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-confd-monitoring</identifier>
+	  <version>2013-06-14</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/confd-monitoring</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-meta-extensions</identifier>
+	  <version>2013-11-07</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/common</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-netconf-inactive</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/netconf/inactive/1.0</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-netconf-monitoring</identifier>
+	  <version>2014-11-13</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/yang/netconf-monitoring</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-netconf-query</identifier>
+	  <version>2014-11-13</version>
+	  
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/netconf/query</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-netconf-transactions</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/netconf/transactions/1.0</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  
+	  <identifier>tailf-rest-error</identifier>
+	  <version></version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/tailf-rest-error</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-rest-query</identifier>
+	  <version>2014-11-13</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/tailf-rest-query</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-webui</identifier>
+	  <version>2013-03-07</version>
+	  <format>yang</format>
+	  <namespace>http://tail-f.com/ns/webui</namespace>
+	  <location>NETCONF</location>
+	</schema>
+	
+	<schema>
+	  <identifier>tailf-xsd-types</identifier>
+	  <version>2009-03-17</version>
+	  <format>yang</format>
+	  <namespace>http://www.w3.org/2001/XMLSchema</namespace>  
+	  <location>NETCONF</location>
+	</schema>
+	
+      </schemas>
+    </netconf-state>
+  </data>
+</rpc-reply>

@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+
+{% load staticfiles %}
+
+{% block appscript %}
+		<script src="{% static 'accounts/js/login.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+				<div class="col-sm-5 col-sm-offset-7 col-md-4 col-md-offset-8 col-lg-3 col-lg-offset-9">
+					<form action="{% url 'accounts:auth' %}" method="post">
+						{% csrf_token %}
+						{% if dic.app.error != 200 %} <!-- 200 OK -->
+						<div class="alert alert-danger" role="alert">
+							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+							<span class="sr-only">Error {{ dic.app.error }}:</span> 
+							<!-- 400 Bad Request : All Fields not included -->
+							{% if dic.app.error == 400 %}{{ dic.error.badrequest }}{% endif %}
+							<!-- 401 Unauthorized : Unauthorized access -->
+							{% if dic.app.error == 401 %}{{ dic.error.unauthorized }}{% endif %}
+						</div>
+						{% endif %}
+						<div class="form-group{% if dic.app.error != 200 %} has-error{% endif %}">
+							<label class="control-label" for="tenant">{{ dic.label.tenant }}:</label>
+							<input class="form-control" type="text" id="tenant" name="tenant" placeholder="{{ dic.label.tenant }}" autofocus>	
+						</div>
+						<div class="form-group{% if dic.app.error != 200 %} has-error{% endif %}">
+							<label class="control-label" for="username">{{ dic.label.username }}:</label>
+							<input class="form-control" type="text" id="username" name="username" placeholder="{{ dic.label.username }}">	
+						</div>
+						<div class="form-group{% if dic.app.error != 200 %} has-error{% endif %}">
+							<label class="control-label" for="password">{{ dic.label.password }}:</label>
+							<div class="input-group">
+								<input class="form-control" type="password" id="password" name="password" placeholder="{{ dic.label.password }}">
+								<span class="input-group-addon">
+									<a href="#" id="eyebtn" state="hidden">
+										<span id="eye" class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+									</a>	
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-info pull-right" id="login">{{ dic.btn.login }}</button>
+						</div>
+					</form>					
+				</div>
+{% endblock %}

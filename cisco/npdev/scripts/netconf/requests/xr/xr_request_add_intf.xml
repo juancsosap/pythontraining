@@ -1,0 +1,9 @@
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+        <interface-configuration>
+            <active>act</active>
+            <interface-name>Loopback100</interface-name>
+            <interface-virtual/>
+        </interface-configuration>
+    </interface-configurations>
+</config>

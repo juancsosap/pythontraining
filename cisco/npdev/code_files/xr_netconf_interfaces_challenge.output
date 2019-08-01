@@ -1,0 +1,147 @@
+cisco@cisco:~/git/code_files$ python xr_netconf_interfaces_challenge_solution.py 
+Start Q1.
+**
+Tying nc_interface_filter
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:66a1a46a-74c8-4755-b0a8-895101e63a07" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <data>
+  <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+   <interface-configuration>
+    <active>act</active>
+    <interface-name>MgmtEth0/0/CPU0/0</interface-name>
+    <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
+     <addresses>
+      <primary>
+       <address>192.168.1.16</address>
+       <netmask>255.255.255.0</netmask>
+      </primary>
+     </addresses>
+    </ipv4-network>
+   </interface-configuration>
+  </interface-configurations>
+ </data>
+</rpc-reply>
+
+End Q1.
+**
+Start Q2.
+**
+Add GigabitEthernet0/0/0/0 interface with primary address "10.23.23.1 255.255.255.0" and a secondary address "20.32.32.1, 255.255.255.0".
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:49b18610-6fad-48c6-8ef0-93fe6b6a8de3" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <ok/>
+</rpc-reply>
+
+Tying nc_interface_filter
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:93108b6e-95ca-4eab-b0bf-3da2534ef161" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <data>
+  <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+   <interface-configuration>
+    <active>pre</active>
+    <interface-name>GigabitEthernet0/0/0/0</interface-name>
+    <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
+     <addresses>
+      <primary>
+       <address>10.23.23.1</address>
+       <netmask>255.255.255.0</netmask>
+      </primary>
+      <secondaries>
+       <secondary>
+        <address>20.32.32.1</address>
+        <netmask>255.255.255.0</netmask>
+       </secondary>
+      </secondaries>
+     </addresses>
+    </ipv4-network>
+    <shutdown></shutdown>
+   </interface-configuration>
+   <interface-configuration>
+    <active>act</active>
+    <interface-name>MgmtEth0/0/CPU0/0</interface-name>
+    <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
+     <addresses>
+      <primary>
+       <address>192.168.1.16</address>
+       <netmask>255.255.255.0</netmask>
+      </primary>
+     </addresses>
+    </ipv4-network>
+   </interface-configuration>
+  </interface-configurations>
+ </data>
+</rpc-reply>
+
+End Q2.
+**
+Start Q3.
+**
+Tying nc_gig0000_interface_filter
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:cb0cbfc3-4df9-49d0-a711-4a948fb64d76" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <data>
+  <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+   <interface-configuration>
+    <active>pre</active>
+    <interface-name>GigabitEthernet0/0/0/0</interface-name>
+    <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
+     <addresses>
+      <primary>
+       <address>10.23.23.1</address>
+       <netmask>255.255.255.0</netmask>
+      </primary>
+      <secondaries>
+       <secondary>
+        <address>20.32.32.1</address>
+        <netmask>255.255.255.0</netmask>
+       </secondary>
+      </secondaries>
+     </addresses>
+    </ipv4-network>
+    <shutdown></shutdown>
+   </interface-configuration>
+  </interface-configurations>
+ </data>
+</rpc-reply>
+
+End Q3.
+**
+Start Q4.
+**
+Delete secondary address "20.32.32.1, 255.255.255.0" from the GigabitEthernet0/0/0/0 interface.
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:813271ad-7406-4bbe-8c4c-d5d7f857e8e3" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <ok/>
+</rpc-reply>
+
+Expect to see only the primary address for the GigabitEthernet0/0/0/0 interface. 
+**
+<?xml version="1.0"?>
+<rpc-reply message-id="urn:uuid:66fdd9c2-9a19-4903-bcae-68f8f1e01a6d" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+ <data>
+  <interface-configurations xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg">
+   <interface-configuration>
+    <active>pre</active>
+    <interface-name>GigabitEthernet0/0/0/0</interface-name>
+    <ipv4-network xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg">
+     <addresses>
+      <primary>
+       <address>10.23.23.1</address>
+       <netmask>255.255.255.0</netmask>
+      </primary>
+     </addresses>
+    </ipv4-network>
+    <shutdown></shutdown>
+   </interface-configuration>
+  </interface-configurations>
+ </data>
+</rpc-reply>
+
+End Q4.
+**
+cisco@cisco:~/git/code_files$ 

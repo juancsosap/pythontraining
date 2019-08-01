@@ -4,11 +4,11 @@
 print("Juan Sosa")
 
 # Prints the texts with a space as a separator (default)
-print("Juan","Sosa")
+print("Juan:","Sosa")
 
 # Prints the texts with a given separator (sep)
-print("SOSA","Juan", sep=", ")
+print("SOSA","Juan", sep=" Peña ")
 
 # Prints the texts with a given ending (end)
 print("Name", end=": ")
-print("Juan", "Sosa")
+print("Juan", "Sosa", end=" Peña\n")

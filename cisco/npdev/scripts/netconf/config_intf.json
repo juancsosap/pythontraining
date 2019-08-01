@@ -1,0 +1,24 @@
+{
+    "login": {
+        "user": "cisco",
+        "pswd": "cisco",
+        "port": 830,
+        "target": "running"        
+    },
+    "flags": {
+        "verbose": false,
+        "allow_agent": false,
+        "look_for_keys": false,
+        "hostkey_verify": false
+    },
+    "hosts": [
+        {
+            "fqdn": "csr1kv",
+            "sw": "xe"
+        },
+        {
+            "fqdn": "xrv",
+            "sw": "xr"
+        }
+    ]
+}

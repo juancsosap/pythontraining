@@ -1,0 +1,345 @@
+$ python apic_rest_challenge.py 
+Start Q1.
+**
+Login
+**
+Cookies are:
+
+<RequestsCookieJar[<Cookie APIC-cookie=5KeL5iCdsgbEaljxW1od5ySsYK/sID7tvOZwS4RA4i2jg0DwHwIEZw5i+1SZkmJAo/E6Piapc8Ck/x8jvXrSJ8hIhEhjWmQ7WYfM22rAq8YG2ZiAzJyZnvGTLZQW+9v0/rwXpS7Re1SPNIQN6fHzr7Sj8Kkf8RmqKkTCIR1Q8cQ= for apic.local/>]>
+End Q1.
+**
+Start Q2.
+**
+Get Tenant_1
+**
+Status Code: 200
+
+{
+    "imdata": [], 
+    "totalCount": "0"
+}
+
+End Q2.
+**
+Start Q3.
+**
+Creating Tenant_1
+**
+{
+    "fvTenant": {
+        "attributes": {
+            "dn": "uni/tn-Tenant_1", 
+            "status": "created", 
+            "rn": "tn-Tenant_1", 
+            "name": "Tenant_1"
+        }, 
+        "children": [
+            {
+                "fvCtx": {
+                    "attributes": {
+                        "dn": "uni/tn-Tenant_1/ctx-Internal", 
+                        "status": "created", 
+                        "rn": "ctx-Internal", 
+                        "name": "Internal"
+                    }, 
+                    "children": []
+                }
+            }
+        ]
+    }
+}
+
+Status Code: 200
+
+{
+    "imdata": [], 
+    "totalCount": "0"
+}
+
+End Q3.
+**
+Start Q4.
+**
+Creating Web
+**
+{
+    "fvBD": {
+        "attributes": {
+            "dn": "uni/tn-Tenant_1/BD-Web", 
+            "status": "created", 
+            "mac": "00:13:18:BD:F8:FF", 
+            "name": "Web", 
+            "rn": "BD-Web"
+        }, 
+        "children": [
+            {
+                "fvSubnet": {
+                    "attributes": {
+                        "dn": "uni/tn-Tenant_1/BD-Web/subnet-[10.1.69.1/24]", 
+                        "ip": "10.1.69.1/24", 
+                        "rn": "subnet-[10.1.69.1/24]", 
+                        "status": "created"
+                    }, 
+                    "children": []
+                }
+            }, 
+            {
+                "fvRsCtx": {
+                    "attributes": {
+                        "status": "created,modified", 
+                        "tnFvCtxName": "Internal"
+                    }, 
+                    "children": []
+                }
+            }
+        ]
+    }
+}
+
+Status Code: 200
+
+{
+    "imdata": [], 
+    "totalCount": "0"
+}
+
+End Q4.
+**
+Start Q5.
+**
+Creating MyApp
+**
+{
+    "fvAp": {
+        "attributes": {
+            "dn": "uni/tn-Tenant_1/ap-MyApp", 
+            "status": "created", 
+            "rn": "ap-MyApp", 
+            "name": "MyApp"
+        }, 
+        "children": [
+            {
+                "fvAEPg": {
+                    "attributes": {
+                        "dn": "uni/tn-Tenant_1/ap-MyApp/epg-Web", 
+                        "status": "created", 
+                        "rn": "epg-Web", 
+                        "name": "Web"
+                    }, 
+                    "children": [
+                        {
+                            "fvRsBd": {
+                                "attributes": {
+                                    "status": "created,modified", 
+                                    "tnFvBDName": "Web"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
+
+Status Code: 200
+
+{
+    "imdata": [], 
+    "totalCount": "0"
+}
+
+End Q5.
+**
+Start Q6.
+**
+Get Tenant_1 with query-target subtree&rsp-prop-include=naming-only
+**
+Status Code: 200
+
+{
+    "imdata": [
+        {
+            "fvSubnetBDDefCont": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ap-MyApp/epg-Web/rsbd/subnetBddefDn-[uni/bd-[uni/tn-Tenant_1/BD-Web]-isSvc-no]", 
+                    "bddefDn": "uni/bd-[uni/tn-Tenant_1/BD-Web]-isSvc-no"
+                }
+            }
+        }, 
+        {
+            "fvRsBd": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ap-MyApp/epg-Web/rsbd"
+                }
+            }
+        }, 
+        {
+            "fvRsCustQosPol": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ap-MyApp/epg-Web/rscustQosPol"
+                }
+            }
+        }, 
+        {
+            "fvAEPg": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ap-MyApp/epg-Web", 
+                    "name": "Web"
+                }
+            }
+        }, 
+        {
+            "fvAp": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ap-MyApp", 
+                    "name": "MyApp"
+                }
+            }
+        }, 
+        {
+            "fvRsBDToNdP": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/rsBDToNdP"
+                }
+            }
+        }, 
+        {
+            "fvRsBdToEpRet": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/rsbdToEpRet"
+                }
+            }
+        }, 
+        {
+            "fvRsCtx": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/rsctx"
+                }
+            }
+        }, 
+        {
+            "fvRsIgmpsn": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/rsigmpsn"
+                }
+            }
+        }, 
+        {
+            "fvRtBd": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/rtbd-[uni/tn-Tenant_1/ap-MyApp/epg-Web]", 
+                    "tDn": "uni/tn-Tenant_1/ap-MyApp/epg-Web"
+                }
+            }
+        }, 
+        {
+            "fvSubnet": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web/subnet-[10.1.69.1/24]", 
+                    "ip": "10.1.69.1/24"
+                }
+            }
+        }, 
+        {
+            "fvBD": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/BD-Web", 
+                    "name": "Web"
+                }
+            }
+        }, 
+        {
+            "fvRsBgpCtxPol": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/rsbgpCtxPol"
+                }
+            }
+        }, 
+        {
+            "fvRsCtxToEpRet": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/rsctxToEpRet"
+                }
+            }
+        }, 
+        {
+            "fvRsCtxToExtRouteTagPol": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/rsctxToExtRouteTagPol"
+                }
+            }
+        }, 
+        {
+            "fvRsOspfCtxPol": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/rsospfCtxPol"
+                }
+            }
+        }, 
+        {
+            "fvRtCtx": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/rtctx-[uni/tn-Tenant_1/BD-Web]", 
+                    "tDn": "uni/tn-Tenant_1/BD-Web"
+                }
+            }
+        }, 
+        {
+            "vzAny": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal/any"
+                }
+            }
+        }, 
+        {
+            "fvCtx": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/ctx-Internal", 
+                    "name": "Internal"
+                }
+            }
+        }, 
+        {
+            "fvRsTenantMonPol": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1/rsTenantMonPol"
+                }
+            }
+        }, 
+        {
+            "fvTenant": {
+                "attributes": {
+                    "dn": "uni/tn-Tenant_1", 
+                    "name": "Tenant_1"
+                }
+            }
+        }
+    ], 
+    "totalCount": "21"
+}
+
+End Q6.
+**
+Start Q7.
+**
+Get subnets as XML.
+**
+Status Code: 200
+
+<?xml version="1.0" encoding="UTF-8"?><imdata totalCount="2"><fvSubnet childAction="" ctrl="" descr="" dn="uni/tn-Tenant_1/BD-Web/subnet-[10.1.69.1/24]" ip="10.1.69.1/24" lcOwn="local" modTs="2016-09-25T12:43:50.029+00:00" monPolDn="uni/tn-common/monepg-default" name="" preferred="no" scope="private" status="" uid="15374" virtual="no"/><fvSubnet childAction="" ctrl="querier" descr="" dn="uni/tn-infra/BD-default/subnet-[10.0.0.30/27]" ip="10.0.0.30/27" lcOwn="local" modTs="2016-09-24T11:04:02.912+00:00" monPolDn="uni/tn-common/monepg-default" name="" preferred="no" scope="private" status="" uid="0" virtual="no"/></imdata>
+End Q7.
+**
+Start Q8.
+**
+Delete Tenant_1
+**
+Status Code: 200
+
+{
+    "imdata": [], 
+    "totalCount": "1"
+}
+
+End Q8.
+**

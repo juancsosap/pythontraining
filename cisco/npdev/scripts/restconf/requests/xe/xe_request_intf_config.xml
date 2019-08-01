@@ -1,0 +1,8 @@
+<GigabitEthernet>
+    <name>{id}</name>
+    <ip>
+        <address>
+            <dhcp></dhcp>
+        </address>
+    </ip>
+</GigabitEthernet>

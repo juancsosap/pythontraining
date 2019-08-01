@@ -1,0 +1,50 @@
+Cisco IOS XE Messages
+-------------------
+
+#Hello message from client to server for CSR1Kv
+
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+  
+#Get schema message from client to server for CSR1Kv
+
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get>
+    <filter type="subtree">
+      <netconf-state xmlns= "urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+        <schemas/>
+      </netconf-state>
+    </filter>
+  </get>
+</rpc>]]>]]>
+
+
+XRv Messages
+------------
+
+#Hello message from client to server for XRv
+
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+  </capabilities>
+</hello>]]>]]>
+
+#Get schema message from client to server for XRv
+
+#220
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><get><filter type="subtree"><netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"><schemas/></netconf-state></filter></get></rpc>
+##
+
+#Get cisco-xr-openconfig-bgp-deviations module message from client to server for XRv 
+
+#270
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"><get-schema xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"><identifier>cisco-xr-openconfig-bgp-deviations</identifier><version>2016-03-21</version><format>yang</format></get-schema></rpc>
+##
+

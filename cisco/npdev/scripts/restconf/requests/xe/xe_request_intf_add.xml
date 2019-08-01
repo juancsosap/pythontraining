@@ -1,0 +1,15 @@
+<Loopback>
+    <name>{id}</name>
+    <ip>
+    <address>
+        <primary>
+            <address>{ip_primary}</address>
+            <mask>{mask_primary}</mask>
+        </primary>
+        <secondary>
+            <address>{ip_secundary}</address>
+            <mask>{mask_secundary}</mask>
+        </secondary>
+    </address>
+    </ip>
+</Loopback>

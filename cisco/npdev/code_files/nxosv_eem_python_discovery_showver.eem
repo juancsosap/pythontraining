@@ -1,0 +1,51 @@
+# Copyright 2016 Cisco Systems, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+#Delete the file before it is generated
+delete bootflash:scripts/show_ver_number.py no-prompt
+#Enter configuration mode
+configure terminal
+#Remove old applet definition and start new one
+no event manager applet create_python_ver_code
+event manager applet create_python_ver_code
+#Define applet actions that will write Python code to a file
+action 200 file open fh bootflash:scripts/show_ver_number.py w
+action 210 file write fh "#!/usr/bin/env python\n"
+action 220 file write fh "from cisco import clid\n"
+action 230 file write fh "ver_text = clid('show version')\n"
+action 240 file write fh "for pair in ver_text.split(',') :\n"
+action 250 file write fh "  if 'sys_ver_str' in pair:\n"
+action 260 file write fh "      ver_value = pair[pair.index(':')+2:len(pair)]\n"
+action 270 file write fh "print(ver_value)\n"
+action 280 file write fh "f = open('/bootflash/version.txt', 'w') \n"
+action 290 file write fh "f.write(ver_value)\n"
+action 300 file write fh "f.close()\n"
+action 310 file close fh
+end
+#Delete any existing version.txt file for clean test purposes
+delete bootflash:version.txt no-prompt
+#Run the applet to create the Python code file
+event manager run create_python_ver_code
+#Show the Python code file
+show file bootflash:scripts/show_ver_number.py
+#Create a command alias to run the Python code
+configure terminal
+no cli alias name showver source show_ver_number.py
+cli alias name showver source show_ver_number.py
+end
+#Use the alias to run the code
+showver
+#See the output
+show file bootflash:version.txt
+

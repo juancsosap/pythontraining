@@ -45,6 +45,11 @@ print('Numpy Array\n{}'.format(arreglo))
 
 print()
 
+arreglo = np.full((2, 5), 5)
+print('Numpy Array\n{}'.format(arreglo))
+
+print()
+
 arreglo = np.linspace(1, 5, 10)
 print('Numpy Array\n{}'.format(arreglo))
 
@@ -62,4 +67,17 @@ print('Numpy Array\n{}'.format(arreglo))
 print()
 
 arreglo = np.random.randint(1, 10, (2, 10))
+print('Numpy Array\n{}'.format(arreglo))
+
+print()
+
+# Identity Matrix
+arreglo = np.identity(4)
+print('Numpy Array\n{}'.format(arreglo))
+
+
+print()
+
+# Identity Matrix
+arreglo = np.eye(4,5)
 print('Numpy Array\n{}'.format(arreglo))

@@ -1,0 +1,41 @@
+module npdesi-course {
+	namespace "http://npdesi.cisco.com/training";
+	prefix "npdesi";
+	organization "Cisco Inc.";
+	contact "chuck@npdesi.cisco.com";
+	description "Here is a module that is used for basic switch configuration";
+	revision "2017-09-03" { 
+		description "Initial revision";
+		reference "NPDESI Course Module";
+	}
+
+	container system {
+		leaf hostname {
+			type string;
+			description "Hostname for this device";
+		}
+		leaf-list dns-servers {
+			type string;
+			description "List of dns-servers";
+		}
+		description "Container for system configurations";
+	}
+
+	container vlans {
+		list vlan {
+			key vlanid;
+			leaf vlanid {
+				type uint16 {
+					range "1 .. 4096";
+				}
+				description "Configured VLAN ID";
+			}
+			leaf name {
+				type string;
+				description "Configured VLAN Name";
+			}
+			description "List of configured VLANs keyed by vlanid";
+		}
+		description "Container for basic VLAN configuration";
+	}	
+}

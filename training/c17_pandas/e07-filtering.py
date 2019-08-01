@@ -22,3 +22,7 @@ print(filtered_data.title.head(), '\n')
 condition = (data.duration >= 200) & data.genre.isin(['Drama', 'Action', 'Crime'])
 filtered_data = data[condition]
 print(filtered_data.title.head(), '\n')
+
+condition = data.isnull();
+filtered_data = data[condition]
+print(filtered_data.title.head(), '\n')

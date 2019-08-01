@@ -1,0 +1,176 @@
+$ python ./xe_restconf_routing_challenge_solution.py 
+Start Q1.
+**
+Get IP routes with all parameters
+**
+Status Code: 200
+
+{
+    "ned:route": {
+        "static": {}
+    }
+}
+
+End Q1.
+**
+Start Q2.
+**
+Add routes - {'ned:route': {'ip-route-interface-forwarding-list': [OrderedDict([('prefix', '50.40.40.0'), ('mask', '255.255.255.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])]), OrderedDict([('prefix', '0.0.0.0'), ('mask', '0.0.0.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])]), OrderedDict([('prefix', '10.0.0.0'), ('mask', '255.0.0.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])]), OrderedDict([('prefix', '20.20.20.0'), ('mask', '255.255.255.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])]), OrderedDict([('prefix', '30.30.30.0'), ('mask', '255.255.255.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])]), OrderedDict([('prefix', '172.16.0.0'), ('mask', '255.255.0.0'), ('fwd-list', [{'fwd': '192.168.1.1'}])])]}}
+**
+Status Code: 204
+
+End Q2.
+**
+Start Q3.
+**
+Get IP routes and expect to see additional routes added
+**
+Status Code: 200
+
+{
+    "ned:route": {
+        "ip-route-interface-forwarding-list": [
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "0.0.0.0", 
+                "mask": "0.0.0.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "10.0.0.0", 
+                "mask": "255.0.0.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "20.20.20.0", 
+                "mask": "255.255.255.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "30.30.30.0", 
+                "mask": "255.255.255.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "50.40.40.0", 
+                "mask": "255.255.255.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "172.16.0.0", 
+                "mask": "255.255.0.0"
+            }
+        ], 
+        "static": {}
+    }
+}
+
+End Q3.
+**
+Start Q4.
+**
+Delete the "50.40.40.0,255.255.255.0" route.
+**
+Status Code: 204
+
+Get IP routes and expect NOT to see "50.40.40.0,255.255.255.0" route.
+**
+Status Code: 200
+
+{
+    "ned:route": {
+        "ip-route-interface-forwarding-list": [
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "0.0.0.0", 
+                "mask": "0.0.0.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "10.0.0.0", 
+                "mask": "255.0.0.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "20.20.20.0", 
+                "mask": "255.255.255.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "30.30.30.0", 
+                "mask": "255.255.255.0"
+            }, 
+            {
+                "fwd-list": [
+                    {
+                        "fwd": "192.168.1.1"
+                    }
+                ], 
+                "prefix": "172.16.0.0", 
+                "mask": "255.255.0.0"
+            }
+        ], 
+        "static": {}
+    }
+}
+
+End Q4.
+**
+Start Q5.
+**
+Delete all routes.
+**
+Status Code: 204
+
+Get IP routes and expect NOT to see any routes.
+**
+Status Code: 200
+
+{
+    "ned:route": {
+        "static": {}
+    }
+}
+
+End Q5.
+**

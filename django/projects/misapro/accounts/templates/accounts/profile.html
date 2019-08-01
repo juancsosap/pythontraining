@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h3 class="panel-title">{{ dic.header.profile }}</h3>
+					</div>
+					<div class="panel-body">
+						<h5><strong>{{ dic.label.username }}:</strong></h5>
+						<h5>{{ user.username }}</h5>
+						{% if user.first_name %}
+						<h5><strong>{{ dic.label.firstname }}:</strong></h5><h5>{{ user.first_name }}</h5>
+						{% endif %}
+						{% if user.last_name %}
+						<h5><strong>{{ dic.label.lastname }}:</strong></h5><h5>{{ user.last_name }}</h5>
+						{% endif %}
+						{% if user.email %}
+						<h5><strong>{{ dic.label.email }}:</strong></h5><h5>{{ user.email }}</h5>
+						{% endif %}
+						<h5><strong>{{ dic.label.lastlogin }}:</strong></h5><h5>{{ user.last_login }}</h5>
+						<h5><strong>{{ dic.label.datejoined }}:</strong></h5><h5>{{ user.date_joined }}</h5>
+					</div>
+				</div>
+			</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+.navbar-brand{
+	font-family: 'Audiowide', cursive;
+	font-size: 14px;
+}
+.navbar-default {
+	border-radius: 0px;
+}
+.navbar-xs { 
+    min-height:28px; height: 28px; 
+}
+.navbar-xs .navbar-brand{ 
+    padding: 0px 12px;font-size: 16px;line-height: 28px; 
+}
+.navbar-xs .navbar-nav > li > a {  
+    padding-top: 0px; padding-bottom: 0px; line-height: 28px; 
+}
+
+
+/* 
+.slds-context-bar__item.slds-is-active {
+    
+    border-bottom-color: rgb(247, 249, 251);
+}
+.slds-context-bar__item:hover:not(.slds-no-hover), 
+.slds-context-bar__item.slds-is-active {
+    outline: 0;
+    border-radius: 0;
+    background-color: rgb(247, 249, 251);
+    border-bottom: 3px solid rgb(0, 161, 223);
+        border-bottom-color: rgb(0, 161, 223);
+    margin-bottom: -3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+*/ 

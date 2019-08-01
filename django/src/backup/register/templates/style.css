@@ -1,0 +1,113 @@
+/* Estilos Globales */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: content-box;
+}
+
+body { 
+	background-color: gray;
+}
+
+h1 {
+	text-align: center;
+	color: #8FBF41;
+}
+
+/* Estilos Contenedores */
+form,
+div#respuesta {
+	margin: 10px auto;
+	padding: 10px;
+	width: 80%;
+	min-width: 250px; 
+	max-width: 400px;
+	background-color: white;
+	border-radius: 10px;
+	text-transform: uppercase;
+}
+
+/* Estilos Formularios */
+fieldset {
+	border-width: 0px;
+	margin: 10px;
+	font-size: 1.2em;
+}
+
+legend {
+	color: #8FBF41;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+	font-size: 0.8em;
+	margin: 10px 0px 5px;
+}
+
+input,
+textarea,
+select {
+	border-width: 2px;
+	border-color: #8FBF41;
+	border-style: solid;
+	width: 100%;
+	margin: 5px 0px;
+	padding: 5px;
+	font-size: 0.75em;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-transform: uppercase;
+}
+
+input[type="radio"],
+input[type="radio"]+label {
+	display: inline-block;
+	font-weight: normal;
+	width: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+label,
+input,
+select,
+textarea { 
+	display: block; 
+}
+
+div#botones {
+	text-align: right;
+}
+
+button {
+	width: 140px;
+	height: 30px;
+	margin: 5px 15px 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	font-size: 0.9em;
+	text-transform: uppercase;
+}
+
+/* Estilos Respuesta */
+p {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	margin: 5px 5%;
+}
+
+img {
+	max-width: 90%;
+	margin: 5px 5%;
+}
+
+
+
+
+
+
+

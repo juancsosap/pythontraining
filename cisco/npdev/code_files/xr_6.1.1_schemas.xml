@@ -1,0 +1,3456 @@
+<rpc-reply message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <data>
+  <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+   <schemas>
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-lib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-lib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-locald-admin-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-locald-admin-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-locald-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-locald-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-locald-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-locald-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-locald-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-locald-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-protocol-radius-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-protocol-radius-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-protocol-radius-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-protocol-radius-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-protocol-radius-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-protocol-radius-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-protocol-radius-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-protocol-radius-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-tacacs-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-tacacs-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-tacacs-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-tacacs-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-aaa-tacacs-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-aaa-tacacs-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-bundlemgr-cfg</identifier>
+     <version>2016-05-12</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-bundlemgr-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-bundlemgr-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-bundlemgr-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-cdp-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-cdp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-cdp-oper</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-cdp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-cdp-oper-sub1</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-cdp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-cfgmgr-rollback-act</identifier>
+     <version>2016-04-17</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-cfgmgr-rollback-act</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-clns-isis-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-clns-isis-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-clns-isis-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-clns-isis-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-clns-isis-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-common-acl-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-common-acl-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-config-cfgmgr-exec-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-config-cfgmgr-exec-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-config-cfgmgr-exec-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-config-cfgmgr-exec-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-config-mda-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-config-mda-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-config-mibs-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-config-mibs-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-optics-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-optics-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-optics-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-optics-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-optics-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-optics-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-otu-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-otu-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-otu-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-otu-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-controller-otu-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-controller-otu-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-sam-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-sam-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-sam-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-sam-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-sam-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-sam-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-ssh-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-ssh-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-ssh-oper</identifier>
+     <version>2015-06-02</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-ssh-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-crypto-ssh-oper-sub1</identifier>
+     <version>2015-06-02</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-crypto-ssh-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-drivers-media-eth-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-drivers-media-eth-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-drivers-media-eth-oper</identifier>
+     <version>2015-10-14</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-drivers-media-eth-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-drivers-media-eth-oper-sub1</identifier>
+     <version>2015-10-14</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-drivers-media-eth-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-dwdm-ui-cfg</identifier>
+     <version>2015-12-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-dwdm-ui-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-dwdm-ui-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-dwdm-ui-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-dwdm-ui-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-dwdm-ui-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-es-acl-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-es-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-es-ace-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-es-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-es-acl-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-es-acl-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-es-acl-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-es-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-es-acl-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-es-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-oper-sub4</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-cfm-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-cfm-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-link-oam-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-link-oam-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-link-oam-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-link-oam-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-link-oam-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-link-oam-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-lldp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-lldp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-lldp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-lldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-lldp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-lldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ethernet-lldp-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ethernet-lldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-fib-common-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-fib-common-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-fib-common-oper-sub4</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-fib-common-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-fib-common-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-fib-common-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-fib-common-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-fib-common-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-fib-common-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-fib-common-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-flashmib-cfg</identifier>
+     <version>2015-12-15</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-flashmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ha-eem-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ha-eem-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ha-eem-policy-oper</identifier>
+     <version>2016-02-05</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ha-eem-policy-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ha-eem-policy-oper-sub1</identifier>
+     <version>2016-02-05</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ha-eem-policy-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub4</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub5</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub6</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub7</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-icpe-infra-oper-sub8</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-icpe-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ifmgr-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ifmgr-oper</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ifmgr-oper-sub2</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ifmgr-oper-sub1</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-alarm-logger-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-alarm-logger-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-alarm-logger-datatypes</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-alarm-logger-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-alarm-logger-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-alarm-logger-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-alarm-logger-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-alarm-logger-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-ceredundancymib-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-ceredundancymib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-correlator-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-correlator-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-correlator-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-correlator-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-correlator-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-correlator-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-dumper-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-dumper-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-infra-clock-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-infra-clock-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-infra-locale-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-infra-locale-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-ltrace-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-ltrace-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-objmgr-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-objmgr-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-objmgr-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-objmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-objmgr-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-objmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-policymgr-cfg</identifier>
+     <version>2015-05-18</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-policymgr-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-policymgr-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-policymgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-policymgr-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-policymgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-policymgr-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-policymgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rcmd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rcmd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rcmd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rcmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rcmd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rcmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rmf-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rmf-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rmf-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rmf-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rsi-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rsi-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rsi-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rsi-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rsi-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rsi-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-rsi-oper-sub2</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-rsi-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-sla-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-sla-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-sla-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-sla-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-sla-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-sla-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-statsd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-statsd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-statsd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-statsd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-statsd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-statsd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-syslog-cfg</identifier>
+     <version>2016-06-22</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-syslog-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-syslog-oper</identifier>
+     <version>2016-06-24</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-syslog-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-syslog-oper-sub1</identifier>
+     <version>2016-06-24</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-syslog-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-systemmib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-systemmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-tc-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-tc-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-tc-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-tc-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-infra-tc-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-infra-tc-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-installmgr-admin-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-installmgr-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-installmgr-admin-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-installmgr-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-installmgr-admin-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-installmgr-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-installmgr-admin-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-installmgr-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-bfd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-bfd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-bfd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-bfd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-bfd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-bfd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-domain-cfg</identifier>
+     <version>2015-05-13</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-domain-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-domain-oper</identifier>
+     <version>2015-09-29</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-domain-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-domain-oper-sub1</identifier>
+     <version>2015-09-29</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-domain-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-iarm-datatypes</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-iarm-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-icmp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-icmp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-iep-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-iep-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-iep-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-iep-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-iep-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-iep-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-mobileip-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-mobileip-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-ntp-admin-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-ntp-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-ntp-admin-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-ntp-admin-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-ntp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-ntp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-ntp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-ntp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-ntp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-ntp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-pfilter-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-pfilter-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-pfilter-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-pfilter-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-pfilter-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-pfilter-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rib-ipv4-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rib-ipv4-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rib-ipv4-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rib-ipv4-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rib-ipv6-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rib-ipv6-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rib-ipv6-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rib-ipv6-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rsvp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rsvp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rsvp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rsvp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rsvp-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rsvp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-rsvp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-rsvp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-sbfd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-sbfd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-sbfd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-sbfd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-sbfd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-sbfd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-static-cfg</identifier>
+     <version>2015-09-10</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-static-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-cfg</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper-sub1</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper-sub3</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper-sub2</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper-sub5</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-tcp-oper-sub4</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-tcp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-cfg</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-oper</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-oper-sub4</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-oper-sub1</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-oper-sub3</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ip-udp-oper-sub2</identifier>
+     <version>2016-02-26</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ip-udp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-acl-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ace-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-acl-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-acl-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-acl-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-arp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-arp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-arp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-arp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-arp-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-arp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-arp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-arp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-autorp-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-autorp-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-autorp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-autorp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-autorp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-autorp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-autorp-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-autorp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-bgp-cfg</identifier>
+     <version>2015-08-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-bgp-datatypes</identifier>
+     <version>2015-08-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-bgp-oper</identifier>
+     <version>2015-08-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-bgp-oper-sub1</identifier>
+     <version>2015-08-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-dhcpd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-dhcpd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-filesystems-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-filesystems-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-hsrp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-hsrp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-hsrp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-hsrp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-hsrp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-hsrp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-igmp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-igmp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-igmp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-igmp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-igmp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-igmp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-io-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-io-oper</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-io-oper-sub2</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-io-oper-sub1</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-io-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ma-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ma-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ma-oper</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ma-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ma-oper-sub1</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ma-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-mfwd-cfg</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-mfwd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ospf-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ospf-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ospf-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ospf-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ospf-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ospf-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-ospf-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-ospf-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-pim-cfg</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-pim-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-pim-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-pim-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-pim-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-pim-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-pim-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-pim-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-smiap-cfg</identifier>
+     <version>2016-07-04</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-smiap-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-telnet-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-telnet-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-telnet-mgmt-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-telnet-mgmt-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-vrrp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-vrrp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-vrrp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-vrrp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv4-vrrp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-vrrp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-acl-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ace-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-acl-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-acl-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-acl-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-acl-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-acl-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-acl-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-io-cfg</identifier>
+     <version>2016-05-10</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-io-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-io-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-io-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-io-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-io-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ma-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ma-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ma-oper</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ma-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ma-oper-sub1</identifier>
+     <version>2015-10-20</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ma-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-nd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-nd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-nd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-nd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-nd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-nd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-new-dhcpv6d-cfg</identifier>
+     <version>2016-03-08</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-new-dhcpv6d-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-new-dhcpv6d-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-new-dhcpv6d-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-new-dhcpv6d-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-new-dhcpv6d-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ospfv3-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ospfv3-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ospfv3-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ospfv3-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-ospfv3-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-ospfv3-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-ipv6-smiap-cfg</identifier>
+     <version>2016-07-04</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-ipv6-smiap-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2-eth-infra-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2-eth-infra-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-l2vpn-oper-sub4</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-l2vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-keychain-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-keychain-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-keychain-macsec-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-keychain-macsec-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-keychain-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-keychain-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-keychain-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-keychain-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-mpp-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-mpp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-mpp-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-mpp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lib-mpp-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lib-mpp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lpts-lib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lpts-lib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lpts-pre-ifib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lpts-pre-ifib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lpts-pre-ifib-oper</identifier>
+     <version>2016-02-22</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lpts-pre-ifib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-lpts-pre-ifib-oper-sub1</identifier>
+     <version>2016-02-22</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-lpts-pre-ifib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-man-netconf-cfg</identifier>
+     <version>2016-03-15</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-man-netconf-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-man-xml-ttyagent-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-man-xml-ttyagent-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-man-xml-ttyagent-oper</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-man-xml-ttyagent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-man-xml-ttyagent-oper-sub1</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-man-xml-ttyagent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-object-tracking-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-object-tracking-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-object-tracking-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-object-tracking-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-object-tracking-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-object-tracking-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-object-tracking-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-object-tracking-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-perfmgmt-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-perfmgmt-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-perfmgmt-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-perfmgmt-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-perfmgmt-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-perfmgmt-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-manageability-perfmgmt-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-manageability-perfmgmt-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mdrv-lib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mdrv-lib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-cfg-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-cfg-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-oper-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-oper-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-ldp-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-ldp-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-lsd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-lsd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-lsd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-lsd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-lsd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-lsd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-oam-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-oam-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-static-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-static-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-static-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-static-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-static-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-static-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-datatypes</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub9</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub8</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub5</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub4</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub7</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub6</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub3</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-te-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-te-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-vpn-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-mpls-vpn-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-mpls-vpn-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-nto-misc-shmem-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-nto-misc-shmem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-nto-misc-shmem-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-nto-misc-shmem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-nto-misc-shprocmem-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-nto-misc-shprocmem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-nto-misc-shprocmem-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-nto-misc-shprocmem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-parser-cfg</identifier>
+     <version>2015-06-02</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-parser-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pfi-im-cmd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pfi-im-cmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pfi-im-cmd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pfi-im-cmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pfi-im-cmd-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pfi-im-cmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-plat-chas-invmgr-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-plat-chas-invmgr-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-plat-chas-invmgr-oper-sub2</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pmengine-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pmengine-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pmengine-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pmengine-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-pmengine-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-pmengine-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-policy-repository-cfg</identifier>
+     <version>2015-08-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-policy-repository-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-policy-repository-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-policy-repository-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-policy-repository-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-policy-repository-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-qos-ma-cfg</identifier>
+     <version>2016-03-03</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-qos-ma-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-qos-ma-oper</identifier>
+     <version>2016-03-03</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-qos-ma-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-qos-mibs-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-qos-mibs-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-rgmgr-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-rgmgr-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-rgmgr-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-rgmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-rgmgr-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-rgmgr-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-segment-routing-ms-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-segment-routing-ms-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-segment-routing-ms-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-segment-routing-ms-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-segment-routing-ms-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-segment-routing-ms-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-shellutil-cfg</identifier>
+     <version>2015-10-12</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-shellutil-filesystem-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-filesystem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-shellutil-filesystem-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-filesystem-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-shellutil-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-shellutil-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-cfg</identifier>
+     <version>2015-10-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub1</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub2</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub3</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub4</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub5</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub6</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-agent-oper-sub7</identifier>
+     <version>2016-06-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-agent-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-ciscosensormib-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-ciscosensormib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-entitymib-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-entitymib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-entitymib-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-entitymib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-entitymib-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-entitymib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-entstatemib-cfg</identifier>
+     <version>2015-07-27</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-entstatemib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-frucontrolmib-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-frucontrolmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-ifmib-cfg</identifier>
+     <version>2015-05-14</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-ifmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-ifmib-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-ifmib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-ifmib-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-ifmib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-mib-rfmib-cfg</identifier>
+     <version>2016-05-13</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-mib-rfmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-sensormib-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-sensormib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-sensormib-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-sensormib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-sensormib-oper-sub2</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-sensormib-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-syslogmib-cfg</identifier>
+     <version>2015-12-01</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-syslogmib-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-snmp-test-trap-act</identifier>
+     <version>2016-04-17</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-snmp-test-trap-act</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-syslog-act</identifier>
+     <version>2016-04-17</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-syslog-act</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-traffmon-netflow-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-traffmon-netflow-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-cfg</identifier>
+     <version>2015-09-25</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-cmd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-cmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-cmd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-cmd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-datatypes</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-datatypes</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-oper</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-management-oper-sub1</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-management-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-cfg</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper-sub5</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper-sub4</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper-sub3</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper-sub2</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-server-oper-sub1</identifier>
+     <version>2015-07-30</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-server-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tty-vty-cfg</identifier>
+     <version>2015-01-07</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tty-vty-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-tunnel-gre-cfg</identifier>
+     <version>2016-05-25</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-tunnel-gre-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-types</identifier>
+     <version>2015-06-29</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-upgrade-fpd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-upgrade-fpd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-upgrade-fpd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-upgrade-fpd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-wd-cfg</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-wd-cfg</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-wdsysmon-fd-oper</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-wdsysmon-fd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>Cisco-IOS-XR-wdsysmon-fd-oper-sub1</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/Cisco-IOS-XR-wdsysmon-fd-oper</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>ietf-inet-types</identifier>
+     <version>2013-07-15</version>
+     <format>yang</format>
+     <namespace>urn:ietf:params:xml:ns:yang:ietf-inet-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>ietf-syslog-types</identifier>
+     <version>2015-11-09</version>
+     <format>yang</format>
+     <namespace>urn:ietf:params:xml:ns:yang:ietf-syslog-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>ietf-yang-types</identifier>
+     <version>2013-07-15</version>
+     <format>yang</format>
+     <namespace>urn:ietf:params:xml:ns:yang:ietf-yang-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-ietf-interfaces-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-ietf-interfaces-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-netconf-monitoring-deviations</identifier>
+     <version>2016-02-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-netconf-monitoring-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-bgp-deviations</identifier>
+     <version>2016-03-21</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-bgp-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-bgp-policy-deviations</identifier>
+     <version>2016-03-21</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-bgp-policy-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-if-aggregate-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-if-aggregate-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-if-ethernet-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-if-ethernet-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-if-ip-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-if-ip-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-interfaces-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-interfaces-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-mpls-deviations</identifier>
+     <version>2016-05-16</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-mpls-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-telemetry-deviations</identifier>
+     <version>2016-07-08</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-telemetry-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-openconfig-vlan-deviations</identifier>
+     <version>2016-07-08</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-openconfig-vlan-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>cisco-xr-routing-policy-deviations</identifier>
+     <version>2015-10-21</version>
+     <format>yang</format>
+     <namespace>http://cisco.com/ns/yang/cisco-xr-routing-policy-deviations</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>iana-if-type</identifier>
+     <version>2014-05-08</version>
+     <format>yang</format>
+     <namespace>urn:ietf:params:xml:ns:yang:iana-if-type</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>ietf-interfaces</identifier>
+     <version>2014-05-08</version>
+     <format>yang</format>
+     <namespace>urn:ietf:params:xml:ns:yang:ietf-interfaces</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-bgp-multiprotocol</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/bgp-multiprotocol</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-bgp-operational</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/bgp-operational</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-bgp-policy</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/bgp-policy</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-bgp-types</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/bgp-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-bgp</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/bgp</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-extensions</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/openconfig-ext</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-if-aggregate</identifier>
+     <version>2015-11-20</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/interface/aggregate</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-if-ethernet</identifier>
+     <version>2015-11-20</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/interfaces/ethernet</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-if-ip</identifier>
+     <version>2015-11-20</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/interfaces/ip</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-interfaces</identifier>
+     <version>2015-11-20</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/interfaces</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-igp</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/mpls</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-ldp</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/ldp</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-rsvp</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/rsvp</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-sr</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/sr</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-static</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/mpls</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-te</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/mpls</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls-types</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/mpls-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-mpls</identifier>
+     <version>2015-11-05</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/mpls</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-policy-types</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/policy-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-routing-policy</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/routing-policy</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-telemetry</identifier>
+     <version>2016-02-04</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/telemetry</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-types</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/openconfig-types</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+    <schema>
+     <identifier>openconfig-vlan</identifier>
+     <version>2015-10-09</version>
+     <format>yang</format>
+     <namespace>http://openconfig.net/yang/vlan</namespace>
+     <location>NETCONF</location>
+    </schema>
+
+  </schemas>
+  </netconf-state>
+ </data>
+</rpc-reply>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Condominios</title>
+		<meta name="keywords" content="Formulario Registro IACC"/>
+		<meta name="description" content="Formulario de Registro - Instituto Profesional 100% Online"/>
+		<meta name="author" content="MySAPro"/>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css"/>
+		<script type="text/javascript" src="validation.js"></script>
+	</head>
+	<body>
+		<h1>List of the Condo</h1>
+		{% if all_condos %}
+			<ul>
+			{% for condo in all_condos %}
+				<li>{{ condo.name }}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<h2>No Condos Available</h2>
+		{% endif %}
+	</body>
+</html>

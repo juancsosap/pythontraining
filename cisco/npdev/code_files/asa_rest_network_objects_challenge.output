@@ -1,0 +1,263 @@
+Nathans-iMac:03_From-Developer nathan$ python asa_rest_network_objects_challenge.py
+Start Q1.
+**
+Use the Token Service to get a token and construct request headers with that token.
+**
+Show the headers and expect a non null "x-auth-token" value.
+**
+{'Content-Type': 'application/json', 'x-auth-token': '6E6B71@12288@18ED@2BFCA8288BA2ED9160B235BC47B6263CD7F053EC'}
+End Q1.
+**
+Start Q2.
+**
+Get all network objects and expect to see no items.
+**
+Status Code: 200
+
+{
+    "items": [], 
+    "rangeInfo": {
+        "total": 0, 
+        "limit": 0, 
+        "offset": 0
+    }, 
+    "selfLink": "https://asa/api/objects/networkobjects"
+}
+
+End Q2.
+**
+Start Q3.
+**
+Create file_server_1 network object.
+**
+Status Code: 201
+
+Get file_server_1 network object.
+**
+Status Code: 200
+
+{
+    "host": {
+        "kind": "IPv4Address", 
+        "value": "203.0.113.10"
+    }, 
+    "kind": "object#NetworkObj", 
+    "objectId": "file_server_1", 
+    "name": "file_server_1", 
+    "selfLink": "https://asa/api/objects/networkobjects/file_server_1"
+}
+
+End Q3.
+**
+Start Q4.
+**
+Try to create file_server_1 network object again and expect an error.
+**
+Status Code: 400
+
+{
+    "messages": [
+        {
+            "code": "DUPLICATE", 
+            "details": "file_server_1", 
+            "context": "objectId", 
+            "level": "Error"
+        }
+    ]
+}
+
+End Q4.
+**
+Start Q5.
+**
+Change file_server_1 IPv4Address address to "203.0.113.20".
+**
+Status Code: 204
+
+Get file_server_1 network object and expect to see the new address.
+**
+Status Code: 200
+
+{
+    "host": {
+        "kind": "IPv4Address", 
+        "value": "203.0.113.20"
+    }, 
+    "kind": "object#NetworkObj", 
+    "objectId": "file_server_1", 
+    "name": "file_server_1", 
+    "selfLink": "https://asa/api/objects/networkobjects/file_server_1"
+}
+
+End Q5.
+**
+Start Q6.
+**
+Change the name of the "file_server_1" network object at "203.0.113.20" to "file_server_2".
+**
+Status Code: 204
+
+Get the "file_server_2" network object.
+**
+Status Code: 200
+
+{
+    "host": {
+        "kind": "IPv4Address", 
+        "value": "203.0.113.20"
+    }, 
+    "kind": "object#NetworkObj", 
+    "objectId": "file_server_2", 
+    "name": "file_server_2", 
+    "selfLink": "https://asa/api/objects/networkobjects/file_server_2"
+}
+
+End Q6.
+**
+Start Q7.
+**
+Delete file_server_2 network object.
+**
+Status Code: 204
+
+Get all network objects and expect to see no items.
+**
+Status Code: 200
+
+{
+    "items": [], 
+    "rangeInfo": {
+        "total": 0, 
+        "limit": 0, 
+        "offset": 0
+    }, 
+    "selfLink": "https://asa/api/objects/networkobjects"
+}
+
+End Q7.
+**
+Start Q8.
+**
+Bulk create web_server_1 and file_server_3 network objects.
+**
+Status Code: 200
+
+{
+    "commonMessages": [], 
+    "entryMessages": [
+        {
+            "resourceUri": "/api/objects/networkobjects", 
+            "messages": [
+                {
+                    "code": "201", 
+                    "details": "Created (201) - The request has been fulfilled and resulted in a new resource being created", 
+                    "level": "Info"
+                }
+            ], 
+            "method": "POST", 
+            "selfLink": "http://asa/api/objects/networkobjects/file_server_3"
+        }, 
+        {
+            "resourceUri": "/api/objects/networkobjects", 
+            "messages": [
+                {
+                    "code": "201", 
+                    "details": "Created (201) - The request has been fulfilled and resulted in a new resource being created", 
+                    "level": "Info"
+                }
+            ], 
+            "method": "POST", 
+            "selfLink": "http://asa/api/objects/networkobjects/web_server_1"
+        }
+    ]
+}
+
+Get all network objects and expect to see "web_server_1" and "file_server_3".
+**
+Status Code: 200
+
+{
+    "items": [
+        {
+            "host": {
+                "kind": "IPv4Address", 
+                "value": "203.0.113.30"
+            }, 
+            "kind": "object#NetworkObj", 
+            "objectId": "file_server_3", 
+            "name": "file_server_3", 
+            "selfLink": "https://asa/api/objects/networkobjects/file_server_3"
+        }, 
+        {
+            "host": {
+                "kind": "IPv4Address", 
+                "value": "203.0.113.40"
+            }, 
+            "kind": "object#NetworkObj", 
+            "objectId": "web_server_1", 
+            "name": "web_server_1", 
+            "selfLink": "https://asa/api/objects/networkobjects/web_server_1"
+        }
+    ], 
+    "kind": "collection#NetworkObj", 
+    "rangeInfo": {
+        "total": 2, 
+        "limit": 2, 
+        "offset": 0
+    }, 
+    "selfLink": "https://asa/api/objects/networkobjects"
+}
+
+End Q8.
+**
+Start Q9.
+**
+Bulk delete file_server_3 and web_server_1 network objects.
+**
+Status Code: 200
+
+{
+    "commonMessages": [], 
+    "entryMessages": [
+        {
+            "resourceUri": "/api/objects/networkobjects/file_server_3", 
+            "messages": [
+                {
+                    "code": "204", 
+                    "details": "No Content (204) - The server has fulfilled the request but does not need to return an entity-body, and might want to return updated meta-information", 
+                    "level": "Info"
+                }
+            ], 
+            "method": "DELETE"
+        }, 
+        {
+            "resourceUri": "/api/objects/networkobjects/web_server_1", 
+            "messages": [
+                {
+                    "code": "204", 
+                    "details": "No Content (204) - The server has fulfilled the request but does not need to return an entity-body, and might want to return updated meta-information", 
+                    "level": "Info"
+                }
+            ], 
+            "method": "DELETE"
+        }
+    ]
+}
+
+Get all network objects and expect to see no items.
+**
+Status Code: 200
+
+{
+    "items": [], 
+    "rangeInfo": {
+        "total": 0, 
+        "limit": 0, 
+        "offset": 0
+    }, 
+    "selfLink": "https://asa/api/objects/networkobjects"
+}
+
+End Q9.
+**
+Nathans-iMac:03_From-Developer nathan$ 

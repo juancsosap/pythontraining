@@ -1,0 +1,68 @@
+{
+    "login": {
+        "user": "cisco",
+        "pswd": "cisco",
+        "port": 830        
+    },
+    "scripts": [
+        {
+            "target": "running",
+            "request": "requests/xe/xe_request_filter_intf.xml",
+            "config": false,
+            "description": "Show which interfaces exist",
+            "result": "results/xe/xe_result_filter_intf_01.xml"
+        },
+        {
+            "target": "running",
+            "request": "requests/xe/xe_request_add_intf.xml",
+            "config": true,
+            "description": "Add a Loopback interface",
+            "result": "results/xe/xe_result_add_intf.xml",
+            "data": 0
+        },
+        {
+            "target": "running",
+            "request": "requests/xe/xe_request_filter_intf.xml",
+            "config": false,
+            "description": "Show which interfaces exist",
+            "result": "results/xe/xe_result_filter_intf_02.xml"
+        },
+        {
+            "target": "running",
+            "request": "requests/xe/xe_request_delete_intf.xml",
+            "config": true,
+            "description": "Delete the Loopback interface",
+            "result": "results/xe/xe_result_delete_intf.xml",
+            "data": 1
+        },
+        {
+            "target": "running",
+            "request": "requests/xe/xe_request_filter_intf.xml",
+            "config": false,
+            "description": "Show which interfaces exist",
+            "result": "results/xe/xe_result_filter_intf_03.xml"
+        }
+    ],
+    "flags": {
+        "verbose": false,
+        "allow_agent": false,
+        "look_for_keys": false,
+        "hostkey_verify": false,
+        "export": true,
+        "console": false
+    },
+    "hosts": [
+        { "name": "csr1kv",
+          "data": [
+              {
+                  "id": 101,
+                  "ip": "10.101.1.1",
+                  "mask": "255.255.255.0"
+              },
+              {
+                "id": 101
+              }
+            ]
+        }
+    ]
+}

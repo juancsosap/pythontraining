@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+	<head>
+		<title>{{ dic.app.title }}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="widtg=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		{% load staticfiles %}
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="{% static 'base/img/favicon.png' %}">
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Static CSS -->
+		<link href="{% static 'base/css/base.css' %}" rel="stylesheet" type="text/css">
+		<!-- Google jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		{% block appscript %}
+		{% endblock %}
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-sm">
+				<div class="container-fluid">
+					<!-- Header -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topNavBar" aria-expanded="false" aria-controls="navbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand text-info" href="{% url 'about:index' %}"><span class="glyphicon glyphicon-screenshot"></span> MiSAPro</a>
+					</div>
+					<!-- Items -->
+					<div class="collapse navbar-toggleable-lg navbar-collapse" id="topNavBar" aria-expanded="false">
+						<ul class="nav navbar-nav">
+							{% if user.is_authenticated %}
+							<li{% if dic.app.name == 'home' %} class="active"{% endif %}>
+								<a href="{% url 'home:index' %}">
+									<span class="glyphicon glyphicon-home" aria-hidden="true"></span> {{ dic.menu.home }}
+								</a>
+							</li>
+							<li{% if dic.app.name == 'administrations' %} class="active"{% endif %}>
+								<a href="{% url 'administrations:index' %}">
+									<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span> {{ dic.menu.administrations }}
+								</a>
+							</li>
+							<li{% if dic.app.name == 'condos' %} class="active"{% endif %}>
+								<a href="{% url 'condos:index' %}">
+									<span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> {{ dic.menu.condos }}
+								</a>
+							</li>
+							<li{% if dic.app.name == 'properties' %} class="active"{% endif %}>
+								<a href="{% url 'properties:index' %}">
+									<span class="glyphicon glyphicon-duplicate" aria-hidden="true"></span> {{ dic.menu.properties }}
+								</a>
+							</li>
+							<li{% if dic.app.name == 'providers' %} class="active"{% endif %}>
+								<a href="{% url 'providers:index' %}">
+									<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> {{ dic.menu.providers }}
+								</a>
+							</li>
+							{% if user.is_superuser %}
+							<li{% if dic.app.name == 'dbadmin' %} class="active"{% endif %}>
+								<a href="../dbadmin/">
+									<span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> dbAdmin
+								</a>
+							</li>
+							{% endif %}
+							{% endif %}
+							<li{% if dic.app.name == 'about' %} class="active"{% endif %}>
+								<a href="{% url 'about:index' %}">
+									<span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> {{ dic.menu.about }}
+								</a>
+							</li>							
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							{% if user.is_authenticated %}
+							<li><a href="{% url 'accounts:profile' %}">
+								<span class="glyphicon glyphicon-lock" aria-hidden="true"></span> {{ user.username }}
+							</a></li>
+							<li><a href="{% url 'accounts:logout' %}">
+								<span class="glyphicon glyphicon-off" aria-hidden="true"></span> {{ dic.menu.logout }}
+							</a></li>
+							{% else %}
+							<li><a href="{% url 'accounts:checkin' %}">
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ dic.menu.checkin }}
+							</a></li>
+							<li><a href="{% url 'accounts:login' %}">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ dic.menu.login }}
+							</a></li>
+							{% endif %}
+							<li>
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<span class="glyphicon glyphicon-flag" aria-hidden="true"></span> {{ dic.app.lang|upper }}
+								</a>
+								<ul class="dropdown-menu">
+									<li{% if dic.app.lang == 'es' %} class="active"{% endif %}><a href="{% url 'chlang' 'es' %}">Español</a></li>
+									<li{% if dic.app.lang == 'en' %} class="active"{% endif %}><a href="{% url 'chlang' 'en' %}">English</a></li>
+									<li{% if dic.app.lang == 'br' %} class="active"{% endif %}><a href="{% url 'chlang' 'br' %}">Português</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="main">
+			<div class="container-fluid">
+				{% block body %}
+				{% endblock %}
+			</div>
+		</section>
+		<footer class="footer">
+      		<div class="container-fluid">
+        		<p class="text-muted text-center">MiSAPro - Santiago. Chile</p>
+      		</div>
+    	</footer>
+	</body>
+</html>

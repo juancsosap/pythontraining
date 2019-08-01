@@ -1,0 +1,239 @@
+module acme-module  {
+    namespace "http://acme.example.com/module"; URI
+    prefix acme;
+
+    import "ietf-yang-types"  {
+        prefix yang;
+    }
+    include "acme-system";
+
+    organization "ACME Inc.";
+    contact joe@acme.example.com;
+    description "Module describing the ACME products";
+    revision 2007-06-09  {
+        description "Initial revision.";
+    }
+
+    typedef percent {
+        type uint16 {
+            range "0 .. 100";
+        }
+        description "Percentage";
+    }
+
+    typedef ip-address {
+        type union {
+            type ipv4-address;
+            type ipv6-address;
+        }
+    }
+
+    grouping endpoint {
+        leaf address {
+           type ip-address;
+        }
+        leaf port {
+           type port-number;
+        }
+    }
+
+    container system {
+        leaf host-name {
+            type string;
+            mandatory true;
+            config true;
+            description "Hostname for this system";
+        }
+
+        leaf cpu-temp {
+            type int32;
+            units degrees-celsius;
+            config false;
+            description "Current temperature in CPU";
+        }
+
+        leaf cpu-utilization {
+            type percent;
+            config false;
+        }
+
+        leaf-list domain-search {
+            type string;
+            mandatory false;
+            config true;
+            description "List of domain names to search";
+        }
+
+        leaf-list dns-server {
+            type ip-address;
+            mandatory false;
+            config true;
+            description "List of DNS Servers";
+        }
+
+        container login {
+            leaf message {
+                type string;
+                description "Message given at start of login session";
+            }
+
+            list user {
+                key id;
+                unique name;
+                leaf id {
+                    type uint32;
+                }
+                leaf name {
+                    type string;
+                }
+                leaf full-name {
+                    type string;
+                }
+                leaf class {
+                    type string;
+                }
+            }
+        }
+    }
+
+    container services {
+        list l3vpn {
+            key svcid;
+            leaf svcid {
+                type uint32;
+                mandatory true;
+                config false;
+            }
+            container route-distinguisher {
+                choice route-distinguisher {
+                    case ip-address-based {
+                        leaf ip-address {
+                            type ipv4-address;
+                        }
+                        leaf ip-address-number {
+                            type uint16;
+                        }
+                    }
+                    case asn32-based {
+                        leaf asn32 {
+                            type uint32;
+                        }
+                        leaf two-byte-number {
+                            type uint16;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    container acls {
+        list access-list {
+            key aclid;
+            leaf aclid {
+                type uint16;
+            }
+            container source {
+                uses endpoint {
+                    refine port {
+                        default 80;
+                    }    
+                }
+            }
+            container destination {
+                uses endpoint {
+                    refine port {
+                        default 80;
+                    }    
+                }
+            }
+        }
+    }
+
+
+    grouping endpoint {
+        leaf address {
+           type ip-address;
+        }
+        leaf port {
+           type port-number;
+        }
+    }
+
+
+
+"""
+NETCONF XML:
+<system>
+ <host-name>my.example.com</host-name>
+
+ <cpu-temp>30</cpu-temp>
+
+ <cpu-utilization>75</cpu-utilization>
+
+ <domain-search>google.com</domain-search>
+ <domain-search>yahoo.com</domain-search>
+
+ <dns-server>8.8.8.8</dns-server>
+ <dns-server>2001:4860:4860::8888</dns-server>
+
+ <login>
+  <message>Only Authorized People</message>
+
+  <user>
+   <id>1</id>
+   <name>crobbins</name>
+   <full-name>Chuck Robbins</fullname>
+   <class>Administrator</class>
+  </user>
+  <user>
+   <id>2</id>
+   <name>jchambers</name>
+   <full-name>John Chambers</fullname>
+   <class>Operator</class>
+  </user>
+
+ </login>
+
+</system>
+
+<services>
+
+ <l3vpn>
+  <svcid>123456</svcid>
+
+  <route-distinguisher>
+   <asn32>12356789</asn32>
+   <two-byte-number>2468</two-byte-number>
+  </route-distinguisher>
+
+ </l3vpn>
+</services>
+
+<acls>
+
+ <access-list>
+  <aclid>100</aclid>
+  <source>
+   <address>192.168.0.3</address>
+   <port>12244</port>
+  </source>
+  <destination>
+   <address>192.168.0.4</address>
+  </destination>
+ </access-list>
+
+ <access-list>
+  <aclid>101</aclid>
+  <source>
+   <address>192.168.0.3</address>
+   <port>12456</port>
+  </source>
+  <destination>
+   <address>192.168.0.4</address>
+   <port>22</port>
+  </destination>
+ </access-list>
+
+</acls>
+"""

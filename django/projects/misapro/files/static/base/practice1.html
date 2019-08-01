@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>FalconMasters Practice</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="widtg=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Static CSS -->
+		<link href="css/practice1.css" rel="stylesheet" type="text/css">
+		<!-- Google jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>Header</h1>
+			</div>
+		</header>
+		<div title="nav" class="container">
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="nav nav-pills">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-2">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="nav nav-tabs nav-justified">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="nav nav-pills nav-justified">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation" class="disabled"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+					</ul>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#">Item #1</a></li>
+						<li role="presentation"><a href="#">Item #2</a></li>
+						<li role="presentation"><a href="#">Item #3</a></li>
+						<li role="presentation">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Item #4 <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li role="presentation"><a href="#">Item #1</a></li>
+								<li role="presentation"><a href="#">Item #2</a></li>
+								<li role="presentation"><a href="#">Item #3</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div title="input-group" class="container">
+			<br>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">Nombre:</span>
+							<input type="text" class="form-control">	
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">Correo:</span>
+							<input type="text" class="form-control">
+							<span class="input-group-addon">@gmail.com</span>	
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<input type="checkbox" class="checkbox">
+							</span>
+							<input type="text" class="form-control">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-addon">
+								<input type="radio" class="radio" name="r">
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-addon">
+								<input type="radio" class="radio" name="r">
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-primary">@</button>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn dropup">
+								<button class="btn btn-primary dropdown-toggle" id="ddmenuN" data-toggle="dropdown" aria-extended="true">@ <span class="caret"></span></button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenuN">
+									<li><a href="#">@gmail.com</a></li>
+									<li><a href="#">@hotmail.com</a></li>
+									<li><a href="#">@yahoo.com</a></li>
+									<li><a href="#">@msn.com</a></li>
+									<li><a href="#">@aon.com</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" class="form-control">
+							<span class="input-group-btn dropup">
+								<button class="btn btn-primary" id="ddmenuN">@</button>
+								<button class="btn btn-primary dropdown-toggle" id="ddmenuN" data-toggle="dropdown" aria-extended="true"><span class="caret"></span></button>
+								<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenuN">
+									<li><a href="#">@gmail.com</a></li>
+									<li><a href="#">@hotmail.com</a></li>
+									<li><a href="#">@yahoo.com</a></li>
+									<li><a href="#">@msn.com</a></li>
+									<li><a href="#">@aon.com</a></li>
+								</ul>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div title="dropdown-buttons" class="container">
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="btn-group">
+						<button class="btn btn-default dropdown-toggle" type="button" id="ddmenu1" data-toggle="dropdown" aria-extended="true">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu1">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-default" type="button" id="ddmenu2a">Dropdown</button>
+						<button class="btn btn-default dropdown-toggle" type="button" id="ddmenu2b" data-toggle="dropdown" aria-extended="true">
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu2b">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="btn-group">
+						<button class="btn btn-danger btn-lg dropdown-toggle" type="button" id="ddmenu3" data-toggle="dropdown" aria-extended="true">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu3">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-primary btn-md dropdown-toggle" type="button" id="ddmenu4" data-toggle="dropdown" aria-extended="true">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu4">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-success btn-sm dropdown-toggle" type="button" id="ddmenu5" data-toggle="dropdown" aria-extended="true">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu5">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+					<div class="btn-group dropup">
+						<button class="btn btn-danger btn-xs dropdown-toggle" type="button" id="ddmenu3" data-toggle="dropdown" aria-extended="true">
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="ddmenu3">
+							<li><a href="#">Item #1</a></li>
+							<li><a href="#">Item #2</a></li>
+							<li><a href="#">Item #3</a></li>
+							<li><a href="#">Item #4</a></li>
+							<li><a href="#">Item #5</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div title="grupos-botones" class="container">
+			<br>
+			<div class="btn-group btn-group-lg">
+				<button class="btn btn-default">Izquierda</button>
+				<button class="btn btn-default">CentroI</button>
+				<div class="btn-group btn-group-lg">
+					<button class="btn btn-default dropdown-toggle" id="menu" data-toggle="dropdown" aria-extended="true">Centro <span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="menu">
+						<li role="presentation"><a role="item" href="#">Item #1</a></li>
+						<li role="presentation"><a role="item" href="#">Item #2</a></li>
+						<li role="presentation"><a role="item" href="#">Item #3</a></li>
+					</ul>
+				</div>
+				<button class="btn btn-default">CentroD</button>
+				<button class="btn btn-default">Derecha</button>	
+			</div>
+			<br><br>
+			<div class="btn-toolbar">
+				<button class="btn btn-default">1</button>
+				<button class="btn btn-default">2</button>
+				<button class="btn btn-default">3</button>
+				<button class="btn btn-default">4</button>
+				<button class="btn btn-default">5</button>	
+			</div>
+			<br>
+			<div class="btn-group-vertical">
+				<button class="btn btn-default">Up</button>
+				<button class="btn btn-default">MidleU</button>
+				<button class="btn btn-default">Midle</button>
+				<button class="btn btn-default">MidleD</button>
+				<button class="btn btn-default">Down</button>	
+			</div>
+			<br><br>
+			<div class="btn-group btn-group-justified">
+				<a href="#" class="btn btn-default">1</a>
+				<a href="#" class="btn btn-default">2</a>
+				<a href="#" class="btn btn-default">3</a>
+				<a href="#" class="btn btn-default">4</a>
+				<a href="#" class="btn btn-default">5</a>
+				<a href="#" class="btn btn-default">6</a>
+			</div>
+			<br>
+			<div class="btn-group btn-group-justified">
+				<div class="btn-group">
+					<button class="btn btn-default">1</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-default">2</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-default">3</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-default">4</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-default">5</button>
+				</div>
+				<div class="btn-group">
+					<button class="btn btn-default">6</button>
+				</div>
+			</div>
+		</div>
+		<div title="dropdown" class="container">
+			<br>
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropdown-menu1" data-toggle="dropdown" aria-extended="true">
+					Dropdown <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu1">
+					<li role="presentation" class="dropdown-header">Header</li>
+					<li class="divider"></li>
+					<li role="presentation"><a role="item" href="#">Item #1</a></li>
+					<li role="presentation"><a role="item" href="#">Item #2</a></li>
+					<li role="presentation"><a role="item" href="#">Item #3</a></li>
+					<li role="presentation" class="disabled"><a role="item" href="#">Item #4</a></li>
+				</ul>
+			</div>			
+		</div>
+		<div title="iconos" class="container">
+			<h1><span class="glyphicon glyphicon-user"></span> Titulo de prueba H1</h1>
+			<h2><span class="glyphicon glyphicon-search"></span> Titulo de prueba H2</h2>
+			<h3><span class="glyphicon glyphicon-cd"></span> Titulo de prueba H3</h3>
+			<h4><span class="glyphicon glyphicon-music"></span> Titulo de prueba H4</h4>
+			<h5><span class="glyphicon glyphicon-cloud"></span> Titulo de prueba H5</h5>
+			<h6><span class="glyphicon glyphicon-heart"></span> Titulo de prueba H6</h6>
+			<br>
+			<p><span class="glyphicon glyphicon-pencil"></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<button class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> </button>
+		</div>
+		<div title="helper classes" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Titulo de Prueba</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<button class="btn btn-primary pull-right">Boton 1</button>
+					<button class="btn btn-success pull-left">Boton 2</button>
+					<br><br>
+					<a href="#" class="sr-only">Visiter articulo</a>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="row hidden">
+				<div class="col-md-12 show">
+					<div style="width: 300px" class="bg-success center-block">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.						
+					</div>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div title="imagenes" class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<img src="http://lorempixel.com/700/700/" class="img-responsive" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://lorempixel.com/700/700/" class="img-responsive img-rounded" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://lorempixel.com/700/700/" class="img-responsive img-circle" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://lorempixel.com/700/700/" class="img-responsive img-thumbnail" alt="">
+				</div>
+			</div>
+		</div>
+		<div title="botones" class="container">
+			<div class="col-sm-3">
+				<button class="text-capitalize btn btn-lg btn-default">default</button>
+				<button class="text-capitalize btn btn-sm btn-primary">primary</button>
+				<button class="text-capitalize btn btn-xs btn-success">success</button>
+				<button class="text-capitalize btn btn-md btn-info">info</button>
+				<button class="text-capitalize btn btn-warning">warning</button>
+				<button class="text-capitalize btn btn-danger">danger</button>
+				<button class="text-capitalize btn btn-link">link</button>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="text-capitalize btn btn-block btn-default">default</a>
+				<a href="#" class="text-capitalize btn btn-block btn-primary">primary</a>
+				<a href="#" class="text-capitalize btn btn-block btn-success">success</a>
+				<a href="#" class="text-capitalize btn btn-block btn-info">info</a>
+				<a href="#" class="text-capitalize btn btn-block btn-warning">warning</a>
+				<a href="#" class="text-capitalize btn btn-block btn-danger">danger</a>
+				<a href="#" class="text-capitalize btn btn-block btn-link">link</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="text-capitalize btn btn-block btn-default active">default</a>
+				<a href="#" class="text-capitalize btn btn-block btn-primary active">primary</a>
+				<a href="#" class="text-capitalize btn btn-block btn-success active">success</a>
+				<a href="#" class="text-capitalize btn btn-block btn-info active">info</a>
+				<a href="#" class="text-capitalize btn btn-block btn-warning active">warning</a>
+				<a href="#" class="text-capitalize btn btn-block btn-danger active">danger</a>
+				<a href="#" class="text-capitalize btn btn-block btn-link active">link</a>
+			</div>
+			<div class="col-sm-3">
+				<a href="#" class="text-capitalize btn btn-block btn-default" disabled>default</a>
+				<a href="#" class="text-capitalize btn btn-block btn-primary" disabled>primary</a>
+				<a href="#" class="text-capitalize btn btn-block btn-success" disabled>success</a>
+				<a href="#" class="text-capitalize btn btn-block btn-info" disabled>info</a>
+				<a href="#" class="text-capitalize btn btn-block btn-warning" disabled>warning</a>
+				<a href="#" class="text-capitalize btn btn-block btn-danger" disabled>danger</a>
+				<a href="#" class="text-capitalize btn btn-block btn-link" disabled>link</a>
+			</div>
+		</div>
+		<div title="formularios" class="container">
+			<form>
+				<br>
+				<div class="form-group">
+					<label for="nombre">Nombre</label>
+					<input class="form-control" type="text" id="nombre" placeholder="Nombre:">	
+				</div>
+				
+				<div class="form-group">
+					<label for="option">Elige una opción:</label>
+					<select class="form-control" name="" id="option">
+						<option value="1">Opción 1</option>
+						<option value="2">Opción 2</option>
+						<option value="3">Opción 3</option>
+						<option value="4">Opción 4</option>
+						<option value="5">Opción 5</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="mensaje">Mensaje:</label>
+					<textarea class="form-control" id="mensaje" placeholder="Escribe tu mensaje:"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="archivo">Archivo:</label>
+					<input type="file" id="archivo">
+					<p class="help-block">Máximo 50MB</p>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-primary">Enviar</button>
+				</div>
+			</form>
+			<form class="form-inline">
+				<div class="form-group">
+					<label class="sr-only" for="nombre">Nombre:</label>
+					<input class="form-control" type="text" id="nombre" placeholder="Nombre:">	
+				</div>
+				
+				<div class="form-group">
+					<div class="input-group">
+						<label class="sr-only" for="correo">Correo:</label>
+						<div class="input-group-addon">@</div>
+						<input class="form-control" type="email" id="correo" placeholder="Correo:">	
+					</div>
+				</div>
+
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="" id=""> Recuerdame
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-primary">Enviar</button>
+				</div>
+			</form>
+			<br>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="id">ID:</label>
+					<div class="col-sm-6">
+						<p class="form-control-static" id="id">123456</p>	
+					</div>
+				</div>
+				<div class="form-group has-warning">
+					<label class="control-label col-sm-2" for="nombre">Nombre:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" id="nombre" placeholder="Nombre:">	
+					</div>
+				</div>
+				<div class="form-group has-success">
+					<label class="control-label col-sm-2" for="apellido">Apellido:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="text" id="apellido" placeholder="Apellido:">	
+					</div>
+				</div>
+				<div class="form-group has-error">
+					<label class="control-label col-sm-2" for="correo">Correo:</label>
+					<div class="col-sm-6">
+						<input class="form-control" type="email" id="correo" placeholder="Correo:">
+					</div>	
+				</div>
+				<fieldset disabled>
+					<div class="form-group">
+						<div class="checkbox col-sm-offset-2 col-sm-6">
+							<label class="control-label">
+								<input type="checkbox" name="" id=""> Recuerdame
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-6">
+							<button class="btn btn-primary">Enviar</button>
+						</div>	
+					</div>
+				</fieldset>
+			</form>
+			<form>
+				<div class="form-group">
+					<label>Label Básica</label>
+					<input class="form-control" type="text" placeholder="Input Básico">
+					<textarea class="form-control" placeholder="Text-Area"></textarea>
+				</div>
+
+				<div class="checkbox">
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #1
+					</label> 
+				</div>
+				<div class="checkbox">
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #2
+					</label> 
+				</div>
+				<div class="checkbox">
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #3
+					</label> 
+				</div>
+				<div class="checkbox">
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #4
+					</label> 
+				</div>
+
+				<div class="checkbox">
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #1
+					</label> 
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #2
+					</label> 
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #3
+					</label> 
+					<label class="checkbox-inline">
+						<input type="checkbox" name=""> Checkbox #4
+					</label> 
+				</div>
+
+				<div class="radio">
+					<label for="radio1">
+						<input type="radio" name="option" id="radio1">
+						Radiobutton #1
+					</label>
+				</div>
+				<div class="radio">
+					<label for="radio2">
+						<input type="radio" name="option" id="radio2">
+						Radiobutton #2
+					</label>
+				</div>
+				<div class="radio">
+					<label for="radio3">
+						<input type="radio" name="option" id="radio3">
+						Radiobutton #3
+					</label>
+				</div>
+
+				<div class="radio">
+					<label for="radio1" class="radio-inline">
+						<input type="radio" name="option" id="radio1">
+						Radiobutton #1
+					</label>
+					<label for="radio2" class="radio-inline">
+						<input type="radio" name="option" id="radio2">
+						Radiobutton #2
+					</label>
+					<label for="radio3" class="radio-inline">
+						<input type="radio" name="option" id="radio3">
+						Radiobutton #3
+					</label>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-success">Enviar</button>
+				</div>
+			</form>
+		</div>
+		<div title="tables" class="container">
+			<div class="table-responsive">
+				<table class="table table-striped table-bordered table-hover table-condensed">
+					<tr class="info">
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Usuario</th>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Usuario</th>
+						<th>ID</th>
+						<th>Nombre</th>
+						<th>Usuario</th>
+					</tr>
+					<tr class="active">
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Carlos</td>
+						<td>carlos123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Pedro</td>
+						<td class="active">pedro123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Ana</td>
+						<td>ana123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+						<td>1</td>
+						<td>Juan</td>
+						<td>juan123</td>
+					</tr>
+				</table>	
+			</div>			
+		</div>
+		<div title="Tipografia" class="container">
+			<h1 class="text-muted">Header H1 <small class="bg-primary">Texto secundario</small></h1>
+			<h2 class="text-primary">Header H2 <small class="bg-success">Texto secundario</small></h2>
+			<h3 class="text-success">Header H3 <small class="bg-info">Texto secundario</small></h3>
+			<h4 class="text-info">Header H4 <small class="bg-warning">Texto secundario</small></h4>
+			<h5 class="text-warning">Header H5 <small class="bg-danger">Texto secundario</small></h5>
+			<h6 class="text-danger">Header H6 <span class="small">Texto secundario</span></h6>
+			<small>Texto secundario</small><br>
+			<span class="small">Texto secundario</span>
+			<div class="row color1">
+				<div class="col-md-4 text-justify">
+					<p class="">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class="lead">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class=""><mark>Dropdowns are automatically positioned via CSS within the normal flow of the document.</mark></p>
+					<p class=""><del>Dropdowns are automatically positioned via CSS within the normal flow of the document.</del></p>
+					<p class=""><s>Dropdowns are automatically positioned via CSS within the normal flow of the document.</s></p>
+					<p class=""><ins>Dropdowns are automatically positioned via CSS within the normal flow of the document.</ins></p>
+					<p class=""><u>Dropdowns are automatically positioned via CSS within the normal flow of the document.</u></p>
+				</div>
+				<div class="col-md-4 text-center">
+					<p class="small">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class=""><small>Dropdowns are automatically positioned via CSS within the normal flow of the document.</small></p>
+					<p class=""><strong>Dropdowns are automatically positioned via CSS within the normal flow of the document.</strong></p>
+					<p class=""><b>Dropdowns are automatically positioned via CSS within the normal flow of the document.</b></p>
+					<p class=""><em>Dropdowns are automatically positioned via CSS within the normal flow of the document.</em></p>
+					<p class="">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class="">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+				</div>
+				<div class="col-md-4 text-right">
+					<p class="text-lowercase">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class="text-uppercase">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class="text-capitalize">Dropdowns are automatically positioned via CSS within the normal flow of the document.</p>
+					<p class=""><blockquote>Dropdowns are automatically positioned via CSS within the normal flow of the document.<footer>Juan Sosa</footer></blockquote></p>
+					<p class=""><cite title="Fuente">Dropdowns are automatically positioned via CSS within the normal flow of the document.</cite></p>
+					<p class=""><code>Dropdowns are automatically positioned via CSS within the normal flow of the document.</code></p>
+					<p class=""><pre>Dropdowns are automatically positioned</pre></p>
+				</div>
+			</div>
+		</div>
+		<div title="grilla" class="container">
+			<section class="main row">
+				<article class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+					<h3>Article</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+					<a href="#" class="btn btn-primary visible-xs-inline-block">Boton</a>
+				</article>
+				<aside class="col-xs-12 col-sm-4 col-md-3 col-lg-2 visible-md visible-lg hidden-print">
+					<h3>Aside</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+				</aside>
+			</section>	
+			<section class="row hidden-xs visible-print">
+				<article class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<h3>Column I</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+				</article>
+				<article class="color1 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<h3>Column II</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+				</article>
+				<article class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<h3>Column III</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+				</article>
+				<article class="color1 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<h3>Column IV</h3>
+					<p>
+						Dropdowns are automatically positioned via CSS within the normal flow of the document. This means dropdowns may be cropped by parents with certain overflow properties or appear out of bounds of the viewport. Address these issues on your own as they arise.
+					</p>
+				</article>
+			</section>	
+		</div>
+		<footer>
+			<div class="container">
+				<h3>Footer</h3>
+			</div>
+		</footer>
+	</body>
+</html>

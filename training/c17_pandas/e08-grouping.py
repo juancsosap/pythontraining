@@ -26,6 +26,7 @@ print('\nMEAN Total: ', data.beer_servings.mean(), '\n')
 print('MEAN Europe: ', data[data.continent == 'Europe'].beer_servings.mean(), '\n')
 
 print('MEAN:\n', data.groupby('continent').beer_servings.mean(), '\n')
+print('CORRELATION:\n', data.groupby('continent').beer_servings.corr(), '\n')
 print('MAX:\n', data.groupby('continent').beer_servings.max(), '\n')
 print('MIN:\n', data.groupby('continent').beer_servings.min(), '\n')
 print('COUNT:\n', data.groupby('continent').beer_servings.count(), '\n')

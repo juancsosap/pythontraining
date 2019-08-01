@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>MySAPro - Formulario de Registro</title>
+		<meta name="keywords" content="Formulario Registro MySAPro"/>
+		<meta name="description" content="Registro - Sistema de Administración de Propiedades (MySAPro)"/>
+		<meta name="author" content="MySAPro"/>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css"/>
+		<script type="text/javascript" src="validation.js"></script>
+	</head>
+	<body>
+		<form method="POST" id="form" action="done.html" enctype="multipart/form-data">
+			
+			<h1>Formulario de Registro</h1>
+			
+			<fieldset>
+				<legend>Datos Básicos</legend>
+				
+				<label for="_name">Nombre</label>
+				<input type="text" id="_name" name="name" tabindex="1" autofocus/>
+				
+				<label for="_surname">Apellido</label>
+				<input type="text" id="_surname" name="surname" tabindex="2"/>
+				
+				<label for="_email">Email</label>
+				<input type="email" id="_email" name="email" tabindex="3"/>
+				
+				<label>Genero</label>
+				<input type="radio" id="_genderM" name="gender" value="M" checked tabindex="4"/>
+				<label for="_generoM">Masculino</label>
+				<input type="radio" id="_genderF" name="gender" value="F" tabindex="4"/>
+				<label for="_generoF">Femenino</label>
+				
+				<label for="_pass">Contraseña</label>
+				<input type="password" id="_pass" name="pass" placeholder="Contraseña de Acceso" tabindex="5"/>
+				<input type="password" id="_pass_ver" name="pass_ver" placeholder="Verificación de Contraseña" tabindex="6"/>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Datos Adicionales</legend>
+				
+				<label for="_message">Mensaje u Observación</label>
+				<textarea id="_message" name="message" maxlength="200" rows="5" tabindex="7"></textarea>
+				
+				<label for="_medio">Medio de Referencia</label>
+				<select id="_medio" name="medio" tabindex="8">
+					<option value="otro">Otro Medio</option>
+					<option value="tv">Televisión</option>
+					<option value="radio">Radio</option>
+					<option value="news">Periodico</option>
+					<option value="internet">Internet</option>
+					<option value="ref">Referenciado por Otro</option>
+				</select>
+				
+				<label for="_photo">Foto de Perfil</label>
+				<input type="file" id="_photo" name="photo" accept="image/*" tabindex="9"/>
+			</fieldset>
+			
+			<div id="botones">
+				<button type="button" onclick="validate()" tabindex="10">Registrar</button>
+				<button type="reset" tabindex="11">Limpiar</button>
+			</div>
+		</form>
+	</body>
+</html>

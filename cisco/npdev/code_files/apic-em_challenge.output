@@ -1,0 +1,585 @@
+cisco@cisco:~/git/code_files$ python apic-em_challenge_solution.py 
+Start question 1 ******************************
+
+Query for the discovery with the name discovery_challenge and delete it if it exists.
+
+ID of discovery is 317.
+
+Task status when deleting discovery is: 
+{
+  "lastUpdate": 1478664401272, 
+  "serviceType": "Discovery Service", 
+  "rootId": "5d478760-372c-493d-863c-8ddc3f79f4ae", 
+  "id": "5d478760-372c-493d-863c-8ddc3f79f4ae", 
+  "version": 1478664401272, 
+  "startTime": 1478664401269, 
+  "progress": "Discovery deleted successfully. # 317", 
+  "endTime": 1478664401301, 
+  "isError": false
+}
+
+End question 1 ******************************
+
+Start question 2 ******************************
+
+Get global credentials for credential subtypes CLI, SNMPV2_READ_COMMUNITY and SNMPV2_WRITE_COMMUNITY.
+
+CLI credentials subtype is "CLICredential"
+SNMP read credentials subtype is "SNMPv2ReadCommunity"
+SNMP write credentials subtype is "SNMPv2WriteCommunity"
+End question 2 ******************************
+
+Start question 3 ******************************
+
+Create discovery with the name discovery_challenge, the IP address 192.168.1.11, and using global credentials.
+
+Task=db8f863a-0e06-409f-82d9-c07b1021cc14 has not completed yet. Sleeping 5 seconds...
+
+Task status when creating discovery is: 
+{
+  "lastUpdate": 1478664401836, 
+  "serviceType": "Discovery Service", 
+  "rootId": "db8f863a-0e06-409f-82d9-c07b1021cc14", 
+  "id": "db8f863a-0e06-409f-82d9-c07b1021cc14", 
+  "version": 1478664401836, 
+  "startTime": 1478664401633, 
+  "progress": "322", 
+  "endTime": 1478664401840, 
+  "isError": false
+}
+
+End question 3 ******************************
+
+Start question 4 ******************************
+
+Wait for discovery to complete.
+
+Discovery condition is Yet to Start.
+
+Discovery not complete yet, sleeping 10 seconds.
+
+Discovery condition is Complete.
+
+End question 4 ******************************
+
+Start question 5 ******************************
+
+Determine which devices were discovered.
+
+{
+  "snmpStatus": "SUCCESS", 
+  "inventoryCollectionStatus": "In Progress", 
+  "reachabilityStatus": "Success", 
+  "hostname": "csr1kv.cisco.com", 
+  "inventoryReachabilityStatus": "Reachable", 
+  "cliStatus": "SUCCESS", 
+  "id": "283b34d9-b0a2-489c-83d5-bd1aa171e8c7", 
+  "pingStatus": "SUCCESS", 
+  "managementIpAddress": "192.168.1.11"
+}
+End question 5 ******************************
+
+Start question 6 ******************************
+
+Determine which interfaces each reachable device has.
+
+Reachable device IDs are [u'283b34d9-b0a2-489c-83d5-bd1aa171e8c7'].
+
+Interfaces for device with ID 283b34d9-b0a2-489c-83d5-bd1aa171e8c7 are:
+
+{
+  "adminStatus": "UP", 
+  "macAddress": "0a:01:c0:a8:01:15", 
+  "series": "Cisco Cloud Services Router 1000V Series", 
+  "pid": "CSR1000V", 
+  "portName": "GigabitEthernet1", 
+  "interfaceType": "Physical", 
+  "speed": "1000000", 
+  "id": "db14aeb1-31a4-47e9-a9b1-e00e46958591", 
+  "ipv4Address": "192.168.1.11", 
+  "instanceUuid": "db14aeb1-31a4-47e9-a9b1-e00e46958591", 
+  "isisSupport": "false", 
+  "duplex": "FullDuplex", 
+  "serialNo": "9TUULHSFFET", 
+  "voiceVlan": null, 
+  "mediaType": "RJ45", 
+  "mappedPhysicalInterfaceId": null, 
+  "portType": "Ethernet Port", 
+  "status": "up", 
+  "mappedPhysicalInterfaceName": null, 
+  "description": "", 
+  "lastUpdated": "2016-11-09 03:48:52.336", 
+  "nativeVlanId": null, 
+  "vlanId": "", 
+  "ifIndex": "1", 
+  "ipv4Mask": "255.255.255.0", 
+  "ospfSupport": "false", 
+  "className": "EthrntPrtclEndpntExtndd", 
+  "portMode": "routed", 
+  "deviceId": "283b34d9-b0a2-489c-83d5-bd1aa171e8c7"
+}
+End question 6 ******************************
+
+Start question 7 ******************************
+
+Get the device configuration for reachable devices.
+
+Config for device with ID 283b34d9-b0a2-489c-83d5-bd1aa171e8c7 is:
+
+
+
+Building configuration...
+
+
+
+Current configuration : 4350 bytes
+
+!
+
+! Last configuration change at 07:50:33 UTC Mon Oct 17 2016
+
+!
+
+version 16.3
+
+service timestamps debug datetime msec
+
+service timestamps log datetime msec
+
+no platform punt-keepalive disable-kernel-core
+
+platform console serial
+
+!
+
+hostname csr1kv
+
+!
+
+boot-start-marker
+
+boot-end-marker
+
+!
+
+!
+
+logging buffered critical
+
+!
+
+no aaa new-model
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+
+
+
+
+
+
+ip domain name cisco.com
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+subscriber templating
+
+!
+
+!
+
+!
+
+multilink bundle-name authenticated
+
+!
+
+!
+
+!
+
+!
+
+!
+
+crytpo pki xxxxxxx
+
+ enrollment selfsigned
+
+certificate xxxxxxxxx
+
+ revocation-check none
+
+rsakeypair TP-self-signed- xxxxxxxx
+
+!
+
+!
+
+certificate xxxxxxxxx
+
+certificate xxxxxxxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+xxxx  xxxxx  xxxx  xxxx  xxxx
+
+quit
+
+
+
+
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+license udi pid CSR1000V sn 9TUULHSFFET
+
+license accept end user agreement
+
+license boot level ax
+
+diagnostic bootup level minimal
+
+archive
+
+ path bootflash:/
+
+!
+
+spanning-tree extend system-id
+
+remote-management
+
+  no restful-api
+
+  dmi
+
+netconf-yang cisco-ia snmp-trap-control trap-list 1.3.6.1.6.3.1.1.5.3
+
+netconf-yang cisco-ia snmp-trap-control trap-list 1.3.6.1.6.3.1.1.5.4
+
+netconf-yang cisco-ia snmp-trap-control trap-list 1.3.6.1.4.1.9.9.41.2.0.1
+
+netconf-yang cisco-odm actions parse.showACL
+
+netconf-yang cisco-odm actions parse.showArchive
+
+netconf-yang cisco-odm actions parse.showIpRoute
+
+netconf-yang cisco-odm actions parse.showInterfaces
+
+netconf-yang cisco-odm actions parse.showEnvironment
+
+netconf-yang cisco-odm actions parse.showFlowMonitor
+
+netconf-yang cisco-odm actions parse.showProcessesCPU
+
+netconf-yang cisco-odm actions parse.showProcessesMemory
+
+netconf-yang cisco-odm actions parse.showMemoryStatistics
+
+netconf-yang cisco-odm actions parse.showPlatformSoftware
+
+netconf-yang cisco-odm polling-enable
+
+netconf-yang
+
+restconf
+
+!
+
+username xxxxxx
+
+!
+
+redundancy
+
+!
+
+!
+
+!
+
+!
+
+!
+
+cdp run
+
+!
+
+! 
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+! 
+
+! 
+
+! 
+
+! 
+
+! 
+
+! 
+
+!
+
+!
+
+interface GigabitEthernet1
+
+ ip address 192.168.1.11 255.255.255.0
+
+ negotiation auto
+
+!
+
+!
+
+virtual-service csr_mgmt
+
+!
+
+ip forward-protocol nd
+
+ip http server
+
+ip http secure-server
+
+!
+
+ip ssh version 2
+
+ip scp server enable
+
+!
+
+logging history debugging
+
+logging snmp-trap emergencies
+
+logging snmp-trap alerts
+
+logging snmp-trap critical
+
+logging snmp-trap errors
+
+logging snmp-trap warnings
+
+logging snmp-trap notifications
+
+logging snmp-trap informational
+
+logging snmp-trap debugging
+
+!
+
+!
+
+snmp-server xxxxxxxx
+
+snmp-server xxxxxxxx
+
+snmp-server xxxxxxxx
+
+snmp-server xxxxxxxx
+
+snmp-server xxxxxxxx
+
+snmp-server xxxxxxxx
+
+!
+
+!
+
+control-plane
+
+!
+
+ !
+
+ !
+
+ !
+
+ !
+
+!
+
+!
+
+!
+
+!
+
+!
+
+line con 0
+
+ exec-timeout 0 0
+
+ privilege level 15
+
+ stopbits 1
+
+line vty 0
+
+ exec-timeout 5 0
+
+ privilege level 15
+
+login xxxxxx
+
+ transport preferred ssh
+
+line vty 1
+
+ exec-timeout 5 0
+
+ privilege level 15
+
+login xxxxxx
+
+ length 0
+
+ transport preferred ssh
+
+line vty 2 4
+
+ exec-timeout 5 0
+
+ privilege level 15
+
+login xxxxxx
+
+ transport preferred ssh
+
+line vty 5 30
+
+ exec-timeout 5 0
+
+login xxxxxx
+
+ transport preferred ssh
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+end
+
+
+
+End question 7 ******************************
+
+cisco@cisco:~/git/code_files$ 

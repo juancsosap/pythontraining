@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>MySAPro - Formulario de Registro</title>
+		<meta name="keywords" content="Respuesta Formulario Registro MySAPro"/>
+		<meta name="description" content="Registro - Sistema de Administración de Propiedades (MySAPro)"/>
+		<meta name="author" content="MySAPro"/>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<div id="answer">
+			<h1>Confirmación de Registro</h1>
+			<?php
+				include 'bd.php';
+
+				//Definición de Variables recibidas desde HTML
+				//Datos Básicos
+				$nombre = $_POST['nombre'];
+				$apellido = $_POST['apellido'];
+				$email = $_POST['email'];
+				//Adaptación de valores de genero a formato booleano para BD
+				if ($_POST['genero'] == "M") { $genero = 'true'; } 
+				else { $genero = 'false'; };
+				$contrasena = md5($_POST['contrasena']);
+
+				//Datos Adicionales
+				$mensaje = $_POST['mensaje'];
+				$referencia = $_POST['medio'];
+				//Copia de archivo de Foto al directorio definitivo
+				$tmpfile = $_FILES['foto']['tmp_name'];
+				$nombrefile = $_FILES['foto']['name'];
+				$foto = "fotos/$nombrefile";
+				move_uploaded_file($tmpfile, $foto);
+
+				//Enviar información a BD
+				//Definición de sentencia SQL
+				$sql_usuarios = "INSERT INTO usuarios SET 
+					        nombre = '$nombre', 
+					        apellido = '$apellido',
+					        email = '$email',
+					        genero = $genero,
+					        foto = '$foto'";
+				enviar_bd($sql_usuarios);
+
+				$sql_usuarios = "SELECT usuarios.id WHERE 
+					        usuarios.email = '$email'";
+				$id = enviar_bd($sql_usuarios);
+
+				$sql_acceso = "INSERT INTO acceso SET 
+					        id_usuario = '$id', 
+					        contrasena = '$contrasena'";
+				enviar_bd($sql_acceso);
+
+				$sql_registro = "INSERT INTO registro SET 
+					        id_usuario = '$id', 
+					        mensaje = '$mensaje',
+					        referencia = '$referencia'";
+				enviar_bd($sql_registro);
+
+				//Página Web de respuesta
+				echo "<p>NOMBRE: $nombre</p>\n";
+				echo "<p>APELLIDO: $apellido</p>\n";
+				echo "<p>EMAIL: $email</p>\n";
+				echo "<p>GENERO: " . $_POST['genero'] . "</p>\n";
+				echo "<p>MENSAJE: $mensaje</p>\n";
+				echo "<p>REFERENCIA: $referencia</p>\n";
+				echo "<img src='$foto' alt='Foto de Perfil'>\n";
+			?>
+		</div>
+	</body>
+</html>
+
+
