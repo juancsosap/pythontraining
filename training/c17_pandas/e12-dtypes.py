@@ -1,5 +1,14 @@
 import pandas as pd
 
+# ## Data Types ##
+#
+# object  -> str
+# int64   -> int
+# float64 -> float
+# bool    -> bool
+# datetime64
+# timedelta
+# category
 
 url = 'http://bit.ly/drinksbycountry'
 data = pd.read_csv(url)

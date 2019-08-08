@@ -1,0 +1,16 @@
+{
+    'packages': [
+        'sklearn',
+        'django',
+        'jupyter',
+        'keras',
+        'lxml',
+        'numpy',
+        'requests',
+        'tensorflow',
+        'pandas',
+        'matplotlib',
+        'ncclient',
+        'jinja2'
+    ]
+}

@@ -17,3 +17,9 @@ for c in range(501, max, 500):
     data = pd.read_csv(url, nrows=500, skiprows=c, header=None)
     data.to_csv(FILE_OUTPUT, sep=",", index=False, header=False, mode='a')
     print("#", end='')
+
+# read_csv   -> to_csv
+# read_json  -> to_json
+# read_sql   -> to_sql
+# read_excel -> to_excel
+# read_table -> to_table

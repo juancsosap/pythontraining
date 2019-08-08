@@ -17,7 +17,7 @@ print(data.shape, end='\n\n')
 # Obtaining the DataFrame Data Types
 print(data.dtypes, end='\n\n')
 
-# Describing obly the object (String), and float64 Data Type of the DataFrame
+# Describing only the object (String), and float64 Data Type of the DataFrame
 print(data.describe(include=['object', 'float64']), end='\n\n')
 
 # Describing all the Series of the DataFrame

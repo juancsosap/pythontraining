@@ -16,3 +16,7 @@ print(data.head(), end='\n\n')
 data.drop([0, 1], axis=0, inplace=True)
 
 print(data.head(), end='\n\n')
+
+# data.dropna -> drop loss data
+# data.replace
+# np.nan -> Not a number
