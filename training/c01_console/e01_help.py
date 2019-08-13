@@ -1,6 +1,6 @@
 # Shows the resources (Variables, Classes, Libraries) available in the session
 # The resources within double under-scores (__XXXXX__) are internal of the system
-print(dir())
+print(dir()) # print something
 
 # Shows the libraries imported by the session
 print(dir(__builtins__))

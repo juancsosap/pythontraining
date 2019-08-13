@@ -30,3 +30,4 @@ complex = 20 # valid, but not recommended, built in class
 # The variable definition and initialization could be did one or many at the time
 n0 = 10
 n1, n2, n3 = 10, 20, 30
+n1 = 10; n2 = 20; n3 = 30
