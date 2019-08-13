@@ -1,5 +1,5 @@
 import sqlite3
-import pymysql # pip install PyMySQL
+import pymysql # pip install pymysql
 from functools import reduce
 
 class Person:

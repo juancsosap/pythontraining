@@ -23,5 +23,6 @@ num = 1j + True # True --> 1 , False --> 0
 print(type(num), num)
 
 # Mixing int + string
-num = str(1) + "123" # Not valid
+# num = 1 + "123" # Not valid
+num = str(1) + "123"
 print(type(num), num)
