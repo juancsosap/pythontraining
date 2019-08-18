@@ -10,7 +10,7 @@
 # The STACK memory store the reference to the HEAP memory
 # address where the value is stored
 var11 = 'HOLA'
-print(var11)
+print('VAR11', var11, '({id})'.format(id = id(var11)))
 
 #   STACK   |   HEAP
 # -----------------------
@@ -25,7 +25,7 @@ print(var11)
 # is created and the STACK memory store the reference to new
 # HEAP memory address where the value is stored
 var11 = 'CHAO'
-print(var11)
+print('VAR11', var11, '({id})'.format(id = id(var11)))
 
 #   STACK   |   HEAP
 # -----------------------
@@ -45,7 +45,8 @@ print(var11)
 # variable value, it store the same reference to the HEAP
 # address memory where the value is stored
 var12 = var11
-print(var11, var12)
+print('VAR11', var11, '({id})'.format(id = id(var11)))
+print('VAR12', var12, '({id})'.format(id = id(var12)))
 
 #   STACK   |   HEAP
 # -----------------------
@@ -67,4 +68,5 @@ print(var11, var12)
 # other variable remains with the reference to the original
 # value
 var12 = 'YEAH'
-print(var11, var12)
+print('VAR11', var11, '({id})'.format(id = id(var11)))
+print('VAR12', var12, '({id})'.format(id = id(var12)))

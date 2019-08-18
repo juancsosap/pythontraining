@@ -49,6 +49,8 @@ text = 'Juan\nSosa' # \n print an ENTER
 print(text)
 text = 'Eduardo Carlos\rSosa' # \r return the cursor to the begining of the line
 print(text)
+text = 'Luis\vSosa' # \v move the cursor vertically
+print(text)
 
 print()
 
@@ -75,6 +77,11 @@ text2 = "World"
 text = text1 + " " + text2
 print(text)
 
+# Multiplying Strings
+text = "Hello "
+text = 5 * text
+print(text)
+
 # Converting number to text
 text = str(123)
 print(type(text), text)
@@ -83,3 +90,11 @@ print(type(text), text)
 # text = "Age: " + 25 # not valid
 text = "Age: " + str(25)
 print(text)
+
+# Unicode String
+ustr = u"\u00dcnic\u00f6de"
+print(ustr)
+
+# Raw String
+rstr = r"Hello \n World"
+print(rstr)

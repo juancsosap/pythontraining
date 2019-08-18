@@ -16,7 +16,7 @@
 # to the HEAP memory address where each value object of the
 # array is stored
 var21 = [12, 34, 56]
-print(var21)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
 
 #   STACK   |   HEAP
 #           |
@@ -33,7 +33,7 @@ print(var21)
 # When one element of the array is modified, only the
 # reference of that element is modified
 var21[2] = 78
-print(var21)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
 
 #   STACK   |   HEAP
 #           |
@@ -52,7 +52,8 @@ print(var21)
 # variable value, it store the same reference to the HEAP
 # address memory where the value is stored
 var22 = var21
-print(var21, var22)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
+print('VAR22', var22, '({id})'.format(id = id(var22)))
 
 #   STACK   |   HEAP
 #           |
@@ -71,7 +72,8 @@ print(var21, var22)
 # reference of that element is modified, but as both
 # variables point to the same object, both are affected
 var22[1] = 90
-print(var21, var22)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
+print('VAR22', var22, '({id})'.format(id = id(var22)))
 
 #   STACK   |   HEAP
 #           |
@@ -99,7 +101,9 @@ print(var21, var22)
 # a new object in the HEAP memory is created as a copy of the
 # other object, but the reference to neted levels remain equals
 var23 = var21.copy()
-print(var21, var22, var23)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
+print('VAR22', var22, '({id})'.format(id = id(var22)))
+print('VAR23', var23, '({id})'.format(id = id(var23)))
 
 #   STACK   |   HEAP
 #           |
@@ -126,7 +130,9 @@ print(var21, var22, var23)
 # When one element of the array is modified in the copy object,
 # the other arrays are no affected
 var23[1] = 13
-print(var21, var22, var23)
+print('VAR21', var21, '({id})'.format(id = id(var21)))
+print('VAR22', var22, '({id})'.format(id = id(var22)))
+print('VAR23', var23, '({id})'.format(id = id(var23)))
 
 #   STACK   |   HEAP
 #           |
@@ -146,7 +152,7 @@ print(var21, var22, var23)
 # When multidimentional arrays are created multple nested
 # object are created in the HEAP memory
 var24 = [[11,12],[21,22]]
-print(var24)
+print('VAR24', var24, '({id})'.format(id = id(var24)))
 
 #   STACK   |   HEAP
 #           |
@@ -175,7 +181,8 @@ print(var24)
 # original object. Then, the reference to the neted objects
 # remain the same
 var25 = var24.copy()
-print(var24, var25)
+print('VAR24', var24, '({id})'.format(id = id(var24)))
+print('VAR25', var25, '({id})'.format(id = id(var25)))
 
 #   STACK   |   HEAP
 #           |
@@ -202,4 +209,5 @@ print(var24, var25)
 # If a modification in a neted object is made, both arrays
 # are affected
 var25[0][0] = 34
-print(var24, var25)
+print('VAR24', var24, '({id})'.format(id = id(var24)))
+print('VAR25', var25, '({id})'.format(id = id(var25)))

@@ -27,7 +27,14 @@ complex = 20 # valid, but not recommended, built in class
 # Some words can't be used as variables names, because are python language keywords
 # for = 30 # invalid, reserved keyword
 
+# False class finally is return None continue for lambda in
+# try True def from nonlocal while and del global not with
+# as elif if or yield assert else import pass break except raise 	
+
 # The variable definition and initialization could be did one or many at the time
 n0 = 10
 n1, n2, n3 = 10, 20, 30
 n1 = 10; n2 = 20; n3 = 30
+
+# Multiple assigned with the same value
+n1 = n2 = n3 = 40
