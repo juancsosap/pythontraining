@@ -1,0 +1,4 @@
+The method add was called at 2019-08-19 15:21:00.877356 returning the value 11.0
+The method mul was called at 2019-08-19 15:24:15.466863 returning the value 24.0
+The method div was called at 2019-08-19 15:31:39.483132 returning the value 0.625
+The method div was called at 2019-08-19 15:33:45.927442 returning the value 2.0
