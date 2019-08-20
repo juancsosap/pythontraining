@@ -96,5 +96,5 @@ ustr = u"\u00dcnic\u00f6de"
 print(ustr)
 
 # Raw String
-rstr = r"Hello \n World"
+rstr = r"c:\documents\newfile.txt"
 print(rstr)

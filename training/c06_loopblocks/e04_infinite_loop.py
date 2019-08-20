@@ -1,12 +1,10 @@
-valid = False
-while(not valid):
+while(True):
     hora = input("¿Que hora es? ")
 
     if(hora.isnumeric()):
         hora_int = int(hora)
         if(hora_int >= 0 and hora_int < 24):
             break
-            valid = True
 
     print("dato no valido")
 

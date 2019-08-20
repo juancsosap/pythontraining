@@ -1,0 +1,10 @@
+<config>
+    <name type='str'>Juan Carlos</name>
+    <surname type='str'>Sosa Peña</surname>
+    <age type='int'>35</age>
+    <active type='bool'>true</active>
+    <phones>
+        <phone type='str'>912345678</phone>
+        <phone type='str'>229876543</phone> 
+    </phones>
+</config>

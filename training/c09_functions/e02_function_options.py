@@ -27,7 +27,19 @@ def multiplicar_muchos(a, b, *args):
 
 if __name__ == '__main__':
     print(sumar(1, 2))
+    
     print(multiplicar(2, 3, 4))
+    
+    print()
+
     print(sumar_muchos(1, 2, 3, 4, 5, 6, 7))
+    print(sumar_muchos(*[1, 2, 3, 4, 5, 6, 7]))
+    
+    print()
+
     printdata(nombre="Juan", apellido="Sosa", edad=35)
+    printdata(**{'nombre':"Juan", 'apellido':"Sosa", 'edad':35})
+    
+    print()
+
     print(sumar_muchos())

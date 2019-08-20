@@ -1,0 +1,10 @@
+{
+    "name": "Juan Carlos",
+    "surname": "Sosa Peña",
+    "age": 35,
+    "active": true,
+    "phones": [
+        "912345678", 
+        "229876543"
+    ]
+}
