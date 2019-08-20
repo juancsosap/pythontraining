@@ -60,6 +60,6 @@ print(template.format(id = 123, name = "Juan", surname = "Sosa", days = 1325))
 # For float numbers could be included the thousand separator, the leading zeros and
 # the amount of decimals
 template = " {id:08d} - {name} {surname} : {salary:,.2f} CLP\n"
-print(template.format(id = 123, name = "Juan", surname = "Sosa", salary = 2507427.1234))
+print(template.format(id = 123, name = "Juan", surname = "Sosa", salary = 2507427.1277))
 
 # Another format rules could be aplied for diferent types of objects

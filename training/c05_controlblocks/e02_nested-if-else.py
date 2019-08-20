@@ -13,3 +13,10 @@ else:
         print("el valor debe estar entre 0 y 23")
 
 print("Fin de programa.")
+
+'''
+o -> numeric    -> in range      -> dia
+                                 -> noche
+                -> out of range
+  -> no numeric
+'''

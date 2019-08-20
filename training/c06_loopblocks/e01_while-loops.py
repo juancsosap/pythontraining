@@ -5,8 +5,8 @@ while(not valid):
     if(hora.isnumeric()):
         hora_int = int(hora)
         if(hora_int >= 0 and hora_int < 24):
-            break
             valid = True
+            continue # return to the while sentence
 
     print("dato no valido")
 

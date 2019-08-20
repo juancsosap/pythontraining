@@ -52,6 +52,7 @@ print('rjust ----> |', text.rjust(60), '|')
 print('rjust ----> |', text.rjust(60, '#'), '|')
 text = '1234'
 print('zfill ----> |', text.zfill(10), '|')
+# print('rjust ----> |', text.rjust(10, '0'), '|')
 
 print('\n---------------------', end="\n\n")
 
@@ -80,6 +81,7 @@ print('\n---------------------', end="\n\n")
 index = text.find('@')
 print('find -----> |', index, '|')
 print('find -----> |', text.find('.'), '|')
+print('find -----> |', text.find('-'), '|')
 print('find -----> |', text.find('.', index), '|')
 print('rfind ----> |', text.rfind('.'), '|')
 print('rfind ----> |', text.rfind('.', index), '|')
@@ -99,6 +101,7 @@ soporta orientación a objetos, programación imperativa y, en
 menor medida, programación funcional. Es un lenguaje interpretado,
 usa tipado dinámico y es multiplataforma.'''
 print('splitline -> |', text.splitlines(), '|')
+#print('split     -> |', text.split('\n'), '|')
 print('splitline -> |', text.splitlines(True), '|')
 
 print('\n---------------------', end="\n\n")

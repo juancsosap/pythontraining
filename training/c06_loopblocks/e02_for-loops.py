@@ -7,6 +7,7 @@ while(num < 10):
 
 print()
 
+# for(int i=0; i < 10; i++)
 for num in range(10):
     print('{}^2 = {}'.format(num, num**2))
 
@@ -19,6 +20,7 @@ while(num < 10):
 
 print()
 
+# for(int i=5; i < 10; i++)
 for num in range(5, 10):
     print('{}^3 = {}'.format(num, num**3))
 
@@ -31,5 +33,6 @@ while(num < 10):
 
 print()
 
+# for(int i=2; i < 10; i+=3)
 for num in range(2, 10, 3):
     print('{}^4 = {}'.format(num, num**4))

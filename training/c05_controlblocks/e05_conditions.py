@@ -7,6 +7,9 @@ print(''.center(50,'-'))
 # Changing to Lower Case
 email = email.lower()
 
+# 012345678901234567890
+# juan.sosacompany.com
+
 # Has only one @
 has_at = ('@' in email)
 is_one = (email.find('@') == email.rfind('@'))
@@ -16,6 +19,8 @@ if(valid):
     ati = email.find('@')
     # Spliting email
     nick, domain = email[:ati], email[ati+1:]
+    # split_email = email.split('@')
+    # nick, domain = tuple(split_email)
 
     # The nick and domain length is almost 4 characters
     nick_len = (len(nick) >= 4)
