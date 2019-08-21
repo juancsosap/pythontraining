@@ -1,5 +1,5 @@
 class Person:
-    def __init__(self, name):
+    def __init__(self, name=''):
         self.name = name
     
     def __repr__(self):
@@ -7,7 +7,8 @@ class Person:
 
 class Employee(Person):
     def __init__(self, name, role):
-        super().__init__(name)
+        super().__init__()
+        self.name = name # not recomended
         self.role = role
 
 class Client(Person):

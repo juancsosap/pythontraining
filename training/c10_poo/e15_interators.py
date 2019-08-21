@@ -44,3 +44,4 @@ if __name__ == "__main__":
     print(next(nsl))
     print(next(nsl))
     print(next(nsl))
+    # print(next(nsl)) # raise StopIteration Exception

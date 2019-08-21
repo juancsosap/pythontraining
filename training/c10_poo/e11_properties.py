@@ -34,6 +34,7 @@ if __name__ == "__main__":
     p1 = Person('Juan', 10)
     print('P1:', p1)
     p1.name = 'Juan Carlos'
+    print(p1.name)
     print('P1:', p1)
 
     print()
