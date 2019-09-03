@@ -1,6 +1,10 @@
+basedir = __file__[:__file__.rfind('/')+1]
+
 import json
 
-with open('docs/data.json') as file:
+path = basedir + 'docs/data.json'
+
+with open(path) as file:
     text = file.read()
     print(text)
     
@@ -10,6 +14,7 @@ with open('docs/data.json') as file:
     print(type(config))
     print(dir(config))
     print(config)
+    print(config.get('name', None))
 
     print()
 

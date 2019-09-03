@@ -1,13 +1,16 @@
 import pandas as pd
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
 # Reading tabular data from URL (Good Default Formated)
-url = 'http://bit.ly/chiporders'
+url = 'data/chiporders.data'  #'http://bit.ly/chiporders'
 data = pd.read_table(url)
 print(data.head(), end='\n\n')
 
 # Reading tabular data from URL (Bad Default Formated)
-url = 'http://bit.ly/movieusers'
+url = 'data/movieusers.data'  #'http://bit.ly/movieusers'
 data = pd.read_table(url)
 print(data.head(), end='\n\n')
 
@@ -25,7 +28,7 @@ data = pd.read_table(url, sep='|', header=None, names=user_cols)
 print(data.head(), end='\n\n')
 
 # Reading CSV file from URL using read_table and separator
-url = 'http://bit.ly/uforeports'
+url = 'data/uforeports.csv'   #'http://bit.ly/uforeports'
 data = pd.read_table(url, sep=',')
 print(data.head(), end='\n\n')
 

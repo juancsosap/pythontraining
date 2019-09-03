@@ -1,6 +1,10 @@
+basedir = __file__[:__file__.rfind('/')+1]
+
 import xml.etree.ElementTree as et
 
-tree = et.parse('docs/data.xml')
+path = basedir + 'docs/data.xml'
+
+tree = et.parse(path)
 root = tree.getroot()
 
 print(dir(tree))
@@ -23,7 +27,3 @@ item = tree.find('surname')
 print(item.tag, item.text, item.attrib)
 
 print('-'*50)
-
-root.write
-text = et.tostring(root)
-print(text)

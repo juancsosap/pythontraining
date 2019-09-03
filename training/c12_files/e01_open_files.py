@@ -1,4 +1,6 @@
-path = 'docs/doc.txt'
+basedir = __file__[:__file__.rfind('/')+1]
+
+path = basedir + 'docs/doc.txt'
 
 # Opening File
 file = open(path)
@@ -14,6 +16,8 @@ try:
     file = open(path)
     # Rest of commands
 except:
+    print('Error')
+finally:
     file.close()
 
 # Auto closing the file
@@ -31,5 +35,5 @@ with open(path) as file:
     'b' 	Open in binary mode.
     '+' 	Open a file for updating (reading and writing) '''
 
-with open(file=path, mode='r', encoding='utf-8') as file:
+with open(file=path, mode='rt', encoding='utf-8') as file:
     pass

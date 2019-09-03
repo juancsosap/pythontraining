@@ -1,7 +1,7 @@
 class InvalidArgumentError(Exception):
     pass
 
-class OutOfRangeValueError(Exception):
+class OutOfRangeValueError(ValueError):
     def __init__(self, message=None, min_val=0, max_val=0):
         if message is not None:
             msg = message 

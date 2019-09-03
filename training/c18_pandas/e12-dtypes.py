@@ -1,4 +1,8 @@
 import pandas as pd
+import os
+
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
 # ## Data Types ##
 #
@@ -10,7 +14,7 @@ import pandas as pd
 # timedelta
 # category
 
-url = 'http://bit.ly/drinksbycountry'
+url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
 data = pd.read_csv(url)
 print(data.head(), end='\n\n')
 
@@ -27,7 +31,7 @@ print(data.head(), end='\n\n')
 print(data.dtypes, end='\n\n')
 
 # Loading Data with wrong Data Type
-url = 'http://bit.ly/chiporders'
+url = 'data/chiporders.data'  #'http://bit.ly/chiporders'
 data = pd.read_table(url)
 print(data.head(), end='\n\n')
 print(data.dtypes, end='\n\n')

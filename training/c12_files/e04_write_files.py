@@ -1,5 +1,7 @@
-path = 'docs/doc.txt'
-copy_path = 'docs/doc-copy.txt'
+basedir = __file__[:__file__.rfind('/')+1]
+
+path = basedir + 'docs/doc.txt'
+copy_path = basedir + 'docs/doc-copy.txt'
 
 # Write file
 with open(path, 'r', encoding='utf-8') as rfile:

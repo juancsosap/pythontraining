@@ -1,7 +1,12 @@
 import flask as fl
 # pip install flask
 import pandas as pd
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
+
+url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
 
 users_list = ['juan', 'luis', 'pepe']
 access_list = [True, False, True]
@@ -53,7 +58,7 @@ def user_by_id(user_id):
 def getpandas():
     limit = int(fl.request.args.get('limit', 10))
     offset = int(fl.request.args.get('offset', 0))
-    data = pd.read_csv('http://bit.ly/drinksbycountry', nrows=limit, skiprows=offset).to_html()
+    data = pd.read_csv(url, nrows=limit, skiprows=offset).to_html()
     return fl.render_template('pandas.html', data=data)
 
 

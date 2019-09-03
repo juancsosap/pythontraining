@@ -14,9 +14,9 @@ print(cesta.pop())
 print(cesta)
 
 # Remove element
-cesta.remove('fruta') # The element must exist
+#cesta.remove('fruta') # The element must exist
 print(cesta)
-cesta.discart('fruta') # Remove if exist
+#cesta.discart('fruta') # Remove if exist
 
 vinos = set()  # creación conjunto vacío
 

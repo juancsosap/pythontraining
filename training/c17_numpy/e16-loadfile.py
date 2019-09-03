@@ -1,13 +1,12 @@
 import numpy as np
 # pip install numpy
-import os
 
+basedir = __file__[:__file__.rfind('/')+1]
 
-BASEDIR = os.path.abspath(os.path.dirname(__file__))
-FILE_INPUT = os.path.join(BASEDIR, 'data_input.csv')
-FILE_OUTPUT = os.path.join(BASEDIR, 'data_input.csv')
+infile = basedir + 'data/data_input.csv'
+outfile = basedir + 'data/data_output.csv'
 
-arreglo = np.loadtxt(FILE_INPUT, delimiter=',')
+arreglo = np.loadtxt(infile, delimiter=',')
 print(arreglo)
 
 print()
@@ -15,11 +14,11 @@ print()
 arreglo **= 2
 print(arreglo)
 
-np.savetxt(FILE_OUTPUT, arreglo, delimiter=',')
+np.savetxt(outfile, arreglo, delimiter=',')
 
 print()
 
-x, y, z = np.loadtxt(FILE_OUTPUT, delimiter=',', unpack=True)
+x, y, z = np.loadtxt(outfile, delimiter=',', unpack=True)
 
 print(x)
 print(y)

@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
 # Reading DataFrame from URL
-url = 'http://bit.ly/uforeports'
+url = 'data/uforeports.csv'   #'http://bit.ly/uforeports'
 data = pd.read_csv(url)
 print('LOADED DATA')
 print(data.head(), end='\n\n')

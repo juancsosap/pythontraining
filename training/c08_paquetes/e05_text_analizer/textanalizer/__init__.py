@@ -1,0 +1,1 @@
+from textanalizer.facade import *

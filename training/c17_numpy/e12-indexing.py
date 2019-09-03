@@ -20,6 +20,9 @@ print(arreglo[1:4], end='\n\n')
 print('Numpy a[1:4, 2]')
 print(arreglo[1:4, 2], end='\n\n')
 
+print('Numpy a[1:4, np.newaxis, 2]')
+print(arreglo[1:4, np.newaxis, 2], end='\n\n')
+
 print('Numpy a[1:4, 1:4]')
 print(arreglo[1:4, 1:4], end='\n\n')
 

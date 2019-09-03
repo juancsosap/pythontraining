@@ -1,9 +1,12 @@
 import pandas as pd
 import numpy as np
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
 # Reading DataFrame from URL
-url = 'http://bit.ly/imdbratings'
+url = 'data/imdbratings.csv'  #'http://bit.ly/imdbratings'
 data = pd.read_csv(url)
 print(data.head(10), end='\n\n')
 print(data.tail(10), end='\n\n')

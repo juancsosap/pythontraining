@@ -1,7 +1,10 @@
 import pandas as pd
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
-url = 'http://bit.ly/chiporders'
+url = 'data/chiporders.data'  #'http://bit.ly/chiporders'
 data = pd.read_table(url)
 print(data.head(), end='\n\n')
 

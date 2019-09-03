@@ -1,3 +1,5 @@
+basedir = __file__[:__file__.rfind('/')+1]
+
 import os
 
 # Get Current Working Directory (CWD)
@@ -11,7 +13,7 @@ cwd2 = os.getcwd()
 print(cwd2)
 
 # Absolute Path
-os.chdir('/tmp')
+os.chdir(basedir)
 cwd3 = os.getcwd()
 print(cwd3)
 
@@ -20,11 +22,10 @@ print()
 # List Directory
 
 # List CWD
-os.chdir(cwd1)
-cwd = os.getcwd()
-print(cwd)
 dir_list = os.listdir()
 print(dir_list)
+
+print()
 
 # List Path
 dir_list = os.listdir('..')
@@ -40,16 +41,21 @@ print(dir_list)
 print()
 
 # Rename file or directory
-os.rename('newdocs','olddocs')
+os.rename('newdocs', 'olddocs')
 dir_list = os.listdir()
 print(dir_list)
 
 print()
 
-# Removing file
+# Creating File
+open('docs/other.txt', 'w').close()
 dir_list = os.listdir('docs')
 print(dir_list)
-os.remove('docs/doc-copy.txt')
+
+print()
+
+# Removing file
+os.remove('docs/other.txt')
 dir_list = os.listdir('docs')
 print(dir_list)
 

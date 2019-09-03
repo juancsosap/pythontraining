@@ -1,4 +1,6 @@
-path = 'docs/doc.txt'
+basedir = __file__[:__file__.rfind('/')+1]
+
+path = basedir + 'docs/doc.txt'
 
 with open(path) as file:
     # Get lines using for loop

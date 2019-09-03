@@ -1,7 +1,10 @@
 import pandas as pd
+import os
 
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
 
-url = 'http://bit.ly/drinksbycountry'
+url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
 data = pd.read_csv(url)
 print(data.head(), end='\n\n')
 
