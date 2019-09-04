@@ -31,6 +31,7 @@ def user_by_id(user_id):
     return 'Welcome user #{id}'.format(id=user_id)
 
 
+@app.errorhandler(405)
 @app.errorhandler(404)
 def not_found(error):
     return 'This page URL is not available'

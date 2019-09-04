@@ -24,7 +24,11 @@ class WordAnalizer:
         split_text = text.split(' ')
         split_text.sort()
         split_text.reverse()
-        split_text = split_text[:split_text.index('')]
+        
+        try:
+            index = split_text.index('')
+            split_text = split_text[:index]
+        except: pass
         
         return split_text
 

@@ -2,20 +2,20 @@
 
 # SQLite3 Database
 # import sqlite3 as dbdriver
-# conn_str = db_file_path
-# conn_str = 'data.db'
+# conn_config = db_file_path
+# conn_config = 'data.db'
 
 # SQL Server Database
 # import pyodbc as dbdriver
-# conn_str = 'Driver={SQL Server};Server=server_name;Database=db_name;Trusted_Connection=yes;'
-# conn_str = 'Driver={SQL Server};Server=MyDatabaseServer;Database=ProductionDB;Trusted_Connection=yes;'
+# conn_config = 'Driver={SQL Server};Server=server_name;Database=db_name;Trusted_Connection=yes;'
+# conn_config = 'Driver={SQL Server};Server=MyDatabaseServer;Database=ProductionDB;Trusted_Connection=yes;'
 
 # Oracle Database
 # import cx_Oracle as dbdriver
-# conn_str = 'username/password@server-ip/db_name'
-# conn_str = 'admin/admin@127.0.0.1/productiondb'
+# conn_config = 'username/password@server-ip/db_name'
+# conn_config = 'admin/admin@127.0.0.1/productiondb'
  
-# MySQL Database            py
+# MySQL Database            
 # import mysql.connector as dbdriver
 # conn_config = { 'user': username, 'password': password, 'host': server-ip, 'database': db_name, 'raise_on_warnings': True }
 # conn_config = { 'user': 'admin, 'password': 'admin', 'host': '127.0.0.1', 'database': 'productiondb, 'raise_on_warnings': True }
@@ -24,9 +24,12 @@ import sqlite3 as dbdriver
 import re
 
 class DBManager:
-    def __init__(self, conn_str, driver=dbdriver):
+    def __init__(self, conn_config, driver=dbdriver):
         print('Connecting to Database')
-        self.conn = driver.connect(conn_str) # driver.connect(**conn_config) for MySQL
+        if(isinstance(conn_config, dict)):
+            self.conn = driver.connect(**conn_config) # For MySQL
+        else:    
+            self.conn = driver.connect(conn_config) 
         self.cursor = self.conn.cursor()
 
     def __del__(self):

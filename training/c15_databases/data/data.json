@@ -1,18 +1,23 @@
 {
-    "person": {
-        "create":"INSERT INTO 'person' VALUES (:rut, :name, :age);",
-        "retriveall":"SELECT * FROM 'person';",
-        "retrive":"SELECT * FROM 'person' WHERE rut=?;",
-        "update":"UPDATE 'person' SET name=:name, age=:age WHERE rut=:rut;",
-        "deleteall":"DELETE FROM 'person';",
-        "delete":"DELETE FROM 'person' WHERE rut=?;"
+    "tables": {
+        "person": {
+            "create":"INSERT INTO 'person' VALUES (:rut, :name, :age);",
+            "retriveall":"SELECT * FROM 'person';",
+            "retrive":"SELECT * FROM 'person' WHERE rut=?;",
+            "update":"UPDATE 'person' SET name=:name, age=:age WHERE rut=:rut;",
+            "deleteall":"DELETE FROM 'person';",
+            "delete":"DELETE FROM 'person' WHERE rut=?;"
+        },
+        "country": {
+            "create":"INSERT INTO 'country' VALUES (:code, :name, :continent);",
+            "retriveall":"SELECT * FROM 'country';",
+            "retrive":"SELECT * FROM 'country' WHERE code=?;",
+            "update":"UPDATE 'country' SET name=:name, continent=:continent WHERE code=:code;",
+            "deleteall":"DELETE FROM 'country';",
+            "delete":"DELETE FROM 'country' WHERE code=?;"
+        }  
     },
-    "country": {
-        "create":"INSERT INTO 'country' VALUES (:code, :name, :continent);",
-        "retriveall":"SELECT * FROM 'country';",
-        "retrive":"SELECT * FROM 'country' WHERE code=?;",
-        "update":"UPDATE 'country' SET name=:name, continent=:continent WHERE code=:code;",
-        "deleteall":"DELETE FROM 'country';",
-        "delete":"DELETE FROM 'country' WHERE code=?;"
+    "db": {
+        "database":"../data/data.db"
     }
 }

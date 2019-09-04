@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Text Analizer</title>
+    </head>
+    <body>
+        <h1>Text Analizer</h1>
+        <h2>Input Text</h2>
+        <p>{{ data['text'] }}</p>
+        <h2>Analize Results</h2>
+        
+        <h3>Top 10 Words</h3>
+        <table>
+            <tr>
+				<th>Word</th>
+				<th>Quantity</th>
+			</tr>
+            {% for word in data['top_words'] %}
+			<tr>
+				<td>{{ word[1] }}</td>
+				<td>{{ word[0] }}</td>
+			</tr>
+            {% endfor %}
+        </table>
+        
+        <h3>Top 10 Chars</h3>
+        <table>
+            <tr>
+				<th>Char</th>
+				<th>Quantity</th>
+			</tr>
+            {% for char in data['top_chars'] %}
+			<tr>
+				<td>{{ char[1] }}</td>
+				<td>{{ char[0] }}</td>
+			</tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

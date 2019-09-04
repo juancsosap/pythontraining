@@ -4,12 +4,14 @@ import json
 from db_manager import DBManager
 
 class GenericSqlDAO:
-    def __init__(self, conn_str, config_path, element, tablename, driver=dbdriver):
-        self.dbman = DBManager(conn_str, driver)
+    def __init__(self, config_path, element, tablename, driver=dbdriver):
         self.element = element
 
         with open(config_path) as file:
-            self.config = json.loads(file.read())[tablename]
+            config = json.loads(file.read())
+        
+        self.dbman = DBManager(config['db'], driver)
+        self.sqls = config['tables'][tablename]
     
     def __enter__(self): return self
 
@@ -18,7 +20,7 @@ class GenericSqlDAO:
     def create(self, *items):
         created = []
         for item in items:
-            sql = self.config['create']
+            sql = self.sqls['create']
             data = item.__dict__
             try:
                 self.dbman.execute(sql, data)
@@ -29,13 +31,13 @@ class GenericSqlDAO:
     def retrive(self, *idxs):
         retrived = []
         if len(idxs) == 0:
-            sql = self.config['retriveall']
+            sql = self.sqls['retriveall']
             try:
                 rows = self.dbman.query(sql)
                 retrived.extend(self.add_items(*rows))
             except Exception as e: print(e)
         else:
-            sql = self.config['retrive']
+            sql = self.sqls['retrive']
             for idx in idxs:
                 try:
                     data = [idx]
@@ -47,7 +49,7 @@ class GenericSqlDAO:
     def update(self, *items):
         updated = []
         for item in items:
-            sql = self.config['update']
+            sql = self.sqls['update']
             data = item.__dict__
             try:
                 self.dbman.execute(sql, data)
@@ -58,14 +60,14 @@ class GenericSqlDAO:
     def delete(self, *idxs):
         deleted = []
         if len(idxs) == 0:
-            sql = self.config['deleteall']
+            sql = self.sqls['deleteall']
             try:
                 items = self.retrive()
                 self.dbman.execute(sql)
                 deleted = items
             except Exception as e: print(e)
         else:
-            sql = self.config['delete']
+            sql = self.sqls['delete']
             for idx in idxs:
                 try:
                     item = self.retrive(idx)

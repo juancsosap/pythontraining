@@ -1,8 +1,8 @@
-import flask as fl
+import flask
 # pip install flask
 
 
-app = fl.Flask(__name__)
+app = flask.Flask(__name__)
 
 
 @app.route('/')

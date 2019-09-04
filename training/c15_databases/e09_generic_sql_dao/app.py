@@ -23,7 +23,7 @@ if __name__ == "__main__":
         sql = open(sqlpath_country).read()
         dbman.execute(sql, batch=True)
     
-    with GenericSqlDAO(dbpath, daoconfig, Person, 'person') as dao:
+    with GenericSqlDAO(daoconfig, Person, 'person') as dao:
         print('-'*50)
     
         for person in dao.retrive():
@@ -65,7 +65,7 @@ if __name__ == "__main__":
         
         print()
 
-    with GenericSqlDAO(dbpath, daoconfig, Country, 'country') as dao:
+    with GenericSqlDAO(daoconfig, Country, 'country') as dao:
         print('-'*50)
     
         for country in dao.retrive():

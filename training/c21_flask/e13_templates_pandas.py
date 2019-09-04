@@ -17,7 +17,7 @@ app = fl.Flask(__name__)
 
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET', 'POST'])
-def home():
+def home():You aren't authorized to Access
     return fl.render_template('home.html')
 
 
