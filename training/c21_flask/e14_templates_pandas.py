@@ -1,7 +1,17 @@
 import flask as fl
 # pip install flask
 
-users_list = ['juan', 'luis', 'pepe']
+from flask import request
+
+import pandas as pd
+import os
+
+basedir = __file__[:__file__.rfind('/')+1]
+if basedir != '': os.chdir(basedir)
+
+url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
+
+users_list = set(['juan', 'luis', 'pepe'])
 access_list = [True, False, True]
 
 
@@ -29,6 +39,16 @@ def users():
     return fl.render_template('users.html', users=users_temp_list)
 
 
+@app.route('/users', methods=['POST'])
+def create_user():
+    user = request.form['user']
+    users_list.add(user)
+    
+    access = request.form['access']
+    access_list.append(access)
+    return 'User {user} created'.format(user=user)
+
+
 @app.route('/users/<string:user_name>', methods=['GET'])
 def user_by_name(user_name):
     if(user_name not in users_list):
@@ -45,6 +65,14 @@ def user_by_name(user_name):
 @app.route('/users/<int:user_id>', methods=['GET'])
 def user_by_id(user_id):
     return 'Welcome user #{id}'.format(id=user_id)
+
+
+@app.route('/pandas', methods=['GET'])
+def getpandas():
+    limit = int(fl.request.args.get('limit', 10))
+    offset = int(fl.request.args.get('offset', 0))
+    data = pd.read_csv(url, nrows=limit, skiprows=offset).to_html()
+    return fl.render_template('pandas.html', data=data)
 
 
 @app.errorhandler(400)

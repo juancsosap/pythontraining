@@ -24,7 +24,7 @@ for t in ts:
     t.start()
 
 for t in ts:
-    t.join()
+    t.join(timeout=1)
 
 despedida('Juan')
 despedida('Luis')

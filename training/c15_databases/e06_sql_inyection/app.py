@@ -17,7 +17,7 @@ if __name__ == "__main__":
         username = input('Username : ') # ' OR ''='
         password = input('Password : ') # ' OR ''='
         
-        sql = '''SELECT email, password FROM person WHERE email='{}' AND password='{}';'''
+        sql = '''SELECT * FROM person WHERE email='{}' AND password='{}';'''
         table = dbman.query(sql.format(username, password))
 
         if(len(table) == 0):
@@ -25,8 +25,5 @@ if __name__ == "__main__":
         else:
             print('Authenticated')
         
-            sql = '''SELECT * FROM person WHERE email='{email}';'''
-            table = dbman.query(sql.format(email=username))
-
             for row in table:
                 print(row)

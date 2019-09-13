@@ -15,6 +15,7 @@ if __name__ == "__main__":
 
         sql = '''SELECT * FROM person'''
         table = dbman.query(sql)
+        print(type(table))
 
         for row in table:
             print(row)

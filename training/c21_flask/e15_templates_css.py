@@ -1,5 +1,8 @@
 import flask as fl
 # pip install flask
+
+from flask import request
+
 import pandas as pd
 import os
 
@@ -8,7 +11,7 @@ if basedir != '': os.chdir(basedir)
 
 url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
 
-users_list = ['juan', 'luis', 'pepe']
+users_list = set(['juan', 'luis', 'pepe'])
 access_list = [True, False, True]
 
 
@@ -17,7 +20,7 @@ app = fl.Flask(__name__)
 
 @app.route('/', methods=['GET'])
 @app.route('/home', methods=['GET', 'POST'])
-def home():You aren't authorized to Access
+def home():
     return fl.render_template('home.html')
 
 
@@ -34,6 +37,16 @@ def users():
     else:
         users_temp_list = users_list
     return fl.render_template('users.html', users=users_temp_list)
+
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    user = request.form['user']
+    users_list.add(user)
+    
+    access = request.form['access']
+    access_list.append(access)
+    return 'User {user} created'.format(user=user)
 
 
 @app.route('/users/<string:user_name>', methods=['GET'])
@@ -59,7 +72,7 @@ def getpandas():
     limit = int(fl.request.args.get('limit', 10))
     offset = int(fl.request.args.get('offset', 0))
     data = pd.read_csv(url, nrows=limit, skiprows=offset).to_html()
-    return fl.render_template('pandas.html', data=data)
+    return fl.render_template('pandas_w_css.html', data=data)
 
 
 @app.errorhandler(400)

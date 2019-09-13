@@ -11,6 +11,9 @@ print()
 print('Numpy a[1]')
 print(arreglo[1], end='\n\n')
 
+print('Numpy a[:,-1]')
+print(arreglo[:,-1], end='\n\n')
+
 print('Numpy a[1, 2]')
 print(arreglo[1, 2], end='\n\n')
 

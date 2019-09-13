@@ -4,10 +4,12 @@ import numpy as np
 import sys
 
 
-size = 200_000_000
+size = 2_000_000
 
-lista = range(size)
-print(sys.getsizeof(1) * len(lista))
+lista = [x for x in range(size)]
+space = sys.getsizeof(size) * len(lista)
+print('{:,d}'.format(space))
 
 array = np.arange(size)
-print(array.size * array.itemsize)
+space = array.size * array.itemsize
+print('{:,d}'.format(space))

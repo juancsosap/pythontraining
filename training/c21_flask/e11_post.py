@@ -1,6 +1,9 @@
 import flask as fl
 # pip install flask
 
+from flask import request
+import json
+
 users_list = set(['juan', 'luis', 'pepe'])
 
 
@@ -22,6 +25,14 @@ def about():
 def users():
     limit = int(fl.request.args.get('limit', 10))
     return 'You will get {count} registers of users'.format(count=limit)
+
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    user = request.form['user']
+    users_list.add(user)
+    print(users_list)
+    return 'User {user} created'.format(user=user)
 
 
 @app.route('/users/<string:user_name>', methods=['GET'])

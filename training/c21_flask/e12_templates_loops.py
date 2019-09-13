@@ -1,7 +1,9 @@
 import flask as fl
 # pip install flask
 
-users_list = ['juan', 'luis', 'pepe', 'maria', 'ana', 'jose', 'andres', 'carlos']
+from flask import request
+
+users_list = set(['juan', 'luis', 'pepe', 'maria', 'ana', 'jose', 'andres', 'carlos'])
 
 
 app = fl.Flask(__name__)
@@ -26,6 +28,13 @@ def users():
     else:
         users_temp_list = users_list
     return fl.render_template('users.html', users=users_temp_list)
+
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    user = request.form['user']
+    users_list.add(user)
+    return 'User {user} created'.format(user=user)
 
 
 @app.route('/users/<string:user_name>', methods=['GET'])

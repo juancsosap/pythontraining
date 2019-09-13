@@ -6,11 +6,17 @@ import numpy as np
 days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
 days_serie = pd.Series(days)
 print(days_serie, end='\n\n')
+print(type(days))
+print(type(days_serie))
+print()
 
 # Creating Serie from Numpy Array
 drivers = np.random.randint(0, 100, 7)
 drivers_serie = pd.Series(drivers)
 print(drivers_serie, end='\n\n')
+print(type(drivers))
+print(type(drivers_serie))
+print()
 
 # Creating Serie and asigning index
 drivers_serie = pd.Series(drivers, index=days)
@@ -32,25 +38,26 @@ print(prof_serie.head(), end='\n\n')
 
 # Creating DataFrame from Python List
 guests_rows = [['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-               [10, 12, 14, 20, 15, 8, 18]]
+               [10, 12, 14, 20, 15, 8, 18],
+               [8, 10, 10, 15, 12, 6, 15]]
 guests_dataframe = pd.DataFrame(guests_rows)
 print(guests_dataframe, end='\n\n')
 
 # Creating DataFrame from Python List
-guests_columns = list(zip(guests_rows[0], guests_rows[1]))
+guests_columns = list(zip(*guests_rows))
 guests_dataframe = pd.DataFrame(guests_columns)
 print(guests_dataframe, end='\n\n')
 
 # Defining Rows Index
-guests_dataframe = pd.DataFrame(guests_rows, index=['Days', 'Guests'])
+guests_dataframe = pd.DataFrame(guests_rows, index=['Days', 'Guests', 'Remained'])
 print(guests_dataframe, end='\n\n')
 
 # Defining Column Names
-guests_dataframe = pd.DataFrame(guests_columns, columns=['Days', 'Guests'])
+guests_dataframe = pd.DataFrame(guests_columns, columns=['Days', 'Guests', 'Remained'])
 print(guests_dataframe, end='\n\n')
 
 # Creating DataFrame from Python Dictionary
-guests_dict = {'Days': guests_rows[0], 'Guests': guests_rows[1]}
+guests_dict = {'Days': guests_rows[0], 'Guests': guests_rows[1], 'Remained': guests_rows[2]}
 guests_dataframe = pd.DataFrame(guests_dict)
 print(guests_dataframe, end='\n\n')
 
@@ -109,7 +116,9 @@ usuarios = {'name': ['Juan', 'Luis', 'Pepe'],
 
 df_personas = pd.DataFrame(personas)
 df_usuarios = pd.DataFrame(usuarios)
-df_full = df_personas.merge(df_usuarios, how='left', left_on=[
-                            'nombre', 'apellido'], right_on=['name', 'surname'])
+df_full = df_personas.merge(df_usuarios, how='left', 
+                                         left_on=['nombre', 'apellido'], 
+                                         right_on=['name', 'surname'])
+
 df_full.drop(['name', 'surname'], axis=1, inplace=True)
 print(df_full, end='\n\n')

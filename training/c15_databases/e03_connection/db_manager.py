@@ -3,10 +3,10 @@
 # SQLite3 Database
 # import sqlite3 as dbdriver
 # conn_str = db_file_path
-# conn_str = 'data.db'
+# conn_str = 'data.db' # ':memory:'
 
 # SQL Server Database
-# import pyodbc as dbdriver
+# import pyodbc as dbdysql.connectoriver
 # conn_str = 'Driver={SQL Server};Server=server_name;Database=db_name;Trusted_Connection=yes;'
 # conn_str = 'Driver={SQL Server};Server=MyDatabaseServer;Database=ProductionDB;Trusted_Connection=yes;'
 
@@ -15,7 +15,7 @@
 # conn_str = 'username/password@server-ip/db_name'
 # conn_str = 'admin/admin@127.0.0.1/productiondb'
  
-# MySQL Database            py
+# MySQL Database            
 # import mysql.connector as dbdriver
 # conn_config = { 'user': username, 'password': password, 'host': server-ip, 'database': db_name, 'raise_on_warnings': True }
 # conn_config = { 'user': 'admin, 'password': 'admin', 'host': '127.0.0.1', 'database': 'productiondb, 'raise_on_warnings': True }
@@ -35,4 +35,4 @@ class DBManager:
     
     def __enter__(self): return self
 
-    def __exit__(self, etype, evalue, etb): pass
+    def __exit__(self, etype, evalue, etb): del self

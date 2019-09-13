@@ -35,7 +35,7 @@ class DBManager:
     
     def __enter__(self): return self
 
-    def __exit__(self, etype, evalue, etb): pass
+    def __exit__(self, etype, evalue, etb): del self
     
     @staticmethod
     def split_sql(sql):
@@ -45,7 +45,7 @@ class DBManager:
 
     def execute(self, sql, data=[], batch=False):
         if batch:
-            for cmd in self.split_sql(sql):
+            for cmd in self.split_sql(sql)[:-1]:
                 self.cursor.execute(cmd, data) 
         else:
             self.cursor.execute(sql, data)

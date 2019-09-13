@@ -18,7 +18,14 @@ print()
 
 lista = [1, 2.6, '3', True]
 arreglo = np.array(lista, dtype=np.int32)
-print('Python List\n{}'.format(lista))
+print('Python String\n{}'.format(lista))
+print('Numpy Array\n{}'.format(arreglo))
+
+print()
+
+id = tuple('000123')
+arreglo = np.array(id, dtype=np.int32)
+print('Python List\n{}'.format(id))
 print('Numpy Array\n{}'.format(arreglo))
 
 print()

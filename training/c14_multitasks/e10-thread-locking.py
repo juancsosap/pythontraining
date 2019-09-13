@@ -6,7 +6,7 @@ lock = th.Lock()
 
 def printer():
     thread_name = th.currentThread().getName()
-    lock.acquire()
+    lock.acquire(timeout=1)
     for i in range(100):
         print('{index:02d} - Hello World from {name}'.format(index=i, name=thread_name))
     lock.release()
