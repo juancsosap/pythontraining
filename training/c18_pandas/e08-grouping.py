@@ -10,6 +10,8 @@ print(data.head(), end='\n\n')
 
 print(data.shape, '\n')
 
+print(data.describe(include='object'), '\n')
+
 print('Groups:')
 for group in data.groupby('continent').groups:
     print(group)

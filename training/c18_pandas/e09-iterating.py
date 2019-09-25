@@ -14,4 +14,4 @@ for val in data.title.head():
 print()
 
 for index, row in data.head().iterrows():
-    print(index, row.title, row.genre, sep=' - ')
+    print(index, row.title, row['genre'], sep=' - ')

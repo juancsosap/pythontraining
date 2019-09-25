@@ -44,6 +44,13 @@ guests_dataframe = pd.DataFrame(guests_rows)
 print(guests_dataframe, end='\n\n')
 
 # Creating DataFrame from Python List
+#guests_columns = [['Dom', 10, 8],
+#                  ['Lun', 12, 10],
+#                  ['Mar', 14, 10],
+#                  ['Mie', 20, 15],
+#                  ['Jue', 15, 12],
+#                  ['Vie', 8, 6],
+#                  ['Sab', 18, 15]]
 guests_columns = list(zip(*guests_rows))
 guests_dataframe = pd.DataFrame(guests_columns)
 print(guests_dataframe, end='\n\n')
@@ -85,7 +92,9 @@ print(guests_dataframe, end='\n\n')
 
 # Creating DataFrame joining DataFrames
 df1 = pd.DataFrame(np.random.randn(4, 2), index=['a', 'b', 'c', 'd'], columns=['c1', 'c2'])
+print(df1, end='\n\n')
 df2 = pd.DataFrame(np.random.randn(4, 2), index=['b', 'c', 'd', 'e'], columns=['c3', 'c4'])
+print(df2, end='\n\n')
 dfj = df1.join(df2)
 print(dfj, end='\n\n')
 dfj = df1.join(df2, how='outer')
@@ -102,7 +111,9 @@ usuarios = {'nombre': ['Juan', 'Luis', 'Pepe'],
             'password': ['S0s@', 'P3r3$', 'L0P3Z']}
 
 df_personas = pd.DataFrame(personas)
+print(df_personas, end='\n\n')
 df_usuarios = pd.DataFrame(usuarios)
+print(df_usuarios, end='\n\n')
 df_full = df_personas.merge(df_usuarios, on=['nombre', 'apellido'], how='outer')
 print(df_full, end='\n\n')
 

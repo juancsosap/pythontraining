@@ -1,5 +1,5 @@
 order_id	quantity	item_name	choice_description	item_price
-1	1	Chips and Fresh Tomato Salsa	NULL	$2.39 
+1	1	Chips and Fresh Tomato Salsa	NULL	$2,39 
 1	1	Izze	[Clementine]	$3.39 
 1	1	Nantucket Nectar	[Apple]	$3.39 
 1	1	Chips and Tomatillo-Green Chili Salsa	NULL	$2.39 

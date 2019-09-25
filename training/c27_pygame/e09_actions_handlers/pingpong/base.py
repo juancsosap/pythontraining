@@ -1,5 +1,5 @@
 import pygame as pg
-from game import Game, items, handlers as gh
+from game import Game, handlers as gh
 
 from pingpong import handlers, items, actions
 

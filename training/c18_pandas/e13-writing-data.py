@@ -12,10 +12,13 @@ max = data.shape[0]
 print(max)
 
 data = pd.read_csv(url, nrows=500)
-data.to_csv(outfile, sep=",", index=False, mode='w')
+columns = data.columns
+filterdata = data[data['State'] == 'NY']
+filterdata.to_csv(outfile, sep=",", index=False, mode='w')
 for c in range(501, max, 500):
-    data = pd.read_csv(url, nrows=500, skiprows=c, header=None)
-    data.to_csv(outfile, sep=",", index=False, header=False, mode='a')
+    data = pd.read_csv(url, nrows=500, skiprows=c, header=None, names=columns)
+    filterdata = data[data['State'] == 'NY']
+    filterdata.to_csv(outfile, sep=",", index=False, header=False, mode='a')
     print("#", end='')
 
 print()

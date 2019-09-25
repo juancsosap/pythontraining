@@ -169,7 +169,7 @@ class Text(Item):
         if halign == 'right': x += (width - textwidth)
         
         if valign == 'center': y += (height - textheight)/2
-        if valign == 'botton': y += (height - textheight)
+        if valign == 'bottom': y += (height - textheight)
         
         self.rect = (x, y, textwidth, textheight)        
 
