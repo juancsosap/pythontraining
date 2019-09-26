@@ -98,3 +98,8 @@ print(ustr)
 # Raw String
 rstr = r"c:\documents\newfile.txt"
 print(rstr)
+
+# Format String
+n1, n2 = 5, 10
+fstr = f"{n1} + {n2} = {n1 + n2}"
+print(fstr)

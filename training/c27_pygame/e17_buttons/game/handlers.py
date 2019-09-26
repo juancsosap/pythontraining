@@ -83,5 +83,22 @@ class ControlMouseOverHandler(ControlHandler):
     
     def run(self, event, start=True):
         if(self.control.iswithin(event.pos)):
-            self.control.action()
+            self.control.state = self.states[self.control.state]
+        else:
+            self.control.state = 'normal'
+        self.control.draw(self.game.window.surface)
+        pg.display.update()
     
+class ControlMouseButtonHandler(ControlHandler):
+    def __init__(self, game, control, button, states):
+        super().__init__(game, control, states)
+        self.button = button
+    
+    def run(self, event, start=True):
+        if(self.control.iswithin(event.pos)):
+            if(event.button == self.button):
+                self.control.state = self.states[self.control.state]
+        else:
+            self.control.state = 'normal'
+        self.control.draw(self.game.window.surface)
+        pg.display.update()

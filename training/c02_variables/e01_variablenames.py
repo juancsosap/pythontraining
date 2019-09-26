@@ -38,3 +38,13 @@ n1 = 10; n2 = 20; n3 = 30
 
 # Multiple assigned with the same value
 n1 = n2 = n3 = 40
+
+# swapping variables
+n1, n2, n3 = 1, 2, 3
+print(n1, n2, n3)
+
+n1, n2, n3 = n2, n3, n1
+print(n1, n2, n3)
+
+n1, n2, n3 = n2, n3, n1
+print(n1, n2, n3)

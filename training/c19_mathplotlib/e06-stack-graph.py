@@ -11,6 +11,12 @@ working = np.array([2, 7, 8, 7, 8, 8, 0])
 studing = np.array([3, 4, 2, 3, 4, 5, 5])
 playing = np.ones((7,)) * 24 - sleeping - eating - working - studing
 
+#sleeping = np.array([7, 6, 7, 6, 5, 8, 7]) / 24 * 100
+#eating = np.array([3, 2, 1, 3, 2, 3, 4]) / 24 * 100
+#working = np.array([2, 7, 8, 7, 8, 8, 0]) / 24 * 100
+#studing = np.array([3, 4, 2, 3, 4, 5, 5]) / 24 * 100
+#playing = np.ones((7,)) * 100 - sleeping - eating - working - studing
+
 plt.plot([], [], color='r', label='Sleeping', linewidth=5)
 plt.plot([], [], color='g', label='Eating', linewidth=5)
 plt.plot([], [], color='b', label='Working', linewidth=5)

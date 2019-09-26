@@ -2,6 +2,7 @@ import random
 import pygame as pg
 from game import GameWindow, handlers as gh
 from game.items import Rect, Text
+from game.controls import Button
 
 from pingpong import handlers, items, actions
 
@@ -42,6 +43,9 @@ class IntroWindow(GameWindow):
         txt = "Press P to pause the game"
         Text(self, txt, pg.Color('black'), self.borderg, 5 * heightg // 6).setalign('center', 'top') \
             .setfont(None, 7).setrect(textwidthg, heightg // 6 - self.borderg).draw(self.surface)
+        
+        colors = [pg.Color('red'), pg.Color('pink'), pg.Color('purple'), pg.Color('black')]
+        Button(self, self.borderg, self.borderg, self.borderg * 10, self.borderg * 5, colors, "Test", None).draw(self.surface)
             
     def draw_bg(self):
         self.surface.fill(pg.Color('purple'))

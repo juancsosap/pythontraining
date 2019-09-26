@@ -63,3 +63,19 @@ template = " {id:08d} - {name} {surname} : {salary:,.2f} CLP\n"
 print(template.format(id = 123, name = "Juan", surname = "Sosa", salary = 2507427.1277))
 
 # Another format rules could be aplied for diferent types of objects
+
+print()
+
+# Format Strings vs Format
+id, name, surname, days, salary = 123, "Juan", "Sosa", 1325, 2507427.1277
+
+ftemplate = f" {id:08d} - {name} {surname} : {days:,d} days : {salary:,.2f} CLP\n"
+template = " {id:08d} - {name} {surname} : {days:,d} days : {salary:,.2f} CLP\n"
+
+print(ftemplate)
+print(template.format(id=id, name=name, surname=surname, days=days, salary=salary))
+
+id, name, surname, days, salary = 321, "Ana", "Prada", 5432, 4586214.2655
+
+print(ftemplate)
+print(template.format(id=id, name=name, surname=surname, days=days, salary=salary))

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 x = np.linspace(-1, 1, 100)
 for n in range(1, 10):
     y = x ** n
-    plt.plot(x, y, label='x^{}'.format(n))
+    plt.plot(x, y, label=f'x^{n}')
 
 plt.xlabel('Value')
 plt.ylabel('Result Value')
