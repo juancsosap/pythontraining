@@ -55,7 +55,7 @@ class Snake(object):
     """Green and snakey."""
     def __init__(self):
         self.color = COLORS["snake"]
-        self.speed = 4 # Cells per second
+        self.speed = 10 # Cells per second
         self.direction = "up"
         self.vector = DIRECT_DICT[self.direction]
         self.body = [(10, 25), (10,24)]
