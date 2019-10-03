@@ -24,6 +24,7 @@ print('Numpy Array 3:\n{}{}\n'.format(arreglo3, arreglo3.shape))
 # Transpose
 print('Numpy Matrix Transpose (a3T)')
 # arreglo5 = arreglo3.transpose() 
+# arreglo5 = arreglo3.T
 arreglo5 = np.transpose(arreglo3)
 print('{}{}\n'.format(arreglo5, arreglo5.shape))
 
