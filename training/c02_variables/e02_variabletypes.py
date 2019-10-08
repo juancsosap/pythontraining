@@ -23,6 +23,11 @@ var5 = "Hello"
 print(type(var5))
 print(dir(str), end="\n\n")
 
+# None (NoneType)
+var6 = None
+print(type(var6))
+print(dir(None), end="\n\n")
+
 # The variable type could be changed in any time
 variable = 1
 print(type(variable))

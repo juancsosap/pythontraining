@@ -4,6 +4,7 @@ import os
 
 basedir = __file__[:__file__.rfind('/')+1]
 if basedir != '': os.chdir(basedir)
+os.chdir('..')
 
 # Reading tabular data from URL (Good Default Formated)
 url = 'data/chiporders.data'  #'http://bit.ly/chiporders'

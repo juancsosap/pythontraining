@@ -4,6 +4,7 @@ import os
 
 basedir = __file__[:__file__.rfind('/')+1]
 if basedir != '': os.chdir(basedir)
+os.chdir('..')
 
 # Reading DataFrame from URL
 url = 'data/imdbratings.csv'  #'http://bit.ly/imdbratings'

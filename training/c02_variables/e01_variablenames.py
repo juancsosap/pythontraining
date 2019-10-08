@@ -48,3 +48,8 @@ print(n1, n2, n3)
 
 n1, n2, n3 = n2, n3, n1
 print(n1, n2, n3)
+
+# Unwanted Variables
+# By convention '_'
+_, n1, n2, n3, _ = 1, 2, 3, 4, 5
+print(n1, n2, n3)

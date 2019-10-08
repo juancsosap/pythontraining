@@ -1,8 +1,10 @@
+import numpy as np
 import pandas as pd
 import os
 
 basedir = __file__[:__file__.rfind('/')+1]
 if basedir != '': os.chdir(basedir)
+os.chdir('..')
 
 # Reading DataFrame from URL
 url = 'data/uforeports.csv'   #'http://bit.ly/uforeports'
@@ -44,5 +46,14 @@ print(datafilter.shape, end='\n\n')
 
 # Reading only the first 100 DataFrame rows' from URL
 data = pd.read_csv(url, usecols=[0, 3], nrows=100)
+print(data.head())
+print(data.shape, end='\n\n')
+
+# Reindex data - Changing the position of each row with its index
+reindexdata = data.reindex(np.random.permutation(data.index))
+print(reindexdata.head())
+print(reindexdata.shape, end='\n\n')
+
+# Original data is not afected
 print(data.head())
 print(data.shape, end='\n\n')

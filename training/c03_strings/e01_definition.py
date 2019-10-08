@@ -93,7 +93,9 @@ print(text)
 
 # Unicode String
 ustr = u"\u00dcnic\u00f6de"
+nstr = "\u00dcnic\u00f6de"
 print(ustr)
+print(ustr == nstr)
 
 # Raw String
 rstr = r"c:\documents\newfile.txt"
@@ -103,3 +105,7 @@ print(rstr)
 n1, n2 = 5, 10
 fstr = f"{n1} + {n2} = {n1 + n2}"
 print(fstr)
+
+# Byte String
+bstr = b'hello'
+print(bstr)

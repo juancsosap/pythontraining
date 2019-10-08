@@ -105,3 +105,8 @@ print('splitline -> |', text.splitlines(), '|')
 print('splitline -> |', text.splitlines(True), '|')
 
 print('\n---------------------', end="\n\n")
+
+# Other text Methods
+text = 'Hello'
+print('Reversed :', reversed(text))
+print('Length   :', len(text))

@@ -5,7 +5,4 @@ if(hora > 6 and hora < 18):
 else:
     print("noche")
 
-    if(True):
-        pass
-
 print("Listo")

@@ -4,6 +4,7 @@ import os
 
 basedir = __file__[:__file__.rfind('/')+1]
 if basedir != '': os.chdir(basedir)
+os.chdir('..')
 
 url = 'data/drinksbycountry.csv'  #'http://bit.ly/drinksbycountry'
 data = pd.read_csv(url)
@@ -17,7 +18,7 @@ graph = dataclean.plot(kind='barh')
 print(type(graph), '\n')
 
 plt.xticks(rotation=45)
-plt.yticks(rotation=45)
+plt.yticks(range(4), dataclean['country'], rotation=45)
 plt.subplots_adjust(bottom=0.25)
 
 data.groupby('continent').mean().plot.bar()

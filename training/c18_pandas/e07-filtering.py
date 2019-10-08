@@ -3,6 +3,7 @@ import os
 
 basedir = __file__[:__file__.rfind('/')+1]
 if basedir != '': os.chdir(basedir)
+os.chdir('..')
 
 url = 'data/imdbratings.csv'  #'http://bit.ly/imdbratings'
 data = pd.read_csv(url)
