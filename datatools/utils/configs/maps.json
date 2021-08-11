@@ -1,0 +1,37 @@
+{
+    "mel":{
+        "description":"Escondida - Rajos",
+        "path":"datatools/repository/map_mel.png",
+        "latitude": {"min":[-24, -17, -39.86], "max":[-24, -11, -37.13]},
+        "longitude":{"min":[-69,  -7, -53.50], "max":[-68, -56, -55.18]},
+        "nodes":"mel"
+    },
+    "mel_rj_en":{
+        "description":"Escondida - Rajo Norte",
+        "path":"datatools/repository/map_mel_en.png",
+        "latitude": {"min":[-24, -14,  -7], "max":[-24, -11, -11]},
+        "longitude":{"min":[-69,  -4,  -5], "max":[-69,  -0, -30]},
+        "nodes":"mel"
+    },
+    "mel_rj_es":{
+        "description":"Escondida - Rajo Sur",
+        "path":"datatools/repository/map_mel_es.png",
+        "latitude": {"min":[-24, -18, -52], "max":[-24, -14, -28]},
+        "longitude":{"min":[-69,  -6, -52], "max":[-69,  -1, -15]},
+        "nodes":"mel"
+    },
+    "mel_lx":{
+        "description":"Escondida - Zona Lixiviación",
+        "path":"datatools/repository/map_mel_lx.png",
+        "latitude": {"min":[-24, -16, -58], "max":[-24, -13, -27]},
+        "longitude":{"min":[-69,  -1, -41], "max":[-68, -57, -32]},
+        "nodes":"mel"
+    },
+    "mel_cm":{
+        "description":"Escondida - Campamentos",
+        "path":"datatools/repository/map_mel_cm.png",
+        "latitude": {"min":[-24, -16, -22], "max":[-24, -13, -37]},
+        "longitude":{"min":[-69,  -8,  -7], "max":[-69,  -3, -22]},
+        "nodes":"mel"
+    }
+}

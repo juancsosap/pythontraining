@@ -1,0 +1,9 @@
+{
+  "sourcefolders":[
+    "data/CPE/"
+  ],
+  "skiplines":false,
+  "destinationfolder":"outputs/CPE/",
+  "mode":"w",
+  "configs":["node-infos", "node-status", "gnss", "latency", "port-states", "port-stats"]
+}

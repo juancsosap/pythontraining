@@ -1,0 +1,25 @@
+{
+    "columns":["hostname", "time", "imsi", "imei", "apn", "address", "mtu"],
+    "key":"hostname",
+    "size":"hostname",
+    "multiplier":[],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "imsi":"IMSI\\s+: (\\S+)",
+        "imei":"IMEI\\s+: (\\S+)",
+        "apn":"APN\\s+: (\\S*)",
+        "address":"IP Address\\s+: (\\S+)",
+        "mtu":"IP MTU\\s+: (\\S*)"
+    },
+    "split":{},
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        }
+    }
+}

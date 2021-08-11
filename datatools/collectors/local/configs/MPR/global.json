@@ -1,0 +1,9 @@
+{
+  "sourcefolders":[
+    "data/MPR/"
+  ],
+  "skiplines":true,
+  "destinationfolder":"outputs/MPR/",
+  "mode":"w",
+  "configs":["basic"]
+}

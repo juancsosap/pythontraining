@@ -1,0 +1,35 @@
+{
+    "hosts":[
+        "ESC1PTST01", "ESC1PNSP01",
+        "ESC1PCMU01", "ESC1PCMU02", "ESC2PCMU01", "ESC2PCMU02", 
+        "ESC1PPRF01", "ESC1PPRF02", "ESC2PPRF01", "ESC2PPRF02",
+        "ESC1PTIA01", "ESC1PTIA02", "ESC2PTIA01", "ESC2PTIA02",
+        "ESC1PHSS01", "ESC2PHSS01", "ESC1PDNS01", "ESC2PDNS01", 
+        "ESC1PNDS01", "ESC1PNDS02", "ESC1PNDS03", "ESC1PNDS04",
+        "ESC1PNDS05", "ESC1PNDS06", "ESC1PNDS07", "ESC1PNDS08",
+        "ESC2PNDS01", "ESC2PNDS02",               "ESC2PNDS04",
+        "ESC2PNDS05", "ESC2PNDS06", "ESC2PNDS07", "ESC2PNDS08"
+    ],
+    "wait":1,
+    "outputfolder":"/home/script/outputs/SRV",
+    "commands":[
+        "ifconfig",
+        "free -m",
+        "cat /proc/uptime",
+        "top -bn1 | grep 'Cpu(s)' | awk -F',' '{print $4}'"
+    ],
+    "files":{
+        "interfaces":{
+            "regex":[
+                "(?P<name>\\S+): flags=\\d+<(?P<state>[^,]+),.* mtu (?P<mtu>\\S+)\n\\s+(inet (?P<ipv4>\\S+)  netmask (?P<netmask>\\S+).*\n\\s+)?(inet6 (?P<ipv6>\\S+)  prefixlen (?P<prefixv6>\\S+).*\n\\s+)?(ether (?P<mac>\\S+)|loop  (?P<loopback>.))?"
+            ]
+        },
+        "basic-info":{
+            "regex":[
+                "Mem:\\s+(?P<mem_total>\\S+)\\s+\\S+\\s+(?P<mem_idle>\\S+)",
+                "cat /proc/uptime.*\n(?P<uptime_seconds>\\S+)",
+                "top -bn1.*\n\\s*(?P<cpu_idle>[^,]+).id"
+            ]
+        }
+    }
+}

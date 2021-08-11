@@ -1,0 +1,138 @@
+{
+    "sources":["basic"],
+    "plots":{
+        "modulation":{
+            "source":["basic"],
+            "title":"Modulation",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Modulation",
+            "ydata":[
+                {"label":"Modulation", "field":"modulation"}
+            ],
+            "field":"Modulation",
+            "filter":{}
+        },
+        "capacity":{
+            "source":["basic"],
+            "title":"Capacity",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Capacity (Mbps)",
+            "ydata":[
+                {"label":"Capacity", "field":"capacity"}
+            ],
+            "field":"Capacity",
+            "filter":{}
+        },
+        "temperature":{
+            "source":["basic"],
+            "title":"Temperature",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Temperature (°C)",
+            "ydata":[
+                {"label":"Temperature", "field":"temperature"}
+            ],
+            "field":"Temperature",
+            "filter":{}
+        },
+        "voltage":{
+            "source":["basic"],
+            "title":"Voltage",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Voltage (V)",
+            "ydata":[
+                {"label":"Voltage", "field":"voltage"}
+            ],
+            "field":"Voltage",
+            "filter":{}
+        },
+        "current":{
+            "source":["basic"],
+            "title":"Current",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Current (Amp)",
+            "ydata":[
+                {"label":"Current", "field":"current"}
+            ],
+            "field":"Current",
+            "filter":{}
+        },
+        "power":{
+            "source":["basic"],
+            "title":"Power",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (Watts)",
+            "ydata":[
+                {"label":"Power", "field":"power"}
+            ],
+            "field":"Power",
+            "filter":{}
+        },
+        "txpower":{
+            "source":["basic"],
+            "title":"TX Power",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (dBm)",
+            "ydata":[
+                {"label":"Local", "field":"localtxpower"},
+                {"label":"Remote", "field":"remotetxpower"}
+            ],
+            "field":"Local",
+            "filter":{}
+        },
+        "rxpower":{
+            "source":["basic"],
+            "title":"RX Power",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (dBm)",
+            "ydata":[
+                {"label":"Local", "field":"localrxpower"},
+                {"label":"Remote", "field":"remoterxpower"}
+            ],
+            "field":"Local",
+            "filter":{}
+        },
+        "packet-stats":{
+            "source":["basic"],
+            "title":"Packet Stats {0} {1}",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Packets",
+            "ydata":[
+                {"label":"4QAM", "field":"packet-stats{0}-4qam"},
+                {"label":"16QAM", "field":"packet-stats{0}-16qam"},
+                {"label":"32QAM", "field":"packet-stats{0}-32qam"},
+                {"label":"64QAM", "field":"packet-stats{0}-64qam"},
+                {"label":"128QAM", "field":"packet-stats{0}-128qam"},
+                {"label":"256QAM", "field":"packet-stats{0}-256qam"},
+                {"label":"512QAM", "field":"packet-stats{0}-512qam"},
+                {"label":"1024QAM", "field":"packet-stats{0}-1024qam"},
+                {"label":"2048QAM", "field":"packet-stats{0}-2048qam"}
+            ],
+            "field":"64QAM",
+            "filter":{}
+        },
+        "power-stats":{
+            "source":["basic"],
+            "title":"Power Stats {0} {1} {2}",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (dBm)",
+            "ydata":[
+                {"label":"MIN", "field":"{0}power-stats{1}-min"},
+                {"label":"MAX", "field":"{0}power-stats{1}-max"},
+                {"label":"AVG", "field":"{0}power-stats{1}-avg"}
+            ],
+            "field":"AVG",
+            "filter":{}
+        }
+    },
+    "source":"outputs/MPR/processed"
+}

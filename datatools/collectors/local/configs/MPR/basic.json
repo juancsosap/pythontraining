@@ -1,0 +1,129 @@
+{
+    "columns":["label", "date", "time", "direction", "modulation", "capacity", "temperature", "voltage", "current", "power", 
+               "localtxpower", "localrxpower", "remotetxpower", "remoterxpower", 
+               "packet-stats15-4qam", "packet-stats15-16qam", "packet-stats15-32qam", "packet-stats15-64qam", "packet-stats15-128qam", 
+               "packet-stats15-256qam", "packet-stats15-512qam", "packet-stats15-1024qam", "packet-stats15-2048qam",
+               "packet-stats24-4qam", "packet-stats24-16qam", "packet-stats24-32qam", "packet-stats24-64qam", "packet-stats24-128qam", 
+               "packet-stats24-256qam", "packet-stats24-512qam", "packet-stats24-1024qam", "packet-stats24-2048qam",
+               "txpower-stats15-min", "txpower-stats15-max", "txpower-stats15-avg",
+               "rxpower-stats15-min", "rxpower-stats15-max", "rxpower-stats15-avg",
+               "txpower-stats24-min", "txpower-stats24-max", "txpower-stats24-avg",
+               "rxpower-stats24-min", "rxpower-stats24-max", "rxpower-stats24-avg"],
+    "key":"label",
+    "size":"label",
+    "multiplier":[],
+    "regex":{
+        "date":"PM G.826~~System Time,(\\S+) \\S+~~,",
+        "time":"PM G.826~~System Time,\\S+ (\\S+)~~,",
+        "direction":"direction,([^~]+)",
+        "label":"label,([^~]+) ",
+        "modulation":"Modulation,([^~]+)",
+        "capacity":"Capacity,(\\S+) Mb/s",
+        "temperature":"Temperature \\(C\\),(\\S+),--",
+        "voltage":"Voltage \\(Volt\\),(\\S+),--",
+        "current":"Current \\(Ampere\\),(\\S+),--",
+        "power":"Power \\(Watt\\),(\\S+),--",
+        "localtxpower":"Local Tx Power Level \\(dBm\\),(\\S+),--",
+        "localrxpower":"Local Rx Power Level \\(dBm\\),(\\S+),--",
+        "remotetxpower":"Remote Tx Power Level \\(dBm\\),(\\S+),--",
+        "remoterxpower":"Remote Rx Power Level \\(dBm\\),(\\S+),--",
+        "packet-stats15":"15 Min ~~Elapsed Time,\\S+~~4-QAM,(\\S+)~~16-QAM,(\\S+)~~32-QAM,(\\S+)~~64-QAM,(\\S+)~~128-QAM,(\\S+)~~256-QAM,(\\S+)~~512-QAM,(\\S+)~~1024-QAM,(\\S+)~~2048-QAM,(\\S+)~~",
+        "packet-stats24":"24 Hours ~~Elapsed Time,\\S+~~4-QAM,(\\S+)~~16-QAM,(\\S+)~~32-QAM,(\\S+)~~64-QAM,(\\S+)~~128-QAM,(\\S+)~~256-QAM,(\\S+)~~512-QAM,(\\S+)~~1024-QAM,(\\S+)~~2048-QAM,(\\S+)~~",
+        "power-stats15":"15 Min~~ Channel 1 TX Power level\\(dBm\\),(\\S+),(\\S+),(\\S+),\\S+~~[^~]+~~[^~]+~~ Channel 1 RX Power level\\(dBm\\),(\\S+),(\\S+),(\\S+),",
+        "power-stats24":"24 Hours~~ Channel 1 TX Power level\\(dBm\\),(\\S+),(\\S+),(\\S+),\\S+~~ Channel 0 TX Power level\\(dBm\\).*~~ Link RX Power level\\(dBm\\)[^1]+Channel 1 RX Power level\\(dBm\\),(\\S+),(\\S+),(\\S+),"
+    },
+    "split":{
+        "packet-stats15-4qam":{
+            "field":"packet-stats15", "index": 0
+        },
+        "packet-stats15-16qam":{
+            "field":"packet-stats15", "index": 1
+        },
+        "packet-stats15-32qam":{
+            "field":"packet-stats15", "index": 2
+        },
+        "packet-stats15-64qam":{
+            "field":"packet-stats15", "index": 3
+        },
+        "packet-stats15-128qam":{
+            "field":"packet-stats15", "index": 4
+        },
+        "packet-stats15-256qam":{
+            "field":"packet-stats15", "index": 5
+        },
+        "packet-stats15-512qam":{
+            "field":"packet-stats15", "index": 6
+        },
+        "packet-stats15-1024qam":{
+            "field":"packet-stats15", "index": 7
+        },
+        "packet-stats15-2048qam":{
+            "field":"packet-stats15", "index": 8
+        },
+        "packet-stats24-4qam":{
+            "field":"packet-stats24", "index": 0
+        },
+        "packet-stats24-16qam":{
+            "field":"packet-stats24", "index": 1
+        },
+        "packet-stats24-32qam":{
+            "field":"packet-stats24", "index": 2
+        },
+        "packet-stats24-64qam":{
+            "field":"packet-stats24", "index": 3
+        },
+        "packet-stats24-128qam":{
+            "field":"packet-stats24", "index": 4
+        },
+        "packet-stats24-256qam":{
+            "field":"packet-stats24", "index": 5
+        },
+        "packet-stats24-512qam":{
+            "field":"packet-stats24", "index": 6
+        },
+        "packet-stats24-1024qam":{
+            "field":"packet-stats24", "index": 7
+        },
+        "packet-stats24-2048qam":{
+            "field":"packet-stats24", "index": 8
+        },
+        "txpower-stats15-min":{
+            "field":"power-stats15", "index": 0
+        },
+        "txpower-stats15-max":{
+            "field":"power-stats15", "index": 1
+        },
+        "txpower-stats15-avg":{
+            "field":"power-stats15", "index": 2
+        },
+        "rxpower-stats15-min":{
+            "field":"power-stats15", "index": 3
+        },
+        "rxpower-stats15-max":{
+            "field":"power-stats15", "index": 4
+        },
+        "rxpower-stats15-avg":{
+            "field":"power-stats15", "index": 5
+        },
+        "txpower-stats24-min":{
+            "field":"power-stats24", "index": 0
+        },
+        "txpower-stats24-max":{
+            "field":"power-stats24", "index": 1
+        },
+        "txpower-stats24-avg":{
+            "field":"power-stats24", "index": 2
+        },
+        "rxpower-stats24-min":{
+            "field":"power-stats24", "index": 3
+        },
+        "rxpower-stats24-max":{
+            "field":"power-stats24", "index": 4
+        },
+        "rxpower-stats24-avg":{
+            "field":"power-stats24", "index": 5
+        }
+    },
+    "transform":{
+    }
+}

@@ -1,0 +1,649 @@
+{
+  "configure": {
+    "cards": {
+      "1": {
+        "mdas": {
+          "1": {
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "log": {
+      "event-control": "vrtr|2034|generate",
+      "log-ids": {
+        "98": {
+          "from": "main|security|change",
+          "no-shutdown": "active",
+          "to": "snmp|1024"
+        }
+      },
+      "snmp-trap-groups": {
+        "98": {
+          "description": "5620sam",
+          "trap-targets": {
+            "10.127.39.250:162": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98",
+            "D06726D06796:main1": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98"
+          }
+        }
+      }
+    },
+    "ports": {
+      "1/1/1": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/10": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/11": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/12": {
+        "description": "TO_IPMI_MGMT_2",
+        "ethernet": {
+          "access": {},
+          "mode": "access"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/13": {
+        "ethernet": {
+          "access": {},
+          "mode": "access"
+        },
+        "shutdown": "active"
+      },
+      "1/1/14": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/15": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/16": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/17": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/18": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/19": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/2": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/20": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/21": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/22": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/23": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/24": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/25": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/26": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/27": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/28": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/29": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/3": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/30": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/31": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/32": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/33": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/34": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/35": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/36": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/37": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/38": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/39": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/4": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/40": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/41": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/42": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/43": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/44": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/45": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/46": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/47": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/48": {
+        "description": "in-band-mgmt",
+        "ethernet": {},
+        "no-shutdown": "active"
+      },
+      "1/1/49": {
+        "ethernet": {
+          "access": {},
+          "encap-type": "dot1q",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/5": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/50": {
+        "description": "Link|to|Router",
+        "ethernet": {
+          "access": {},
+          "encap-type": "dot1q",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/51": {
+        "ethernet": {
+          "access": {},
+          "encap-type": "dot1q",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/52": {
+        "ethernet": {
+          "access": {},
+          "encap-type": "dot1q",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/6": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/7": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/8": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/9": {
+        "ethernet": {
+          "access": {},
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "qos": {},
+    "routers": {
+      "Base": {
+        "interfaces": {
+          "in-band-mgmt": {
+            "address": "10.1.1.33/24",
+            "no-shutdown": "active",
+            "port": "1/1/48"
+          },
+          "system": {
+            "address": "10.127.44.61/32",
+            "no-shutdown": "active"
+          }
+        },
+        "ospfs": {
+          "10.127.44.61": {
+            "areas": {
+              "0.0.0.0": {
+                "interfaces": {
+                  "TO_7750_3260": {
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "system": {
+                    "no-shutdown": "active"
+                  }
+                }
+              }
+            },
+            "no-shutdown": "active"
+          }
+        },
+        "router-id": "10.127.44.61"
+      }
+    },
+    "service": {
+      "customers": {
+        "1": {
+          "description": "Default|customer"
+        }
+      },
+      "iess": {
+        "999": {
+          "customer": "1",
+          "interfaces": {
+            "TO_7750_3260": {
+              "address": "10.127.40.99/31",
+              "saps": {
+                "1/1/50:999": {
+                  "egress": {},
+                  "ingress": {}
+                }
+              }
+            }
+          },
+          "no-shutdown": "active"
+        }
+      },
+      "vplss": {
+        "150": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/11": {
+              "egress": {}
+            },
+            "1/1/50:150": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "172": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/10": {
+              "egress": {}
+            },
+            "1/1/50:172": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "181": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/2": {
+              "egress": {}
+            },
+            "1/1/50:181": {
+              "egress": {}
+            },
+            "1/1/6": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "191": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/3": {
+              "egress": {}
+            },
+            "1/1/50:191": {
+              "egress": {}
+            },
+            "1/1/7": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "193": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/4": {
+              "egress": {}
+            },
+            "1/1/50:193": {
+              "egress": {}
+            },
+            "1/1/8": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "195": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/5": {
+              "egress": {}
+            },
+            "1/1/50:195": {
+              "egress": {}
+            },
+            "1/1/9": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "196": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1": {
+              "egress": {}
+            },
+            "1/1/50:196": {
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "311": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/22": {
+              "description": "TP5000_ioc-2-2",
+              "egress": {}
+            },
+            "1/1/50:311": {
+              "description": "7750_SR2e_2/1/1",
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "service-name": "VPLS_NTP_3260",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "313": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/23": {
+              "description": "TP5000-ioc-2-1",
+              "egress": {}
+            },
+            "1/1/50:313": {
+              "description": "7750_SR2e_2/1/1",
+              "egress": {}
+            }
+          },
+          "service-mtu": "9000",
+          "service-name": "VPLS_PTP_3260",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "6000": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/49:670": {
+              "egress": {}
+            },
+            "1/1/50:670": {
+              "egress": {}
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "7000": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/50:570": {
+              "egress": {}
+            },
+            "1/1/52:570": {
+              "egress": {}
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "8000": {
+          "customer": "1|svc-sap-type|any",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/50:540": {
+              "egress": {}
+            },
+            "1/1/50:541": {
+              "egress": {}
+            },
+            "1/1/50:544": {
+              "egress": {}
+            },
+            "1/1/51:540": {
+              "egress": {}
+            },
+            "1/1/51:541": {
+              "egress": {}
+            },
+            "1/1/51:544": {
+              "egress": {}
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        }
+      }
+    },
+    "system": {
+      "dns": {},
+      "name": "ESC2PCSW02",
+      "resource-profile": {
+        "egress-internal-tcam": {},
+        "ingress-internal-tcam": {
+          "acl-sap-ingresss": {
+            "3": {}
+          },
+          "eth-cfms": {
+            "1": {
+              "down-mep": "1"
+            }
+          },
+          "qos-sap-ingress-resources": {
+            "4": {}
+          }
+        },
+        "no-g8032-control-sap-tags": "active",
+        "router": {}
+      },
+      "security": {
+        "ftp-server": "active",
+        "snmp": {
+          "communitys": {
+            "Lla.RtAyRW2": "hash2|r|version|both",
+            "uTdc9j48PBRkxn5DcSjchk": "hash2|rwa|version|both"
+          }
+        },
+        "telnet-server": "active"
+      },
+      "snmp": {
+        "packet-size": "9216"
+      },
+      "sync-if-timing": {},
+      "thresholds": {
+        "rmon": {}
+      },
+      "time": {
+        "sntp": {
+          "shutdown": "active"
+        },
+        "zone": "UTC"
+      }
+    }
+  }
+}

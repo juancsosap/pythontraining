@@ -1,0 +1,72 @@
+{
+    "rsrp":[
+        {"name":"<= -120dBm",                     "max":-120, "color":"black",     "alpha":1}, 
+        {"name":"[-114dBm, -120dBm)", "min":-120, "max":-114, "color":"red",       "alpha":0.8}, 
+        {"name":"[-108dBm, -114dBm)", "min":-114, "max":-108, "color":"yellow",    "alpha":0.6},
+        {"name":"[-102dBm, -108dBm)", "min":-108, "max":-102, "color":"lightblue", "alpha":0.4}, 
+        {"name":"[ -96dBm, -102dBm)", "min":-102, "max":-96,  "color":"darkblue",  "alpha":0.2}, 
+        {"name":"> -96dBm",           "min":-96,              "color":"green",     "alpha":0.05}
+    ],
+    "states":[
+        {"name":"UP",      "value":"Up",      "color":"green", "alpha":1}, 
+        {"name":"DOWN",    "value":"Down",    "color":"red",   "alpha":1}
+    ],
+    "modulation":[
+        {"name":"4QAM",    "value":"4-QAM",    "color":"purple", "alpha":1}, 
+        {"name":"16QAM",   "value":"16-QAM",   "color":"blue",   "alpha":1}, 
+        {"name":"32QAM",   "value":"32-QAM",   "color":"green",  "alpha":1}, 
+        {"name":"64QAM",   "value":"64-QAM",   "color":"yellow", "alpha":1}, 
+        {"name":"128QAM",  "value":"128-QAM",  "color":"orange", "alpha":1}, 
+        {"name":"256QAM",  "value":"256-QAM",  "color":"red",    "alpha":1}, 
+        {"name":"512QAM",  "value":"512-QAM",  "color":"brown",  "alpha":1}, 
+        {"name":"1024QAM", "value":"1024-QAM", "color":"pink",   "alpha":1}, 
+        {"name":"2048QAM", "value":"2048-QAM", "color":"gray",   "alpha":1}
+    ],
+    "bands":[
+        {"name":"Band 28", "value":"Band 28", "color":"green", "alpha":0.5}, 
+        {"name":"Band 7",  "value":"Band 7",  "color":"red",   "alpha":0.5}, 
+        {"name":"Band 40", "value":"Band 40", "color":"blue",  "alpha":0.5},
+        {"name":"Other",   "value":"Band",    "color":"black", "alpha":1}
+    ],
+    "cells":[
+        {"name":"ESCRLLTE01_1", "value":"ESCRLLTE01_1", "color":"#0000F0", "alpha":1}, 
+        {"name":"ESCRLLTE02_1", "value":"ESCRLLTE02_1", "color":"#00F000", "alpha":1}, 
+        {"name":"ESCRLLTE03_1", "value":"ESCRLLTE03_1", "color":"#F00000", "alpha":1}, 
+        {"name":"ESCRBLTE04_1", "value":"ESCRBLTE04_1", "color":"#00F0F0", "alpha":1}, 
+        {"name":"ESCRBLTE05_1", "value":"ESCRBLTE05_1", "color":"#F0F000", "alpha":1}, 
+        {"name":"ESCRBLTE05_2", "value":"ESCRBLTE05_2", "color":"#F7F000", "alpha":1}, 
+        {"name":"ESCRBLTE05_3", "value":"ESCRBLTE05_3", "color":"#FFF000", "alpha":1}, 
+        {"name":"ESCRHLTE06_1", "value":"ESCRHLTE06_1", "color":"#F000F0", "alpha":1}, 
+        {"name":"ESCRHLTE06_2", "value":"ESCRHLTE06_2", "color":"#F700F0", "alpha":1}, 
+        {"name":"ESCRHLTE06_3", "value":"ESCRHLTE06_3", "color":"#FF00F0", "alpha":1}, 
+        {"name":"ESCRHLTE07_1", "value":"ESCRHLTE07_1", "color":"#800000", "alpha":1}, 
+        {"name":"ESCRHLTE07_2", "value":"ESCRHLTE07_2", "color":"#870000", "alpha":1}, 
+        {"name":"ESCRHLTE07_3", "value":"ESCRHLTE07_3", "color":"#8F0000", "alpha":1}, 
+        {"name":"ESCRHLTE08_1", "value":"ESCRHLTE08_1", "color":"#0000C0", "alpha":1}, 
+        {"name":"ESCRHLTE08_2", "value":"ESCRHLTE08_2", "color":"#0000C7", "alpha":1}, 
+        {"name":"ESCRHLTE08_3", "value":"ESCRHLTE08_3", "color":"#0000CF", "alpha":1}, 
+        {"name":"ESCRLLTE09_1", "value":"ESCRLLTE09_1", "color":"#00C000", "alpha":1}, 
+        {"name":"ESCRLLTE10_1", "value":"ESCRLLTE10_1", "color":"#C00000", "alpha":1}, 
+        {"name":"ESCRHLTE11_1", "value":"ESCRHLTE11_1", "color":"#00C0C0", "alpha":1}, 
+        {"name":"ESCRHLTE11_2", "value":"ESCRHLTE11_2", "color":"#00C7C0", "alpha":1}, 
+        {"name":"ESCRHLTE11_3", "value":"ESCRHLTE11_3", "color":"#00CFC0", "alpha":1}, 
+        {"name":"ESCRFLTE12_1", "value":"ESCRFLTE12_1", "color":"#C0C000", "alpha":1}, 
+        {"name":"ESCRFLTE12_2", "value":"ESCRFLTE12_2", "color":"#C7C000", "alpha":1}, 
+        {"name":"ESCRFLTE12_3", "value":"ESCRFLTE12_3", "color":"#CFC000", "alpha":1}, 
+        {"name":"ESCRFLTE13_1", "value":"ESCRFLTE13_1", "color":"#C000C0", "alpha":1}, 
+        {"name":"ESCRFLTE13_2", "value":"ESCRFLTE13_2", "color":"#C700C0", "alpha":1}, 
+        {"name":"ESCRFLTE13_3", "value":"ESCRFLTE13_3", "color":"#CF00C0", "alpha":1}, 
+        {"name":"ESCRHLTE14_1", "value":"ESCRHLTE14_1", "color":"#C0C0C0", "alpha":1}, 
+        {"name":"ESCRHLTE14_2", "value":"ESCRHLTE14_2", "color":"#C7C0C0", "alpha":1}, 
+        {"name":"ESCRHLTE14_3", "value":"ESCRHLTE14_3", "color":"#CFC0C0", "alpha":1}, 
+        {"name":"ESCRHLTE15_1", "value":"ESCRHLTE15_1", "color":"#000080", "alpha":1}, 
+        {"name":"ESCRHLTE15_2", "value":"ESCRHLTE15_2", "color":"#000087", "alpha":1}, 
+        {"name":"ESCRHLTE15_3", "value":"ESCRHLTE15_3", "color":"#00008F", "alpha":1}, 
+        {"name":"ESCRHLTE25_1", "value":"ESCRHLTE25_1", "color":"#800000", "alpha":1}, 
+        {"name":"ESCRHLTE25_2", "value":"ESCRHLTE25_2", "color":"#870000", "alpha":1}, 
+        {"name":"ESCRHLTE25_3", "value":"ESCRHLTE25_3", "color":"#8F0000", "alpha":1}, 
+        {"name":"ESCRHLTE26_1", "value":"ESCRHLTE26_1", "color":"#008000", "alpha":1}, 
+        {"name":"ESCRHLTE26_2", "value":"ESCRHLTE26_2", "color":"#008700", "alpha":1}, 
+        {"name":"Other",        "value":"",             "color":"#000000", "alpha":1}
+    ]
+}

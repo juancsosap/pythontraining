@@ -1,0 +1,36 @@
+{
+    "hosts":[
+        "ESCRLRTR01",   "ESCRLRTR02",   "ESCRLRTR03",   "ESCRBRTR05",
+        "ESCRHRTR06",   "ESCRHRTR07",   "ESCRHRTR08",   "ESCRLRTR09",
+        "ESCRLRTR10",   "ESCRHRTR11",   "ESCRFRTR12",   "ESCRFRTR13",
+        "ESCRHRTR14",   "ESCRHRTR15",   "ESCC1RTR16",   "ESCMBRTR17",
+        "ESCMBRTR18",   "ESCC2RTR19",   "ESCD1RTR20",   "ESCD1RTR23",
+        "ESCRHRTR24",   "ESCRLRTR25",   "ESCC2CSW19-A", "ESCC2CSW19-B",
+        "ESCC1OSW16-A", "ESCC1OSW16-B", "ESCC1CSW16-A", "ESCC1CSW16-B"
+    ],
+    "wait":1,
+    "outputfolder":"/home/script/outputs/RTR",
+    "commands":[
+        "environment no more",
+        "show system cpu | match \"  Usage  \"",
+        "show system memory-pools | match \":\"",
+        "show system information | match \"System Up Time\"",
+        "show card detail"
+    ],
+    "files":{
+        "basic-info":{
+            "regex":[
+                "Usage\\s+\\S+\\s+(?P<cpu_usage>\\S+)\\%",
+                "Total In Use\\s+:\\s+(?P<mem_usage>\\S+) bytes",
+                "Available Memory\\s+:\\s+(?P<mem_available>\\S+) bytes",
+                "System Up Time\\s+: (?P<uptime_days>\\S+) days, (?P<uptime_hours>\\S+) "
+            ]
+        },
+        "card-info":{
+            "regex":[
+                "Manufac.*\\n\\s+Administrative state\\s+: (?P<admin_status>\\S+)\\n\\s+Operational state\\s+: (?P<oper_status>\\S+)\\n(\\s+Temperature\\s+: (?P<temp>\\S+)C\\n)?(\\s+Temperature threshold\\s+: (?P<temp_th>\\S+)C\\n)?",
+                "\\-\\-\\-\\-\\S+\n(?P<card_slot>\\S+)\\s+(?P<card_type>\\S+)\\s+\\s+"
+            ]
+        }
+    }
+}

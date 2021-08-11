@@ -1,0 +1,698 @@
+{
+  "configure": {
+    "cards": {
+      "1": {
+        "card-type": "iom-sar",
+        "mdas": {
+          "1": {
+            "access": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "mda-type": "a6-eth-10G",
+            "network": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "no-shutdown": "active"
+          },
+          "2": {
+            "access": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "mda-type": "a6-eth-10G",
+            "network": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "external-alarms": {},
+    "filter": {},
+    "log": {
+      "accounting-policys": {
+        "1": {
+          "collection-interval": "15",
+          "no-shutdown": "active",
+          "record": "service-ingress-octets",
+          "to": "file|1"
+        }
+      },
+      "file-ids": {
+        "1": {
+          "location": "cf3:",
+          "rollover": "15|retention|12"
+        }
+      },
+      "log-ids": {
+        "98": {
+          "from": "main|security",
+          "to": "snmp|1024"
+        }
+      },
+      "snmp-trap-groups": {
+        "98": {
+          "description": "5620sam",
+          "trap-targets": {
+            "10.127.39.250:162": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98",
+            "D06726D06796:main1": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98"
+          }
+        }
+      },
+      "syslogs": {
+        "1": {}
+      }
+    },
+    "ports": {
+      "1/1/1": {
+        "description": "TO_BHPWMXSDIS01_RIM_NETWORK",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "no-autonegotiate": "active",
+          "speed": "100"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/2": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/3": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/4": {
+        "description": "TO_OXIDO2_WAVELITE_MGMT",
+        "ethernet": {},
+        "no-shutdown": "active"
+      },
+      "1/1/5": {
+        "description": "TO_ESCC1RTR16_2/1/9",
+        "ethernet": {
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "network",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/6": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/1": {
+        "description": "TO_BHPWMXSDIS02_RIM_NETWORK",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "no-autonegotiate": "active",
+          "speed": "100"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/2": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/3": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/4": {
+        "description": "TO_OXIDO1_WAVELITE_MGMT",
+        "ethernet": {},
+        "no-shutdown": "active"
+      },
+      "1/2/5": {
+        "ethernet": {
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "network",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/6": {
+        "ethernet": {
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "network",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "qos": {
+      "fabric-profiles": {
+        "30": {
+          "aggregate-mode": "active",
+          "aggregate-rate": "10000000|unshaped-sap-cir|0"
+        }
+      }
+    },
+    "redundancy": {
+      "synchronize": "boot-env"
+    },
+    "router": {
+      "autonomous-system": "65000",
+      "bgp": {
+        "enable-peer-tracking": "active",
+        "family": "ipv4|vpn-ipv4",
+        "groups": {
+          "PDN-Network": {
+            "local-address": "10.127.44.52",
+            "local-as": "65500",
+            "neighbors": {
+              "10.127.44.2": {
+                "description": "TO_ESCC2RTR19"
+              }
+            },
+            "next-hop-self": "active",
+            "peer-as": "65500"
+          },
+          "Test": {
+            "description": "TO_ESCC1RTR16",
+            "local-address": "10.127.44.52",
+            "local-as": "65000",
+            "neighbors": {
+              "10.127.44.1": {
+                "description": "TO_ESCC1RTR16"
+              }
+            },
+            "peer-as": "65000"
+          }
+        },
+        "min-route-advertisement": "5",
+        "no-shutdown": "active",
+        "rapid-withdrawal": "active"
+      },
+      "interfaces": {
+        "TO_ESCC1RTR16": {
+          "address": "10.127.40.9/31",
+          "bfd": "100|receive|100|multiplier|3",
+          "description": "TO_ESCC1RTR16_1/1/10",
+          "no-shutdown": "active",
+          "port": "1/1/5"
+        },
+        "TO_ESCC2RTR19": {
+          "address": "10.127.40.11/31",
+          "bfd": "100|receive|100|multiplier|3",
+          "no-shutdown": "active",
+          "port": "1/2/5"
+        },
+        "system": {
+          "address": "10.127.44.52/32",
+          "no-shutdown": "active"
+        }
+      },
+      "isis": {
+        "area-id": "49.0001",
+        "interfaces": {
+          "TO_ESCC1RTR16": {
+            "bfd-enable": "ipv4",
+            "interface-type": "point-to-point",
+            "level-capability": "level-2",
+            "no-shutdown": "active"
+          },
+          "TO_ESCC2RTR19": {
+            "bfd-enable": "ipv4",
+            "interface-type": "point-to-point",
+            "level-capability": "level-2",
+            "no-shutdown": "active"
+          },
+          "system": {
+            "no-shutdown": "active"
+          }
+        },
+        "level-capability": "level-2",
+        "levels": {
+          "2": {
+            "wide-metrics-only": "active"
+          }
+        },
+        "no-shutdown": "active",
+        "reference-bandwidth": "1000000000",
+        "traffic-engineering": "active"
+      },
+      "ldp": {
+        "interface-parameters": {},
+        "no-shutdown": "active",
+        "targeted-session": {}
+      },
+      "mpls": {
+        "interfaces": {
+          "TO_ESCC1RTR16": {
+            "no-shutdown": "active"
+          },
+          "TO_ESCC2RTR19": {
+            "no-shutdown": "active"
+          },
+          "system": {
+            "no-shutdown": "active"
+          }
+        },
+        "lsps": {
+          "TO_ESCC1RTR16": {
+            "cspf": "active",
+            "fast-reroutes": {
+              "facility": {}
+            },
+            "no-shutdown": "active",
+            "primarys": {
+              "IGP": {}
+            },
+            "to": "10.127.44.1"
+          },
+          "TO_ESCC2RTR19": {
+            "cspf": "active",
+            "fast-reroutes": {
+              "facility": {}
+            },
+            "no-shutdown": "active",
+            "primarys": {
+              "IGP": {}
+            },
+            "to": "10.127.44.2"
+          }
+        },
+        "no-shutdown": "active",
+        "paths": {
+          "IGP": {
+            "no-shutdown": "active"
+          }
+        },
+        "resignal-timer": "30"
+      },
+      "policy-options": {
+        "policy-statements": {
+          "exp-OAM-Leaking": {
+            "entrys": {
+              "10": {
+                "actions": {
+                  "accept": {}
+                },
+                "from": {
+                  "prefix-list": "OAM-Leaking"
+                }
+              }
+            }
+          }
+        },
+        "prefix-lists": {
+          "OAM-Leaking": {
+            "prefixs": {
+              "10.127.39.184/29": "longer",
+              "10.127.39.56/29": "longer"
+            }
+          }
+        }
+      },
+      "router-id": "10.127.44.52",
+      "rsvp": {
+        "interfaces": {
+          "TO_ESCC1RTR16": {
+            "bfd-enable": "active",
+            "no-shutdown": "active"
+          },
+          "TO_ESCC2RTR19": {
+            "bfd-enable": "active",
+            "no-shutdown": "active"
+          },
+          "system": {
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      },
+      "sgt-qos": {
+        "application": "ptp|dscp|nc2"
+      }
+    },
+    "routers": {
+      "management": {}
+    },
+    "security": {
+      "logging": {}
+    },
+    "service": {
+      "customers": {
+        "1": {
+          "description": "Default|customer"
+        },
+        "10": {},
+        "15": {
+          "description": "LTE|OAM"
+        },
+        "30": {
+          "description": "PDN|and|UE|Services"
+        }
+      },
+      "sdps": {
+        "4401": {
+          "far-end": "10.127.44.1",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCC1RTR16",
+          "no-shutdown": "active"
+        },
+        "4402": {
+          "far-end": "10.127.44.2",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCC2RTR19",
+          "no-shutdown": "active"
+        }
+      },
+      "vplss": {
+        "20103": {
+          "customer": "30",
+          "description": "VPLS_SMARTCAP",
+          "mesh-sdps": {
+            "4401:20103": {
+              "no-shutdown": "active"
+            },
+            "4402:20103": {
+              "no-shutdown": "active"
+            }
+          },
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:103": {
+              "shutdown": "active"
+            },
+            "1/2/1:103": {
+              "shutdown": "active"
+            }
+          },
+          "service-mtu": "1402",
+          "service-name": "SMARTCAP",
+          "stp": {
+            "no-shutdown": "active"
+          }
+        },
+        "20105": {
+          "customer": "30",
+          "description": "VPLS_RADARES",
+          "mesh-sdps": {
+            "4401:20105": {
+              "no-shutdown": "active"
+            },
+            "4402:20105": {
+              "no-shutdown": "active"
+            }
+          },
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:105": {
+              "shutdown": "active"
+            },
+            "1/2/1:105": {
+              "shutdown": "active"
+            }
+          },
+          "service-mtu": "1402",
+          "service-name": "RADARES",
+          "stp": {
+            "no-shutdown": "active"
+          }
+        },
+        "20110": {
+          "customer": "30",
+          "description": "VPLS_MEMS",
+          "mesh-sdps": {
+            "4401:20110": {
+              "no-shutdown": "active"
+            },
+            "4402:20110": {
+              "no-shutdown": "active"
+            }
+          },
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:110": {
+              "shutdown": "active"
+            },
+            "1/2/1:110": {
+              "shutdown": "active"
+            }
+          },
+          "service-mtu": "1402",
+          "service-name": "MEMS",
+          "stp": {
+            "no-shutdown": "active"
+          }
+        },
+        "20113": {
+          "customer": "30",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:113": {},
+            "1/2/1:113": {
+              "shutdown": "active"
+            }
+          },
+          "service-mtu": "1402",
+          "service-name": "ADB_SERVICE",
+          "split-horizon-groups": {
+            "113": {}
+          },
+          "spoke-sdps": {
+            "4401:20113": {
+              "no-shutdown": "active",
+              "split-horizon-group": "113"
+            },
+            "4402:20113": {
+              "no-shutdown": "active",
+              "split-horizon-group": "113"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        }
+      },
+      "vprns": {
+        "30113": {
+          "customer": "1",
+          "interfaces": {
+            "server_adb": {
+              "address": "10.42.152.254/32",
+              "loopback": "active"
+            }
+          },
+          "no-shutdown": "active",
+          "route-distinguisher": "65000:30113",
+          "spoke-sdps": {
+            "4401": {},
+            "4402": {}
+          },
+          "vrf-target": "target:65000:30113"
+        },
+        "500": {
+          "auto-bind": "mpls",
+          "customer": "10",
+          "description": "VPRN_LTE_O&M",
+          "enable-bgp-vpn-backup": "ipv4",
+          "grt-lookup": {
+            "enable-grt": {
+              "allow-local-management": "active"
+            },
+            "export-grt": "exp-OAM-Leaking",
+            "export-limit": "256"
+          },
+          "interfaces": {
+            "to_OXIDO1_WAVELITE_MGMT": {
+              "address": "10.127.46.129/30",
+              "saps": {
+                "1/2/4": {}
+              }
+            },
+            "to_OXIDO2_WAVELITE_MGMT": {
+              "address": "10.127.46.133/30",
+              "saps": {
+                "1/1/4": {}
+              }
+            }
+          },
+          "no-shutdown": "active",
+          "route-distinguisher": "65000:500",
+          "vrf-target": "target:65000:500"
+        }
+      }
+    },
+    "system": {
+      "dns": {},
+      "location": "OXIDO",
+      "name": "ESCD1RTR20",
+      "security": {
+        "ftp-server": "active",
+        "profiles": {
+          "administrative": {
+            "entrys": {
+              "10": {
+                "action": "permit",
+                "match": "configure|system|security"
+              },
+              "100": {
+                "action": "deny",
+                "match": "configure|li"
+              },
+              "110": {
+                "action": "deny",
+                "match": "show|li"
+              },
+              "111": {
+                "action": "deny",
+                "match": "clear|li"
+              },
+              "20": {
+                "action": "permit",
+                "match": "show|system|security"
+              },
+              "30": {
+                "action": "permit",
+                "match": "tools|perform|security"
+              },
+              "40": {
+                "action": "permit",
+                "match": "tools|dump|security"
+              }
+            }
+          },
+          "default": {
+            "entrys": {
+              "10": {
+                "action": "permit",
+                "match": "exec"
+              },
+              "100": {
+                "action": "deny",
+                "match": "configure|li"
+              },
+              "20": {
+                "action": "permit",
+                "match": "exit"
+              },
+              "30": {
+                "action": "permit",
+                "match": "help"
+              },
+              "40": {
+                "action": "permit",
+                "match": "logout"
+              },
+              "50": {
+                "action": "permit",
+                "match": "password"
+              },
+              "60": {
+                "action": "deny",
+                "match": "show|config"
+              },
+              "65": {
+                "action": "deny",
+                "match": "show|li"
+              },
+              "66": {
+                "action": "deny",
+                "match": "clear|li"
+              },
+              "70": {
+                "action": "permit",
+                "match": "show"
+              },
+              "80": {
+                "action": "permit",
+                "match": "enable-admin"
+              }
+            }
+          }
+        },
+        "snmp": {
+          "communitys": {
+            "Lla.RtAyRW2": "hash2|r|version|both",
+            "uTdc9j48PBRkxn5DcSjchk": "hash2|rwa|version|both"
+          }
+        },
+        "telnet-server": "active",
+        "users": {
+          "admin": {
+            "access": "console|ftp",
+            "console": {
+              "member": "administrative"
+            },
+            "password": "$2y$10$TQrZlpBDra86.qoexZUzQeBXDY1FcdDhGWdD9lLxMuFyPVSm0OGy6"
+          },
+          "nfmp": {
+            "access": "console|ftp|snmp",
+            "console": {
+              "member": "administrative",
+              "no-member": "default"
+            },
+            "password": "$2y$10$TJU/aQrNQWDU55fL4t/oY.tgC1K8eelKplUX56iuRbKicVl9ev8Km"
+          }
+        }
+      },
+      "snmp": {
+        "packet-size": "9216"
+      },
+      "sync-if-timing": {},
+      "thresholds": {
+        "rmon": {}
+      },
+      "time": {
+        "dst-zones": {
+          "CL": {
+            "end": "first|saturday|april|00:00",
+            "start": "second|saturday|october|00:00"
+          }
+        },
+        "ntp": {
+          "no-shutdown": "active",
+          "servers": {
+            "10.127.39.186": "active",
+            "10.127.39.58": "active"
+          }
+        },
+        "sntp": {
+          "shutdown": "active"
+        },
+        "zone": "CLT|-04"
+      }
+    }
+  }
+}

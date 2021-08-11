@@ -1,0 +1,904 @@
+{
+  "configure": {
+    "cards": {
+      "1": {
+        "card-type": "iom-sar",
+        "mdas": {
+          "1": {
+            "access": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "mda-type": "a6-eth-10G",
+            "network": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "no-shutdown": "active"
+          },
+          "2": {
+            "access": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "mda-type": "a6-eth-10G",
+            "network": {
+              "ingress": {
+                "fabric-policy": "30"
+              }
+            },
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "external-alarms": {},
+    "filter": {},
+    "log": {
+      "accounting-policys": {
+        "1": {
+          "collection-interval": "15",
+          "no-shutdown": "active",
+          "record": "service-ingress-octets",
+          "to": "file|1"
+        }
+      },
+      "file-ids": {
+        "1": {
+          "location": "cf3:",
+          "rollover": "15|retention|12"
+        }
+      },
+      "log-ids": {
+        "98": {
+          "from": "main|security",
+          "to": "snmp|1024"
+        }
+      },
+      "snmp-trap-groups": {
+        "98": {
+          "description": "5620sam",
+          "trap-targets": {
+            "10.127.39.250:162": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98",
+            "D06726D06796:main1": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98"
+          }
+        }
+      },
+      "syslogs": {
+        "1": {}
+      }
+    },
+    "ports": {
+      "1/1/1": {
+        "description": "TO_MPR_ESCMRRTR19_1/1/1",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "network",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/2": {
+        "ethernet": {
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/1/3": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/4": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/5": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/1/6": {
+        "ethernet": {},
+        "no-shutdown": "active"
+      },
+      "1/2/1": {
+        "description": "TO_ESCC1RTR16_2/1/10",
+        "ethernet": {
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "network",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/2": {
+        "ethernet": {
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/3": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/4": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/5": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/6": {
+        "ethernet": {},
+        "shutdown": "active"
+      }
+    },
+    "qos": {
+      "fabric-profiles": {
+        "30": {
+          "aggregate-mode": "active",
+          "aggregate-rate": "10000000|unshaped-sap-cir|0"
+        }
+      },
+      "mc-mlppp": {},
+      "network-queues": {
+        "BHP-Network-Queue": {
+          "description": "BHP|network|queue|QoS|policy.",
+          "fcs": {
+            "af": {
+              "multicast-queue": "11",
+              "queue": "3"
+            },
+            "be": {
+              "multicast-queue": "9",
+              "queue": "1"
+            },
+            "ef": {
+              "multicast-queue": "14",
+              "queue": "6"
+            },
+            "h1": {
+              "multicast-queue": "15",
+              "queue": "7"
+            },
+            "h2": {
+              "multicast-queue": "13",
+              "queue": "5"
+            },
+            "l1": {
+              "multicast-queue": "12",
+              "queue": "4"
+            },
+            "l2": {
+              "multicast-queue": "10",
+              "queue": "2"
+            },
+            "nc": {
+              "multicast-queue": "16",
+              "queue": "8"
+            }
+          },
+          "queues": {
+            "1": {
+              "cbs": "1",
+              "high-prio-only": "10",
+              "mbs": "50",
+              "rate": "100|cir|5"
+            },
+            "10": {
+              "cbs": "3",
+              "mbs": "25",
+              "multipoint": "active",
+              "rate": "100|cir|10"
+            },
+            "11": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|10"
+            },
+            "12": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|15"
+            },
+            "13": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|30"
+            },
+            "14": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "20|cir|20"
+            },
+            "15": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|3"
+            },
+            "16": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|7"
+            },
+            "2": {
+              "cbs": "3",
+              "mbs": "25",
+              "rate": "100|cir|10"
+            },
+            "3": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|10"
+            },
+            "4": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|15"
+            },
+            "5": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|30"
+            },
+            "6": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "20|cir|20"
+            },
+            "7": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|3"
+            },
+            "8": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|7"
+            },
+            "9": {
+              "cbs": "1",
+              "high-prio-only": "10",
+              "mbs": "50",
+              "multipoint": "active"
+            }
+          }
+        }
+      },
+      "networks": {
+        "2": {
+          "description": "MNGT_TO_NC_VLAN900",
+          "egress": {
+            "fcs": {
+              "af": {
+                "dscp-in-profile": "af12",
+                "dscp-out-profile": "cs1",
+                "lsp-exp-in-profile": "2"
+              },
+              "ef": {
+                "dscp-out-profile": "af41"
+              },
+              "h2": {
+                "dscp-in-profile": "af32",
+                "dscp-out-profile": "af32"
+              },
+              "l1": {
+                "dscp-in-profile": "af22"
+              }
+            }
+          },
+          "ingress": {
+            "default-action": "fc|nc|profile|in",
+            "dscps": {
+              "af11": "fc|l2|profile|in",
+              "af12": "fc|af|profile|in",
+              "af22": "fc|l1|profile|in",
+              "af32": "fc|h2|profile|in",
+              "af41": "fc|ef|profile|in",
+              "af42": "fc|ef|profile|in",
+              "be": "fc|be|profile|out",
+              "cs1": "fc|af|profile|out",
+              "cs2": "fc|l2|profile|in",
+              "cs4": "fc|ef|profile|in",
+              "cs5": "fc|nc|profile|in",
+              "ef": "fc|ef|profile|in",
+              "nc1": "fc|h1|profile|in"
+            },
+            "lsp-exps": {
+              "0": "fc|be|profile|out",
+              "1": "fc|l2|profile|in",
+              "2": "fc|af|profile|in",
+              "3": "fc|l1|profile|in",
+              "4": "fc|h2|profile|in",
+              "5": "fc|ef|profile|in",
+              "6": "fc|h1|profile|in",
+              "7": "fc|nc|profile|in"
+            }
+          }
+        },
+        "900": {
+          "description": "MNGT_TO_NC_VLAN900",
+          "egress": {},
+          "ingress": {
+            "default-action": "fc|nc|profile|in"
+          }
+        }
+      },
+      "sap-egresss": {
+        "10": {
+          "fcs": {
+            "af": {
+              "queue": "3"
+            },
+            "be": {
+              "queue": "1"
+            },
+            "ef": {
+              "queue": "6"
+            },
+            "h2": {
+              "queue": "5"
+            },
+            "l1": {
+              "queue": "4"
+            },
+            "l2": {
+              "queue": "2"
+            },
+            "nc": {
+              "queue": "8"
+            }
+          },
+          "policy-name": "Transport|Egress|QoS",
+          "queues": {
+            "1": {
+              "rate": "max|cir|max"
+            },
+            "2": {
+              "best-effort": "active",
+              "rate": "max|cir|max"
+            },
+            "3": {
+              "rate": "max|cir|max"
+            },
+            "4": {
+              "rate": "max|cir|max"
+            },
+            "5": {
+              "rate": "max|cir|max"
+            },
+            "6": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            },
+            "7": {
+              "expedite": "active"
+            },
+            "8": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            }
+          }
+        },
+        "20": {
+          "description": "QOS_FOR_TOP",
+          "fcs": {
+            "h1": {
+              "dot1p": "7",
+              "dscp": "nc1",
+              "queue": "7"
+            }
+          },
+          "queues": {
+            "1": {},
+            "7": {
+              "rate": "max|cir|max"
+            }
+          }
+        }
+      },
+      "sap-ingresss": {
+        "10": {
+          "dot1ps": {
+            "0": "fc|be",
+            "1": "fc|l2",
+            "2": "fc|af",
+            "3": "fc|l1",
+            "4": "fc|h2",
+            "5": "fc|ef",
+            "7": "fc|nc"
+          },
+          "dscps": {
+            "af22": "fc|l1",
+            "af32": "fc|h2",
+            "be": "fc|be",
+            "cs1": "af12|fc|af",
+            "ef": "cs4|af41|af42|fc|ef"
+          },
+          "fcs": {
+            "af": {
+              "queue": "3"
+            },
+            "be": {
+              "queue": "1"
+            },
+            "ef": {
+              "queue": "6"
+            },
+            "h2": {
+              "queue": "5"
+            },
+            "l1": {
+              "queue": "4"
+            },
+            "l2": {
+              "queue": "2"
+            },
+            "nc": {
+              "queue": "8"
+            }
+          },
+          "policy-name": "Transport|Ingress|QoS",
+          "queues": {
+            "1": {
+              "rate": "max|cir|max"
+            },
+            "2": {
+              "best-effort": "active",
+              "rate": "max|cir|max"
+            },
+            "3": {
+              "rate": "max|cir|max"
+            },
+            "4": {
+              "rate": "max|cir|max"
+            },
+            "5": {
+              "rate": "max|cir|max"
+            },
+            "6": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            },
+            "7": {
+              "expedite": "active"
+            },
+            "8": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            }
+          }
+        },
+        "20": {
+          "description": "QOS_FOR_TOP",
+          "dot1p": "7|fc|h1|priority|high",
+          "dscp": "nc1|fc|h1|priority|high",
+          "fcs": {
+            "h1": {
+              "queue": "7"
+            }
+          },
+          "queues": {
+            "1": {},
+            "7": {
+              "rate": "max|cir|max"
+            }
+          }
+        }
+      }
+    },
+    "redundancy": {
+      "synchronize": "boot-env"
+    },
+    "router": {
+      "autonomous-system": "65000",
+      "bgp": {
+        "enable-peer-tracking": "active",
+        "groups": {
+          "MPiBGP": {
+            "LTE": "VPRNs",
+            "family": "ipv4|vpn-ipv4",
+            "local-address": "10.127.44.5",
+            "neighbors": {
+              "10.127.44.1": {
+                "description": "TO_ESCC1RTR16"
+              },
+              "10.127.44.2": {
+                "description": "TO_ESCC2RTR19"
+              }
+            },
+            "next-hop-self": "active",
+            "peer-as": "65000"
+          }
+        },
+        "min-route-advertisement": "5",
+        "no-shutdown": "active",
+        "rapid-withdrawal": "active"
+      },
+      "interfaces": {
+        "TO_ESCC1RTR16": {
+          "address": "10.127.40.3/31",
+          "bfd": "100|receive|100|multiplier|3",
+          "no-shutdown": "active",
+          "port": "1/2/1"
+        },
+        "TO_MPR_ESCMRRTR19": {
+          "address": "10.127.40.26/31",
+          "bfd": "100|receive|100|multiplier|3",
+          "no-shutdown": "active",
+          "port": "1/1/1:1001"
+        },
+        "system": {
+          "address": "10.127.44.5/32",
+          "no-shutdown": "active"
+        }
+      },
+      "ldp": {
+        "interface-parameters": {
+          "interfaces": {
+            "TO_ESCC1RTR16": {},
+            "TO_MPR_ESCMRRTR19": {}
+          }
+        },
+        "no-shutdown": "active",
+        "targeted-session": {}
+      },
+      "mpls": {
+        "interfaces": {
+          "TO_ESCC1RTR16": {
+            "no-shutdown": "active"
+          },
+          "TO_MPR_ESCMRRTR19": {
+            "no-shutdown": "active"
+          },
+          "system": {
+            "no-shutdown": "active"
+          }
+        },
+        "lsps": {
+          "TO_ESCC1RTR16": {
+            "cspf": "active",
+            "fast-reroutes": {
+              "facility": {}
+            },
+            "no-shutdown": "active",
+            "primarys": {
+              "IGP": {}
+            },
+            "to": "10.127.44.1"
+          },
+          "TO_ESCC2RTR19": {
+            "cspf": "active",
+            "fast-reroutes": {
+              "facility": {}
+            },
+            "no-shutdown": "active",
+            "primarys": {
+              "IGP": {}
+            },
+            "to": "10.127.44.2"
+          }
+        },
+        "no-shutdown": "active",
+        "paths": {
+          "IGP": {
+            "no-shutdown": "active"
+          }
+        },
+        "resignal-timer": "30"
+      },
+      "ospf": {
+        "areas": {
+          "0.0.0.0": {
+            "interfaces": {
+              "TO_ESCC1RTR16": {
+                "bfd-enable": "active",
+                "interface-type": "point-to-point",
+                "no-shutdown": "active"
+              },
+              "TO_MPR_ESCMRRTR19": {
+                "bfd-enable": "active",
+                "interface-type": "point-to-point",
+                "no-shutdown": "active"
+              },
+              "system": {
+                "no-shutdown": "active"
+              }
+            }
+          }
+        },
+        "router-id": "10.127.44.5",
+        "traffic-engineering": "active"
+      },
+      "policy-options": {
+        "policy-statements": {
+          "exp-OAM-Leaking": {
+            "entrys": {
+              "10": {
+                "actions": {
+                  "accept": {}
+                },
+                "from": {
+                  "prefix-list": "OAM-Leaking"
+                }
+              }
+            }
+          }
+        },
+        "prefix-lists": {
+          "OAM-Leaking": {
+            "prefixs": {
+              "10.127.39.184/29": "exact",
+              "10.127.39.56/29": "longer"
+            }
+          }
+        }
+      },
+      "router-id": "10.127.44.5",
+      "rsvp": {
+        "interfaces": {
+          "TO_ESCC1RTR16": {
+            "bfd-enable": "active",
+            "no-shutdown": "active"
+          },
+          "TO_MPR_ESCMRRTR19": {
+            "bfd-enable": "active",
+            "no-shutdown": "active"
+          },
+          "system": {
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      },
+      "sgt-qos": {
+        "application": "ptp|dscp|nc2"
+      }
+    },
+    "routers": {
+      "management": {}
+    },
+    "security": {
+      "logging": {}
+    },
+    "service": {
+      "customers": {
+        "1": {
+          "description": "Default|customer"
+        },
+        "10": {},
+        "15": {
+          "description": "LTE_OAM"
+        }
+      },
+      "sdps": {
+        "105": {
+          "far-end": "10.127.44.1",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCC1RTR16",
+          "no-shutdown": "active"
+        },
+        "205": {
+          "far-end": "10.127.44.2",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCC2RTR19",
+          "no-shutdown": "active"
+        }
+      },
+      "vplss": {
+        "1717": {
+          "allow-ip-int-binding": "active",
+          "customer": "1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/2": {},
+            "1/2/2": {}
+          },
+          "service-name": "asdf",
+          "stp": {
+            "shutdown": "active"
+          }
+        }
+      },
+      "vprns": {
+        "500": {
+          "auto-bind": "mpls",
+          "customer": "10",
+          "grt-lookup": {
+            "enable-grt": {
+              "allow-local-management": "active"
+            },
+            "export-grt": "exp-OAM-Leaking",
+            "export-limit": "256"
+          },
+          "interfaces": {
+            "to_mss": {
+              "address": "10.127.41.5/30",
+              "vplss": {
+                "asdf": {}
+              }
+            }
+          },
+          "no-shutdown": "active",
+          "route-distinguisher": "65000:500",
+          "static-routes": {
+            "10.127.44.128/32": "next-hop|10.127.41.6",
+            "10.127.44.129/32": "next-hop|10.127.41.6"
+          },
+          "vrf-target": "target:65000:500"
+        }
+      }
+    },
+    "system": {
+      "dns": {},
+      "location": "Monoposte|VSL",
+      "name": "ESCMRRTR17",
+      "security": {
+        "ftp-server": "active",
+        "profiles": {
+          "administrative": {
+            "entrys": {
+              "10": {
+                "action": "permit",
+                "match": "configure|system|security"
+              },
+              "100": {
+                "action": "deny",
+                "match": "configure|li"
+              },
+              "110": {
+                "action": "deny",
+                "match": "show|li"
+              },
+              "111": {
+                "action": "deny",
+                "match": "clear|li"
+              },
+              "20": {
+                "action": "permit",
+                "match": "show|system|security"
+              },
+              "30": {
+                "action": "permit",
+                "match": "tools|perform|security"
+              },
+              "40": {
+                "action": "permit",
+                "match": "tools|dump|security"
+              }
+            }
+          },
+          "default": {
+            "entrys": {
+              "10": {
+                "action": "permit",
+                "match": "exec"
+              },
+              "100": {
+                "action": "deny",
+                "match": "configure|li"
+              },
+              "20": {
+                "action": "permit",
+                "match": "exit"
+              },
+              "30": {
+                "action": "permit",
+                "match": "help"
+              },
+              "40": {
+                "action": "permit",
+                "match": "logout"
+              },
+              "50": {
+                "action": "permit",
+                "match": "password"
+              },
+              "60": {
+                "action": "deny",
+                "match": "show|config"
+              },
+              "65": {
+                "action": "deny",
+                "match": "show|li"
+              },
+              "66": {
+                "action": "deny",
+                "match": "clear|li"
+              },
+              "70": {
+                "action": "permit",
+                "match": "show"
+              },
+              "80": {
+                "action": "permit",
+                "match": "enable-admin"
+              }
+            }
+          }
+        },
+        "snmp": {
+          "communitys": {
+            "Lla.RtAyRW2": "hash2|r|version|both",
+            "uTdc9j48PBRkxn5DcSjchk": "hash2|rwa|version|both"
+          }
+        },
+        "users": {
+          "admin": {
+            "access": "console|ftp",
+            "console": {
+              "member": "administrative"
+            },
+            "password": "$2y$10$TQrZlpBDra86.qoexZUzQeBXDY1FcdDhGWdD9lLxMuFyPVSm0OGy6"
+          },
+          "nfmp": {
+            "access": "console|ftp|snmp",
+            "console": {
+              "member": "administrative",
+              "no-member": "default"
+            },
+            "password": "$2y$10$I/xG.DW/EHkFp6tGu1dm6.cPyZZiy6w66BBRK.Md/tIdjJf8Twg2y"
+          }
+        }
+      },
+      "snmp": {
+        "packet-size": "9216"
+      },
+      "sync-if-timing": {},
+      "thresholds": {
+        "rmon": {}
+      },
+      "time": {
+        "dst-zones": {
+          "CL": {
+            "end": "first|saturday|april|00:00",
+            "start": "second|saturday|october|00:00"
+          }
+        },
+        "ntp": {
+          "no-shutdown": "active",
+          "servers": {
+            "10.127.39.186": "active",
+            "10.127.39.58": "active"
+          }
+        },
+        "sntp": {
+          "shutdown": "active"
+        },
+        "zone": "CLT|-04"
+      }
+    }
+  }
+}

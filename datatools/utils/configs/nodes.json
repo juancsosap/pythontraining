@@ -1,0 +1,21 @@
+{
+    "mel":[
+        {"name":"ESCRLLTE01", "latitude": [-24, -16, -29.63], "longitude":[-69,  -3, -25.86]},
+        {"name":"ESCRLLTE02", "latitude": [-24, -16, -26.30], "longitude":[-69,  -4, -33.50]},
+        {"name":"ESCRLLTE03", "latitude": [-24, -15, -10.20], "longitude":[-69,  -4, -44.10]},
+        {"name":"ESCRBLTE04", "latitude": [-24, -16, -50.10], "longitude":[-69,  -5, -10.20]},
+        {"name":"ESCRBLTE05", "latitude": [-24, -16, -50.20], "longitude":[-69,  -5, -10.20]},
+        {"name":"ESCRHLTE06", "latitude": [-24, -17, -17.80], "longitude":[-69,  -4, -11.40]},
+        {"name":"ESCRHLTE07", "latitude": [-24, -15, -58.90], "longitude":[-69,  -3, -33.40]},
+        {"name":"ESCRHLTE08", "latitude": [-24, -12, -23.10], "longitude":[-69,  -3, -13.30]},
+        {"name":"ESCRLLTE09", "latitude": [-24, -13, -24.10], "longitude":[-69,  -2, -43.20]},
+        {"name":"ESCRLLTE10", "latitude": [-24, -12, -17.20], "longitude":[-69,  -2, -47.00]},
+        {"name":"ESCRHLTE11", "latitude": [-24, -11, -46.50], "longitude":[-69,  -2, -38.60]},
+        {"name":"ESCRFLTE12", "latitude": [-24, -13, -43.60], "longitude":[-69,  -2, -22.10]},
+        {"name":"ESCRFLTE13", "latitude": [-24, -15, -55.75], "longitude":[-69,  -0, -56.18]},
+        {"name":"ESCRHLTE14", "latitude": [-24, -14, -23.20], "longitude":[-69,  -0, -50.50]},
+        {"name":"ESCRHLTE15", "latitude": [-24, -16, -10.30], "longitude":[-68, -57, -55.40]},
+        {"name":"ESCRHLTE25", "latitude": [-24, -12, -10.40], "longitude":[-69,  -3,  -8.00]},
+        {"name":"ESCRHLTE26", "latitude": [-24, -12,  -6.00], "longitude":[-69,  -2, -38.00]}
+    ]
+}

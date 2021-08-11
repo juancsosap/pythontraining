@@ -1,0 +1,159 @@
+{
+    "sources":["node-infos", "node-status", "latency", "gnss", "port-states", "port-stats"],
+    "plots":{
+        "fdb-mac":{
+            "source":["node-status"],
+            "title":"FDb MAC Size",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"MACs",
+            "ydata":[
+                {"label":"Count", "field":"fdb_macs"}
+            ],
+            "field":"Count",
+            "filter":{}
+        },
+        "power":{
+            "source":["node-status"],
+            "title":"Power Parameters",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (dBm)",
+            "ydata":[
+                {"label":"RSSI", "field":"rssi"},
+                {"label":"RSRP", "field":"rsrp"}
+            ],
+            "field":"RSRP",
+            "filter":{}
+        },
+        "bandwidth":{
+            "source":["port-stats"],
+            "title":"Port {0} Bandwidth",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Bandwidth (Kbps)",
+            "ydata":[
+                {"label":"Egress BW", "field":"egress_bandwidth"},
+                {"label":"Ingress BW", "field":"ingress_bandwidth"}
+            ],
+            "field":"Egress BW",
+            "filter":{"port_id":"{0}"}
+        },
+        "mtu":{
+            "source":["port-stats"],
+            "title":"Mean MTU",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"MTU (Bytes)",
+            "ydata":[
+                {"label":"Egress MTU",  "field":"egress_mtu"},
+                {"label":"Ingress MTU", "field":"ingress_mtu"}
+            ],
+            "field":"Egress MTU",
+            "filter":{"port_id":"{0}"}
+        },
+        "speed":{
+            "source":["gnss"],
+            "title":"Speed",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Speed (Kph)",
+            "ydata":[
+                {"label":"Speed", "field":"speed"}
+            ],
+            "field":"Speed",
+            "filter":{}
+        },
+        "altitude":{
+            "source":["gnss"],
+            "title":"Altitude",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Altitude (Meters)",
+            "ydata":[
+                {"label":"Altitude", "field":"altitude"}
+            ],
+            "field":"Altitude",
+            "filter":{} 
+        },
+        "latency":{
+            "source":["latency"],
+            "title":"Latency",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Latency (ms)",
+            "ydata":[
+                {"label":"MAX Latency", "field":"latency_max"},
+                {"label":"AVG Latency", "field":"latency_avg"},
+                {"label":"MIN Latency", "field":"latency_min"}
+            ],
+            "field":"MAX Latency",
+            "filter":{"remote_ip":"{0}"}
+        },
+        "cells":{
+            "source":["node-status", "gnss"],
+            "link":["hostname", "time"],
+            "field":"cells",
+            "title":"Cell ID",
+            "xmap":"longitude",
+            "ymap":"latitude",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Cell ID",
+            "ydata":[
+                {"label":"Cell Name", "field":"cellname"}
+            ],
+            "field":"Cell Name",
+            "filter":{}
+        },
+        "bands":{
+            "source":["node-status", "gnss"],
+            "link":["hostname", "time"],
+            "field":"bands",
+            "title":"Cell Band",
+            "xmap":"longitude",
+            "ymap":"latitude",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Cell Band",
+            "ydata":[
+                {"label":"Band", "field":"band"}
+            ],
+            "field":"Band",
+            "filter":{}
+        },
+        "rsrp":{
+            "source":["node-status", "gnss"],
+            "link":["hostname", "time"],
+            "field":"rsrp",
+            "title":"RSRP Ranges",
+            "xmap":"longitude",
+            "ymap":"latitude",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"RSRP Ranges",
+            "ydata":[
+                {"label":"RSRP", "field":"rsrp"}
+            ],
+            "field":"RSRP",
+            "filter":{}
+        },
+        "states":{
+            "source":["port-states", "gnss"],
+            "link":["hostname", "time"],
+            "title":"Port State",
+            "xmap":"longitude",
+            "ymap":"latitude",
+            "field":"states",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"States",
+            "ydata":[
+                {"label":"Port States", "field":"oper_state"}
+            ],
+            "field":"Port States",
+            "filter":{"port_id":"{0}"}
+        }
+    },
+    "source":"outputs/CPE/processed"
+}

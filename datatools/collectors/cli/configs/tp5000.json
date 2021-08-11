@@ -1,0 +1,47 @@
+{
+    "hosts":[
+        "ESC1PNTP01", "ESC2PNTP01"
+    ],
+    "outputfolder":"/home/script/outputs/TP5000",
+    "commands":[
+        "show status",
+        "show ptp status ioc-1",
+        "show ntp status ioc-2",
+        "show ip status imc",
+        "show ip status ioc",
+        "show hardware-status imc",
+        "show hardware-status ioc1",
+        "show hardware-status ioc2"
+    ],
+    "wait":1,
+    "files":{
+        "basic-info":{
+            "regex":[
+                "IMC uptime\\s+:\\s+(?P<uptime_days>\\S+) days (?P<uptime_hours>\\S+) hrs (?P<uptime_minutes>\\S+) mins",
+                "Client load\\s+:\\s+(?P<ptp_load>\\S+)%",
+                "Packet load:\\s+(?P<ntp_load>\\S+)%",
+                "Clock status\\s+:\\s+(?P<clock_status>.*)\\n",
+                "Packet service eth1\\s+:\\s+(?P<eth1_svc>\\S+)",
+                "Packet service eth2\\s+:\\s+(?P<eth2_svc>\\S+)",
+                "\\-48V\\-A\\s+:\\s+(?P<psu_a_state>\\S+)",
+                "\\-48V\\-B\\s+:\\s+(?P<psu_b_state>\\S+)",
+                "GPS Antenna\\s+:\\s+(?P<gps_ant_state>\\S+)"
+            ]
+        },
+        "interface-info":{
+            "regex":[
+                "(?P<intf_name>\\S+)\\s+Link encap:Ethernet\\s+HWaddr (?P<mac_addr>\\S+)",
+                "inet addr:(?P<ip_add>\\S+)\\s+\\S+\\s+Mask:(?P<netmask>\\S+)",
+                "(?P<intf_status>\\S+) \\S+ \\S+ \\S+\\s+MTU:(?P<intf_mtu>\\S+)\\s+Metric:"
+            ]
+        },
+        "ioc-info":{
+            "regex":[
+                "show hardware-status ioc(?P<ioc_id>.)",
+                "FPGA Temp\\s+:\\s+(?P<temp_curr>\\S+)C",
+                "Temp High\\s+:\\s+(?P<temp_high>\\S+)C",
+                "Temp Low\\s+:\\s+(?P<temp_low>\\S+)C"
+            ]
+        }
+    }
+}

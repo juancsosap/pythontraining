@@ -1,0 +1,107 @@
+{
+    "|node":{
+        "description":"NODE TEMPLATE",
+        "template":{
+            "hostname":{
+                "type":"string",
+                "items":{
+                    "values":{
+                        "type":"list",
+                        "template":"{0}"
+                    }
+                }
+            }
+        }
+    },
+    "|label":{
+        "description":"LABEL TEMPLATE",
+        "template":{
+            "label":{
+                "type":"string",
+                "items":{
+                    "pattern":{
+                        "type":"list",
+                        "template":"{0}"
+                    }
+                }
+            }
+        }
+    },
+    "|cell":{
+        "description":"CELL TEMPLATE",
+        "template":{
+            "cellname":{
+                "type":"string",
+                "items":{
+                    "pattern":{
+                        "type":"list",
+                        "template":"{0}"
+                    }
+                }
+            }
+        }
+    },
+    "|time":{
+        "description":"DATE TIME TEMPLATE",
+        "template":{
+            "time":{
+                "type":"time",
+                "items":{
+                    "min":{
+                        "type":"string",
+                        "template":"{0}"
+                    },
+                    "max":{
+                        "type":"string",
+                        "template":"{1}"
+                    }
+                }
+            }
+        }
+    },
+    "|date":{
+        "description":"DATE TEMPLATE",
+        "template":{
+            "time":{
+                "type":"time",
+                "items":{
+                    "min":{
+                        "type":"string",
+                        "template":"{0} 00:00:00"
+                    },
+                    "max":{
+                        "type":"string",
+                        "template":"{0} 23:59:59"
+                    }
+                }
+            }
+        }
+    },
+    "|zone":{
+        "description":"ZONE TEMPLATE",
+        "template":{
+            "latitude":{
+                "type":"coordinates",
+                "items":{
+                    "min":{
+                        "type":"coordinates"
+                    },
+                    "max":{
+                        "type":"coordinates"
+                    }
+                }
+            },
+            "longitude":{
+                "type":"coordinates",
+                "items":{
+                    "min":{
+                        "type":"coordinates"
+                    },
+                    "max":{
+                        "type":"coordinates"
+                    }
+                }
+            }
+        }
+    }
+}

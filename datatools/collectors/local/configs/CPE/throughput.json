@@ -1,0 +1,36 @@
+{
+    "columns":["hostname", "time", "cellid", "latitude", "longitude", "downlink", "uplink"],
+    "key":"hostname",
+    "size":"utilization",
+    "multiplier":["hostname", "cellid", "timestamp", "coordinates"],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1",
+        "cellid":"Cell Identity\\s+: (\\S+)",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "coordinates":"Position [^:]+: (\\S+), (\\S+)",
+        "utilization":"Utilization \\(\\% of port capacity\\)\\s+\\~?(\\S+)\\s+\\~?(\\S+)"
+    },
+    "split":{
+        "latitude":{
+            "field":"coordinates", "index": 0
+        },
+        "longitude":{
+            "field":"coordinates", "index": 1
+        },
+        "downlink":{
+            "field":"utilization", "index": 0
+        },
+        "uplink":{
+            "field":"utilization", "index": 1
+        }
+    },
+    "transform"{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        }
+    }
+}

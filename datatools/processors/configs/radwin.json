@@ -1,0 +1,49 @@
+{
+    "dtypes":{
+        "data":{
+            "link_state":"object", 
+            "sector_id":"object", 
+            "hsu_location":"object", 
+            "hbs_location":"object", 
+            "frecuency":"float32", 
+            "hsu_ip":"object", 
+            "hbs_ip":"object", 
+            "band":"object", 
+            "hsu_rss":"float32", 
+            "hbs_rss":"float32", 
+            "channel_bw":"float32", 
+            "hsutxrate":"float32", 
+            "hbstxrate":"float32", 
+            "hsurxrate":"float32", 
+            "hbsrxrate":"float32", 
+            "hsu_throughput":"float32", 
+            "hbs_throughput":"float32", 
+            "gps_latitude":"object", 
+            "gps_longitude":"object", 
+            "gps_altitude":"float32",
+            "site_name":"object", 
+            "up_time":"object", 
+            "product":"object", 
+            "hw_version":"object", 
+            "sw_version":"object", 
+            "mac_address":"object", 
+            "serial_number":"object", 
+            "agg_capacity":"object",
+            "time":"object"
+        },
+        "events":{
+            "site_name":"object", 
+            "severity":"object", 
+            "time":"object", 
+            "description":"object", 
+            "interface":"object"
+        }
+    },
+    "outputs":{
+        "data": ["hostname", "time", "link_state", "sector_id", "hsu_location", "frecuency", "hsu_ip", "band", "hsu_rss", 
+                 "channel_bw", "hsutxrate", "hsurxrate", "hsu_throughput", "gps_latitude", "gps_longitude", "gps_altitude", "up_time", 
+                 "product", "hw_version", "sw_version", "mac_address", "serial_number", "agg_capacity", "hbs_location", "hbs_ip", 
+                 "hbs_rss", "hbstxrate", "hbsrxrate", "hbs_throughput", "date", "week"],
+        "events":["hostname", "severity", "time", "description", "interface", "date", "week"]
+    }
+}

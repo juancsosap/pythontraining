@@ -1,0 +1,58 @@
+{
+    "sources":["data", "events"],
+    "plots":{
+        "rss":{
+            "source":["data"],
+            "title":"Power Parameters",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Power (dBm)",
+            "ydata":[
+                {"label":"HSU", "field":"hsu_rss"},
+                {"label":"HBS", "field":"hbs_rss"}
+            ],
+            "field":"HSU",
+            "filter":{}
+        },
+        "throughput":{
+            "source":["data"],
+            "title":"Throughput",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Throughput (Mbps)",
+            "ydata":[
+                {"label":"HSU", "field":"hsu_throughput"},
+                {"label":"HBS", "field":"hbs_throughput"}
+            ],
+            "field":"HSU",
+            "filter":{}
+        },
+        "txrate":{
+            "source":["data"],
+            "title":"TX Rate",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Rate (Mbps)",
+            "ydata":[
+                {"label":"HSU",  "field":"hsutxrate"},
+                {"label":"HBS",  "field":"hbstxrate"}
+            ],
+            "field":"HSU TX",
+            "filter":{}
+        },
+        "rxrate":{
+            "source":["data"],
+            "title":"RX Rate",
+            "xlabel":"Time",
+            "xdata":"time",
+            "ylabel":"Rate (Mbps)",
+            "ydata":[
+                {"label":"HSU", "field":"hsurxrate"},
+                {"label":"HBS", "field":"hbsrxrate"}
+            ],
+            "field":"HSU RX",
+            "filter":{}
+        }
+    },
+    "source":"outputs/RADWIN/processed"
+}

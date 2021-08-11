@@ -1,0 +1,9 @@
+{
+  "sourcefolders":[
+    "data/MBH/"
+  ],
+  "skiplines":false,
+  "destinationfolder":"outputs/MBH/",
+  "mode":"w",
+  "configs":["basic"]
+}

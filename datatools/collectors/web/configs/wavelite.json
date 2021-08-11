@@ -1,0 +1,7 @@
+{
+    "hosts":["10.127.46.138", "10.127.46.142", "10.127.46.130", "10.127.46.134", "10.127.46.150"],
+    "savefolder":"outputs/WAVELITE",
+    "mimetypes":"text/csv",
+    "mode":"w",
+    "protocol":"http"
+}

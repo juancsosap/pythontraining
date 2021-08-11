@@ -1,0 +1,15 @@
+{
+    "auth":{
+        "username":"root",
+        "password":"123456"
+    },
+    "hosts":[
+        "10.127.39.242"
+    ],
+    "commands":{
+        "ifconfig":{
+            "file":"interfaces.csv",
+            "regex":"(?P<name>\\S+): flags.* mtu (?P<mtu>\\S+)\n\\s+(inet (?P<ipv4>\\S+)  netmask (?P<netmask>\\S+).*\n\\s+)?(inet6 (?P<ipv6>\\S+)  prefixlen (?P<prefixv6>\\S+).*\n\\s+)?(ether (?P<mac>\\S+)|loop  (?P<loopback>.))?"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.orp/soap/envelope/">
+    <SOAP:Header>
+        <header xmlns="xmlapi_1.0">
+            <security>
+                <user>ossadmin</user>
+                <password hashed="false">OSSAdmin.123</password>
+            </security>
+            <requestID>1234567890</requestID>
+        </header>
+    </SOAP:Header>
+    <SOAP:Body>
+        <ping xmlns="xmlapi_1.0"/>
+    </SOAP:Body>
+</SOAP:Envelope>

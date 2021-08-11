@@ -1,0 +1,29 @@
+{
+    "columns":["hostname", "time", "state", "status", "radiomode", "band", "channel", "cellid", "rssi", "rsrp", "fdb_macs"],
+    "key":"hostname",
+    "size":"hostname",
+    "multiplier":[],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "state":"PDN State\\s+: (\\S+)",
+        "status":"Network Status\\s+: (\\S+)",
+        "radiomode":"Radio Mode\\s+: (\\S*)",
+        "band":"Band\\s+: (\\S+)?",
+        "channel":"Channel\\s+: (\\S+)?",
+        "cellid":"Cell Identity\\s+: (\\S+)?",
+        "rssi":"RSSI\\s+: >?=? ?(\\S*) ?d?B?m?",
+        "rsrp":"RSRP\\s+: >?=? ?(\\S*) ?d?B?m?",
+        "fdb_macs":"No. of Entries: (\\S+)"
+    },
+    "split":{},
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        }
+    }
+}

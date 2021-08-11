@@ -1,0 +1,55 @@
+{
+    "columns":["hostname", "time", "port_id", "admin_state", "link", "oper_state", 
+               "admin_mtu", "oper_mtu", "mode", "encap", "media"],
+    "key":"hostname",
+    "size":"port_state",
+    "multiplier":["hostname", "timestamp"],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "port_state":"(1)/([1-2]+)/([1-9]+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+[-]\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)"
+    },
+    "split":{
+        "admin_state":{
+            "field":"port_state", "index": 3
+        },
+        "link":{
+            "field":"port_state", "index": 4
+        },
+        "oper_state":{
+            "field":"port_state", "index": 5
+        },
+        "admin_mtu":{
+            "field":"port_state", "index": 6
+        },
+        "oper_mtu":{
+            "field":"port_state", "index": 7
+        },
+        "mode":{
+            "field":"port_state", "index": 8
+        },
+        "encap":{
+            "field":"port_state", "index": 9
+        },
+        "media":{
+            "field":"port_state", "index": 10
+        }
+    },
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        },
+        "port_id":{
+            "items":[
+                {"field":"port_state", "index": 0},
+                {"field":"port_state", "index": 1},
+                {"field":"port_state", "index": 2}
+            ],
+            "template":"{0}/{1}/{2}"
+        }
+    }
+}

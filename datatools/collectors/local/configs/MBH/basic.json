@@ -1,0 +1,34 @@
+{
+    "columns":["hostname", "time", "system_ip", "system_version", "system_type", "cpu_usage", "memory_usage", "memory_available", "uptime"],
+    "key":"hostname",
+    "size":"hostname",
+    "multiplier":[],
+    "regex":{
+        "hostname":":(\\S+)# environment no more",
+        "timestamp":"Current Date & Time : (\\S+) (\\S+)",
+        "system_ip":"(\\S+)/32\\s+n/a",
+        "system_version":"System Version\\s+: (\\S+)",
+        "system_type":"System Type\\s+: (.+)",
+        "cpu_usage":"Usage\\s+\\S+\\s+(\\S+)%",
+        "memory_usage":"Total In Use\\s+:\\s+(\\S+) bytes",
+        "memory_available":"Available Memory\\s+:\\s+(\\S+) bytes",
+        "system_up_time":"System Up Time\\s+: (\\S+) days, (\\S+) "
+    },
+    "split":{},
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        },
+        "uptime":{
+            "items":[
+                {"field":"system_up_time", "index": 0},
+                {"field":"system_up_time", "index": 1}
+            ],
+            "template":"{0}:{1}"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "btsid":216,
+    "btsname":"ESCRLLTE24",
+    "servers":{
+        "ip_netact":"10.127.38.38",
+        "ip_l3dc":"10.127.39.26",
+        
+    }
+}

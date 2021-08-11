@@ -1,0 +1,2926 @@
+{
+  "configure": {
+    "cards": {
+      "1": {
+        "card-type": "iom-e",
+        "mdas": {
+          "1": {
+            "mda-type": "me10-10gb-sfp+",
+            "no-shutdown": "active"
+          },
+          "2": {
+            "mda-type": "me40-1gb-csfp",
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      },
+      "2": {
+        "card-type": "iom-e",
+        "mdas": {
+          "1": {
+            "mda-type": "me10-10gb-sfp+",
+            "no-shutdown": "active"
+          },
+          "2": {
+            "mda-type": "me40-1gb-csfp",
+            "no-shutdown": "active"
+          }
+        },
+        "no-shutdown": "active"
+      }
+    },
+    "lags": {
+      "1": {
+        "shutdown": "active"
+      }
+    },
+    "log": {
+      "accounting-policys": {
+        "1": {
+          "collection-interval": "15",
+          "no-shutdown": "active",
+          "record": "service-ingress-octets",
+          "to": "file|1"
+        }
+      },
+      "event-controls": {
+        "igmp": "2005|suppress",
+        "vrtr": "2034|generate|disable-specific-throttle"
+      },
+      "file-ids": {
+        "1": {
+          "location": "cf3:",
+          "rollover": "15|retention|12"
+        }
+      },
+      "log-ids": {
+        "98": {
+          "from": "main|security|change",
+          "no-shutdown": "active",
+          "to": "snmp|1024"
+        }
+      },
+      "snmp-trap-groups": {
+        "98": {
+          "description": "5620sam",
+          "trap-targets": {
+            "10.127.39.250:162": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98",
+            "D06726D06796:main1": "address|10.127.39.250|snmpv2c|notify-community|privatetrap98"
+          }
+        }
+      },
+      "syslogs": {
+        "1": {}
+      }
+    },
+    "port-xc": {
+      "pxcs": {
+        "1": {
+          "no-shutdown": "active",
+          "port": "1/1/9"
+        }
+      }
+    },
+    "ports": {
+      "1/1/1": {
+        "description": "TO_OAM_ONE_DNS",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/10": {
+        "description": "TO_ESCC1RTR16_1/1/10",
+        "ethernet": {
+          "hold-time": "up|5",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          }
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/2": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/3": {
+        "description": "TO_Prim_CMU_ENS1F0",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid",
+          "mtu": "9000"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/4": {
+        "description": "TO_Mate_CMU_ENS1F0",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid",
+          "mtu": "9000"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/5": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/6": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/7": {
+        "description": "TO_SR2e_VSL_CORE_01_1/1/7",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/8": {
+        "description": "TO_CMU_2_ENS1FO",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "hybrid"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/1/9": {
+        "description": "PXC|for|vprn101-Base",
+        "ethernet": {
+          "dot1x": {
+            "tunneling": "active"
+          },
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "1/2/1": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/10": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/11": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/12": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/13": {
+        "ethernet": {
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/14": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/15": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/16": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/17": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/18": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/19": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/2": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/20": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/21": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/22": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/23": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/24": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/25": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/26": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/27": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/28": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/29": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/3": {
+        "description": "TO_MPR_ESCRFRTR13_1/2/1",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "no-autonegotiate": "active"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/30": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/31": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/32": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/33": {
+        "ethernet": {
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/34": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/35": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/36": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/37": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/38": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/39": {
+        "description": "TO_Prim_CMU_IPMI",
+        "ethernet": {
+          "mode": "access"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/4": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/40": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/5": {
+        "description": "TO_MPR_ESCMRRTR1_1/2/1",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "no-autonegotiate": "active"
+        },
+        "no-shutdown": "active"
+      },
+      "1/2/6": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/7": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "1/2/8": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "hybrid"
+        },
+        "shutdown": "active"
+      },
+      "1/2/9": {
+        "ethernet": {
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "2/1/1": {
+        "description": "TO_ONE-NDS",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/10": {
+        "ethernet": {
+          "hold-time": "up|5",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          }
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/2": {
+        "ethernet": {},
+        "no-otu": "active",
+        "shutdown": "active"
+      },
+      "2/1/3": {
+        "description": "TO_Prim_CMU_ENS4F0",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid",
+          "mtu": "9000"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/4": {
+        "description": "TO_Mate_CMU_ENS4F0",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid",
+          "mtu": "9000"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/5": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/6": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/7": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "hold-time": "up|5",
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/8": {
+        "description": "TO_CMU_2_ENS4FO",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "mode": "hybrid"
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/1/9": {
+        "ethernet": {
+          "hold-time": "up|5",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          }
+        },
+        "no-otu": "active",
+        "no-shutdown": "active"
+      },
+      "2/2/1": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/10": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/11": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/12": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/13": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/14": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/15": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/16": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/17": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/18": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/19": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/2": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/20": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/21": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/22": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/23": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/24": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/25": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/26": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/27": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/28": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/29": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/3": {
+        "description": "TO_MPR_ESCRHRTR06_1/1/1",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "no-autonegotiate": "active"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/30": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/31": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/32": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/33": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/34": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/35": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/36": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/37": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/38": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/39": {
+        "description": "TO_Mate_CMU_IPMI",
+        "ethernet": {
+          "mode": "access"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/4": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/40": {
+        "ethernet": {
+          "encap-type": "dot1q",
+          "mode": "hybrid"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/5": {
+        "description": "TO_MPR_ESCRFRTR12_1/2/3",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "no-autonegotiate": "active"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/6": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/7": {
+        "description": "TO_MPR_ESCMRRTR1_1/2/1",
+        "ethernet": {
+          "encap-type": "dot1q",
+          "lldp": {
+            "dest-macs": {
+              "nearest-bridge": {
+                "admin-status": "tx-rx",
+                "notification": "active",
+                "tx-mgmt-address": "system",
+                "tx-tlvs": "port-desc|sys-name|sys-desc|sys-cap"
+              }
+            }
+          },
+          "no-autonegotiate": "active"
+        },
+        "no-shutdown": "active"
+      },
+      "2/2/8": {
+        "ethernet": {},
+        "shutdown": "active"
+      },
+      "2/2/9": {
+        "ethernet": {
+          "mode": "access",
+          "mtu": "9212"
+        },
+        "no-shutdown": "active"
+      },
+      "pxc-1.a": {
+        "description": "PXC|for|vprn101-Base|Base|side",
+        "ethernet": {},
+        "no-shutdown": "active"
+      },
+      "pxc-1.b": {
+        "description": "PXC|for|vprn101-Base|vprn101|side",
+        "ethernet": {},
+        "no-shutdown": "active"
+      }
+    },
+    "qos": {
+      "network-queues": {
+        "BHP-Network-Queue": {
+          "description": "BHP|network|queue|QoS|policy.",
+          "fcs": {
+            "af": {
+              "multicast-queue": "11",
+              "queue": "3"
+            },
+            "be": {
+              "multicast-queue": "9",
+              "queue": "1"
+            },
+            "ef": {
+              "multicast-queue": "14",
+              "queue": "6"
+            },
+            "h1": {
+              "multicast-queue": "15",
+              "queue": "7"
+            },
+            "h2": {
+              "multicast-queue": "13",
+              "queue": "5"
+            },
+            "l1": {
+              "multicast-queue": "12",
+              "queue": "4"
+            },
+            "l2": {
+              "multicast-queue": "10",
+              "queue": "2"
+            },
+            "nc": {
+              "multicast-queue": "16",
+              "queue": "8"
+            }
+          },
+          "queues": {
+            "1": {
+              "mbs": "50",
+              "rate": "100|cir|5"
+            },
+            "10": {
+              "cbs": "3",
+              "mbs": "25",
+              "multipoint": "active",
+              "rate": "100|cir|10"
+            },
+            "11": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|10"
+            },
+            "12": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|15"
+            },
+            "13": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|30"
+            },
+            "14": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "20|cir|20"
+            },
+            "15": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|3"
+            },
+            "16": {
+              "cbs": "5",
+              "mbs": "50",
+              "multipoint": "active",
+              "rate": "100|cir|7"
+            },
+            "2": {
+              "cbs": "3",
+              "mbs": "25",
+              "rate": "100|cir|10"
+            },
+            "3": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|10"
+            },
+            "4": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|15"
+            },
+            "5": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|30"
+            },
+            "6": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "20|cir|20"
+            },
+            "7": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|3"
+            },
+            "8": {
+              "cbs": "5",
+              "mbs": "50",
+              "rate": "100|cir|7"
+            },
+            "9": {
+              "mbs": "50",
+              "multipoint": "active"
+            }
+          }
+        }
+      },
+      "networks": {
+        "2": {
+          "description": "BHP|network|QoS|policy.",
+          "egress": {
+            "fcs": {
+              "af": {
+                "dscp-in-profile": "af12",
+                "dscp-out-profile": "cs1",
+                "lsp-exp-in-profile": "2"
+              },
+              "ef": {
+                "dscp-out-profile": "af41"
+              },
+              "h2": {
+                "dscp-in-profile": "af32",
+                "dscp-out-profile": "af32"
+              },
+              "l1": {
+                "dscp-in-profile": "af22"
+              }
+            }
+          },
+          "ingress": {
+            "dscps": {
+              "af11": "fc|l2|profile|in",
+              "af12": "fc|af|profile|in",
+              "af22": "fc|l1|profile|in",
+              "af32": "fc|h2|profile|in",
+              "af41": "fc|ef|profile|in",
+              "af42": "fc|ef|profile|in",
+              "be": "fc|be|profile|out",
+              "cs1": "fc|af|profile|out",
+              "cs2": "fc|l2|profile|in",
+              "cs4": "fc|ef|profile|in",
+              "cs5": "fc|nc|profile|in",
+              "ef": "fc|ef|profile|in",
+              "nc1": "fc|h1|profile|in"
+            },
+            "lsp-exps": {
+              "0": "fc|be|profile|out",
+              "1": "fc|l2|profile|in",
+              "2": "fc|af|profile|in",
+              "3": "fc|l1|profile|in",
+              "4": "fc|h2|profile|in",
+              "5": "fc|ef|profile|in",
+              "6": "fc|h1|profile|in",
+              "7": "fc|nc|profile|in"
+            }
+          },
+          "name": "2"
+        }
+      },
+      "sap-egresss": {
+        "10": {
+          "fcs": {
+            "af": {
+              "queue": "3"
+            },
+            "be": {
+              "queue": "1"
+            },
+            "ef": {
+              "queue": "6"
+            },
+            "h2": {
+              "queue": "5"
+            },
+            "l1": {
+              "queue": "4"
+            },
+            "l2": {
+              "queue": "2"
+            },
+            "nc": {
+              "queue": "8"
+            }
+          },
+          "name": "10",
+          "queues": {
+            "1": {
+              "rate": "max|cir|max"
+            },
+            "2": {
+              "best-effort": "active",
+              "rate": "max|cir|max"
+            },
+            "3": {
+              "rate": "max|cir|max"
+            },
+            "4": {
+              "rate": "max|cir|max"
+            },
+            "5": {
+              "rate": "max|cir|max"
+            },
+            "6": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            },
+            "7": {
+              "expedite": "active"
+            },
+            "8": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            }
+          }
+        },
+        "20": {
+          "description": "QOS_FOR_TOP",
+          "fcs": {
+            "h1": {
+              "dot1p": "7",
+              "dscp": "nc1",
+              "queue": "7"
+            }
+          },
+          "name": "20",
+          "queues": {
+            "1": {},
+            "7": {
+              "rate": "max|cir|max"
+            }
+          }
+        }
+      },
+      "sap-ingresss": {
+        "10": {
+          "dot1ps": {
+            "0": "fc|be",
+            "1": "fc|l2",
+            "2": "fc|af",
+            "3": "fc|l1",
+            "4": "fc|h2",
+            "5": "fc|ef",
+            "7": "fc|nc"
+          },
+          "dscps": {
+            "af22": "fc|l1",
+            "af32": "fc|h2",
+            "be": "fc|be",
+            "cs1": "af12|fc|af",
+            "ef": "cs4|af41|af42|fc|ef"
+          },
+          "fcs": {
+            "af": {
+              "queue": "3"
+            },
+            "be": {
+              "queue": "1"
+            },
+            "ef": {
+              "queue": "6"
+            },
+            "h2": {
+              "queue": "5"
+            },
+            "l1": {
+              "queue": "4"
+            },
+            "l2": {
+              "queue": "2"
+            },
+            "nc": {
+              "queue": "8"
+            }
+          },
+          "name": "10",
+          "queues": {
+            "1": {
+              "rate": "max|cir|max"
+            },
+            "11": {
+              "multipoint": "active"
+            },
+            "2": {
+              "best-effort": "active",
+              "rate": "max|cir|max"
+            },
+            "3": {
+              "rate": "max|cir|max"
+            },
+            "4": {
+              "rate": "max|cir|max"
+            },
+            "5": {
+              "rate": "max|cir|max"
+            },
+            "6": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            },
+            "7": {
+              "expedite": "active"
+            },
+            "8": {
+              "expedite": "active",
+              "rate": "max|cir|max"
+            }
+          }
+        },
+        "20": {
+          "description": "QOS_FOR_TOP",
+          "dot1p": "7|fc|h1|priority|high",
+          "dscp": "nc1|fc|h1|priority|high",
+          "fcs": {
+            "h1": {
+              "queue": "7"
+            }
+          },
+          "name": "20",
+          "queues": {
+            "1": {},
+            "11": {
+              "multipoint": "active"
+            },
+            "7": {
+              "rate": "max|cir|max"
+            }
+          }
+        }
+      }
+    },
+    "redundancy": {
+      "synchronize": "boot-env"
+    },
+    "routers": {
+      "Base": {
+        "autonomous-system": "65000",
+        "bgp": {
+          "cluster": "10.127.44.2",
+          "enable-peer-tracking": "active",
+          "family": "vpn-ipv4|l2-vpn",
+          "groups": {
+            "MPiBGP": {
+              "LTE": "VPRNs",
+              "dynamic-neighbor": {
+                "prefix": "10.127.44.0/26"
+              },
+              "family": "ipv4|vpn-ipv4",
+              "local-address": "10.127.44.2",
+              "local-as": "65000",
+              "neighbors": {
+                "10.127.44.1": {
+                  "description": "TO_ESCC1RTR16"
+                }
+              },
+              "next-hop-self": "active",
+              "peer-as": "65000"
+            },
+            "PDN": {
+              "Network": "active",
+              "family": "vpn-ipv4",
+              "local-address": "10.127.44.2",
+              "local-as": "65500|no-prepend-global-as",
+              "neighbors": {
+                "10.127.44.51": {},
+                "10.127.44.52": {
+                  "description": "TO_ESCD1RTR20"
+                }
+              },
+              "next-hop-self": "active",
+              "peer-as": "65500"
+            },
+            "SAR-Hm": {
+              "cluster": "10.127.44.2",
+              "dynamic-neighbor": {
+                "prefix": "10.127.32.0/23"
+              },
+              "family": "vpn-ipv4|l2-vpn",
+              "local-as": "65000",
+              "next-hop-self": "active",
+              "peer-as": "65000",
+              "type": "internal"
+            }
+          },
+          "min-route-advertisement": "5",
+          "no-shutdown": "active",
+          "rapid-withdrawal": "active",
+          "router-id": "10.127.44.2"
+        },
+        "interfaces": {
+          "PXC-to-vprn101": {
+            "address": "10.127.46.18/31",
+            "no-shutdown": "active",
+            "port": "pxc-1.a:101"
+          },
+          "TO_ESCC1RTR16": {
+            "address": "10.127.40.1/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "1/1/10"
+          },
+          "TO_ESCD1RTR20": {
+            "address": "10.127.40.10/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "2/1/9"
+          },
+          "TO_ESCRBRTR05": {
+            "address": "10.127.40.6/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "2/1/10"
+          },
+          "TO_MPR_ESCMRRTR19": {
+            "address": "10.127.40.29/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "2/2/7:1002"
+          },
+          "TO_MPR_ESCRFRTR12": {
+            "address": "10.127.40.25/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "2/2/5:1009"
+          },
+          "TO_MPR_ESCRFRTR13": {
+            "address": "10.127.40.23/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "1/2/3:1011"
+          },
+          "TO_MPR_ESCRHRTR06": {
+            "address": "10.127.40.69/31",
+            "bfd": "100|receive|100|multiplier|3",
+            "no-shutdown": "active",
+            "port": "2/2/3:1012"
+          },
+          "system": {
+            "address": "10.127.44.2/32",
+            "no-shutdown": "active"
+          }
+        },
+        "isiss": {
+          "0": {
+            "area-id": "49.0001",
+            "interfaces": {
+              "TO_ESCD1RTR20": {
+                "bfd-enable": "ipv4",
+                "interface-type": "point-to-point",
+                "level-capability": "level-2",
+                "no-shutdown": "active"
+              },
+              "system": {
+                "no-shutdown": "active"
+              }
+            },
+            "levels": {
+              "2": {
+                "wide-metrics-only": "active"
+              }
+            },
+            "no-shutdown": "active",
+            "reference-bandwidth": "1000000000",
+            "traffic-engineering": "active"
+          }
+        },
+        "ldp": {
+          "interface-parameters": {
+            "interfaces": {
+              "TO_ESCC1RTR16": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              },
+              "TO_ESCRBRTR05": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              },
+              "TO_MPR_ESCMRRTR19": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              },
+              "TO_MPR_ESCRFRTR12": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              },
+              "TO_MPR_ESCRFRTR13": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              },
+              "TO_MPR_ESCRHRTR06": {
+                "dual-stack": "active",
+                "ipv4": {
+                  "no-shutdown": "active"
+                },
+                "no-shutdown": "active"
+              }
+            }
+          },
+          "no-shutdown": "active",
+          "targeted-session": {}
+        },
+        "mpls": {
+          "cspf-on-loose-hop": "active",
+          "interfaces": {
+            "TO_ESCC1RTR16": {
+              "no-shutdown": "active"
+            },
+            "TO_ESCD1RTR20": {
+              "no-shutdown": "active"
+            },
+            "TO_ESCRBRTR05": {
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCMRRTR19": {
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRFRTR12": {
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRFRTR13": {
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRHRTR06": {
+              "no-shutdown": "active"
+            },
+            "system": {
+              "no-shutdown": "active"
+            }
+          },
+          "lsps": {
+            "TO_ESCC1RTR16": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.1"
+            },
+            "TO_ESCD1RTR20": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.52"
+            },
+            "TO_ESCD1RTR23": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.51"
+            },
+            "TO_ESCMRRTR17": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.5"
+            },
+            "TO_ESCMRRTR19": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.30"
+            },
+            "TO_ESCRBRTR05": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.3"
+            },
+            "TO_ESCRFRTR12": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.6"
+            },
+            "TO_ESCRFRTR13": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.15"
+            },
+            "TO_ESCRHRTR06": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.12"
+            },
+            "TO_ESCRHRTR07": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.13"
+            },
+            "TO_ESCRHRTR08": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.11"
+            },
+            "TO_ESCRHRTR11": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.10"
+            },
+            "TO_ESCRHRTR14": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.9"
+            },
+            "TO_ESCRHRTR15": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.8"
+            },
+            "TO_ESCRLRTR01": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.18"
+            },
+            "TO_ESCRLRTR02": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.19"
+            },
+            "TO_ESCRLRTR03": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.20"
+            },
+            "TO_ESCRLRTR09": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.16"
+            },
+            "TO_ESCRLRTR10": {
+              "cspf": "active",
+              "fast-reroutes": {
+                "facility": {}
+              },
+              "no-shutdown": "active",
+              "primarys": {
+                "IGP": {}
+              },
+              "to": "10.127.44.17"
+            }
+          },
+          "no-shutdown": "active",
+          "paths": {
+            "IGP": {
+              "no-shutdown": "active"
+            }
+          },
+          "resignal-timer": "30"
+        },
+        "ospfs": {
+          "0": {
+            "10.127.44.2": "active",
+            "areas": {
+              "0.0.0.0": {
+                "interfaces": {
+                  "PXC-to-vprn101": {
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_7210_3260_0": {
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_7210_3260_1": {
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_ESCC1RTR16": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_ESCRBRTR05": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_MPR_ESCMRRTR19": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_MPR_ESCRFRTR12": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_MPR_ESCRFRTR13": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "TO_MPR_ESCRHRTR06": {
+                    "bfd-enable": "active",
+                    "interface-type": "point-to-point",
+                    "no-shutdown": "active"
+                  },
+                  "system": {
+                    "no-shutdown": "active"
+                  }
+                }
+              }
+            },
+            "asbr": "active",
+            "import": "conect-ospf",
+            "no-shutdown": "active",
+            "traffic-engineering": "active"
+          }
+        },
+        "policy-options": {
+          "communitys": {
+            "O&M": {
+              "members": "target:65000:500"
+            },
+            "S1": {
+              "members": "target:65000:10"
+            }
+          },
+          "policy-statements": {
+            "EXPORT_VRF": {
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {
+                      "community": "add|S1"
+                    }
+                  },
+                  "from": {
+                    "protocol": "direct"
+                  },
+                  "to": {
+                    "protocol": "bgp-vpn"
+                  }
+                }
+              }
+            },
+            "EXPORT_VRF_O&M": {
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {
+                      "community": "add|O&M"
+                    }
+                  },
+                  "from": {
+                    "protocol": "direct"
+                  },
+                  "to": {
+                    "protocol": "bgp-vpn"
+                  }
+                },
+                "20": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "protocol": "static"
+                  },
+                  "to": {
+                    "protocol": "bgp-vpn"
+                  }
+                }
+              }
+            },
+            "IMPORT_BGP_DIRECT": {
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "protocol": "direct"
+                  },
+                  "to": {
+                    "protocol": "bgp"
+                  }
+                },
+                "20": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "protocol": "bgp"
+                  },
+                  "to": {
+                    "protocol": "ospf"
+                  }
+                },
+                "30": {}
+              }
+            },
+            "IMPORT_VRF": {
+              "default-actions": {
+                "accept": {}
+              },
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "community": "S1",
+                    "prefix-list": "S1"
+                  }
+                },
+                "20": {
+                  "actions": {
+                    "drop": {}
+                  },
+                  "from": {
+                    "community": "O&M",
+                    "prefix-list": "OYM"
+                  }
+                }
+              }
+            },
+            "IMPORT_VRF_O&M": {
+              "default-actions": {
+                "accept": {}
+              },
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "community": "O&M",
+                    "prefix-list": "OYM"
+                  }
+                },
+                "20": {
+                  "actions": {
+                    "drop": {}
+                  },
+                  "from": {
+                    "community": "S1",
+                    "prefix-list": "S1"
+                  }
+                }
+              }
+            },
+            "exp-MGMT-CMU-3260": {
+              "entrys": {
+                "10": {
+                  "actions": {
+                    "accept": {}
+                  },
+                  "from": {
+                    "prefix-list": "MGMT-CMU-3260"
+                  }
+                }
+              }
+            },
+            "export-Base-MEL-APPS-APN": {
+              "entrys": {
+                "5": {
+                  "actions": {
+                    "accept": {
+                      "type": "2"
+                    }
+                  },
+                  "from": {
+                    "prefix-list": "MEL-APPS-APN_prefixes",
+                    "protocol": "bgp"
+                  },
+                  "to": {
+                    "protocol": "ospf"
+                  }
+                }
+              }
+            }
+          },
+          "prefix-lists": {
+            "MEL-APPS-APN_prefixes": {
+              "prefixs": {
+                "10.127.32.0/23": "prefix-length-range|32-32",
+                "10.43.16.0/20": "prefix-length-range|32-32"
+              }
+            },
+            "MGMT-CMU-3260": {
+              "prefixs": {
+                "10.127.39.184/29": "longer",
+                "10.127.39.56/29": "longer",
+                "10.127.47.0/28": "exact",
+                "10.127.47.152/29": "longer",
+                "10.127.47.16/28": "exact"
+              }
+            },
+            "OYM": {
+              "prefixs": {
+                "10.127.45.0/26": "longer",
+                "10.127.45.192/26": "longer",
+                "10.127.45.96/28": "longer",
+                "10.127.47.160/28": "longer"
+              }
+            },
+            "S1": {
+              "prefixs": {
+                "10.127.45.112/28": "longer",
+                "10.127.45.128/28": "longer",
+                "10.127.45.144/28": "longer",
+                "10.127.45.160/28": "longer",
+                "10.127.45.176/28": "longer",
+                "10.127.45.64/28": "longer",
+                "10.127.45.80/28": "longer",
+                "10.127.47.176/28": "longer",
+                "10.127.47.192/28": "longer",
+                "10.127.47.208/28": "longer"
+              }
+            }
+          }
+        },
+        "router-id": "10.127.44.2",
+        "rsvp": {
+          "interfaces": {
+            "TO_ESCC1RTR16": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_ESCD1RTR20": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_ESCRBRTR05": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCMRRTR19": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRFRTR12": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRFRTR13": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "TO_MPR_ESCRHRTR06": {
+              "bfd-enable": "active",
+              "no-shutdown": "active"
+            },
+            "system": {
+              "no-shutdown": "active"
+            }
+          },
+          "no-shutdown": "active"
+        }
+      },
+      "management": {}
+    },
+    "service": {
+      "customers": {
+        "1": {
+          "description": "Default|customer",
+          "name": "1"
+        },
+        "10": {
+          "name": "10"
+        },
+        "15": {
+          "description": "LTE_OAM",
+          "name": "15"
+        },
+        "30": {
+          "description": "PDN|and|UE|Services",
+          "name": "30"
+        }
+      },
+      "iess": {
+        "999": {
+          "interfaces": {
+            "TO_7210_3260_0": {
+              "address": "10.127.40.96/31",
+              "saps": {
+                "1/1/1:999": {}
+              }
+            },
+            "TO_7210_3260_1": {
+              "address": "10.127.40.98/31",
+              "saps": {
+                "2/1/1:999": {}
+              }
+            }
+          },
+          "name": "999|customer|1",
+          "no-shutdown": "active"
+        }
+      },
+      "pw-templates": {
+        "1": {
+          "name": "SARHM|auto-gre-sdp",
+          "split-horizon-groups": {
+            "7750": {}
+          }
+        }
+      },
+      "sdps": {
+        "102": {
+          "far-end": "10.127.44.1",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCC1RTR16",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "203": {
+          "far-end": "10.127.44.3",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRBRTR05",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "205": {
+          "far-end": "10.127.44.5",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCMRRTR17",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "206": {
+          "far-end": "10.127.44.6",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRFRTR12",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "207": {
+          "far-end": "10.127.44.8",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR15",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "208": {
+          "far-end": "10.127.44.9",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR14",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "209": {
+          "far-end": "10.127.44.10",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR11",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "210": {
+          "far-end": "10.127.44.11",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR08",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "211": {
+          "far-end": "10.127.44.12",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR06",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "212": {
+          "far-end": "10.127.44.13",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRHRTR07",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "213": {
+          "far-end": "10.127.44.15",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRFRTR13",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "214": {
+          "far-end": "10.127.44.16",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRLRTR09",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "215": {
+          "far-end": "10.127.44.17",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRLRTR10",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "216": {
+          "far-end": "10.127.44.18",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRLRTR01",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "217": {
+          "far-end": "10.127.44.19",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRLRTR02",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "218": {
+          "far-end": "10.127.44.20",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCRLRTR03",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "221": {
+          "far-end": "10.127.44.30",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCMRRTR19",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "4451": {
+          "far-end": "10.127.44.51",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCD1RTR23",
+          "mpls": "active",
+          "no-shutdown": "active"
+        },
+        "4452": {
+          "far-end": "10.127.44.52",
+          "keep-alive": {
+            "shutdown": "active"
+          },
+          "lsp": "TO_ESCD1RTR20",
+          "mpls": "active",
+          "no-shutdown": "active"
+        }
+      },
+      "vplss": {
+        "100": {
+          "allow-ip-int-bind": {},
+          "local-age": "60",
+          "name": "MEL-APPS-APN-SGi_VPLS|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/3:100": {
+              "no-shutdown": "active"
+            },
+            "1/1/4:100": {
+              "no-shutdown": "active"
+            },
+            "2/1/3:100": {
+              "no-shutdown": "active"
+            },
+            "2/1/4:100": {
+              "no-shutdown": "active"
+            }
+          },
+          "send-flush-on-failure": "active",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10103": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:103",
+            "route-target": "export|target:65000:103|import|target:65000:103"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "VPLS_SMARTCAP",
+          "mesh-sdps": {
+            "4452:20103": {
+              "no-shutdown": "active"
+            }
+          },
+          "name": "SMARTCAP|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10105": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:105",
+            "route-target": "export|target:65000:105|import|target:65000:105"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "VPLS_RADARES",
+          "mesh-sdps": {
+            "4452:20105": {
+              "no-shutdown": "active"
+            }
+          },
+          "name": "RADARES|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10110": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:110",
+            "route-target": "export|target:65000:110|import|target:65000:110"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "VPLS_MEMS",
+          "mesh-sdps": {
+            "4452:20110": {
+              "no-shutdown": "active"
+            }
+          },
+          "name": "MEMS|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10113": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:113",
+            "route-target": "export|target:65000:113|import|target:65000:113"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "ADB_SERVICE",
+          "name": "ADB_SERVICE|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "split-horizon-groups": {
+            "113": {}
+          },
+          "spoke-sdps": {
+            "4452:20113": {
+              "no-shutdown": "active",
+              "split-horizon-group": "113"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10320": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:320",
+            "route-target": "export|target:65000:320|import|target:65000:320"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "VPLS_MODULAR",
+          "mesh-sdps": {
+            "4452:20320": {
+              "no-shutdown": "active"
+            }
+          },
+          "name": "MODULAR|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "10330": {
+          "bgp": {
+            "pw-template-bindings": {
+              "1": {}
+            },
+            "route-distinguisher": "65000:330",
+            "route-target": "export|target:65000:330|import|target:65000:330"
+          },
+          "bgp-vpls": {
+            "max-ve-id": "65535",
+            "no-shutdown": "active",
+            "ve-names": {
+              "3260": {
+                "ve-id": "2"
+              }
+            }
+          },
+          "description": "VPLS_TERRALITE",
+          "name": "TERRALITE|customer|30",
+          "no-shutdown": "active",
+          "service-mtu": "1402",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "150": {
+          "allow-ip-int-bind": {},
+          "name": "OAM_DNS|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:150": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:150": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "172": {
+          "allow-ip-int-bind": {},
+          "name": "TDS_DNS|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:172": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:172": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "181": {
+          "name": "TDS_PCRF_INT|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:181": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:181": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "191": {
+          "allow-ip-int-bind": {},
+          "name": "TDS_PCRF_OAM|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:191": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:191": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "193": {
+          "allow-ip-int-bind": {},
+          "name": "TDS_PCRF_DIAM|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:193": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:193": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "195": {
+          "allow-ip-int-bind": {},
+          "name": "TDS_PCRF_HA|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:195": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:195": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "196": {
+          "allow-ip-int-bind": {},
+          "name": "VSL_PCRF_ILO|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:196": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:196": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "20": {
+          "allow-ip-int-bind": {},
+          "name": "x10_IMS_1_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:540": {
+              "no-shutdown": "active"
+            },
+            "1/1/6:540": {
+              "no-shutdown": "active"
+            },
+            "2/1/6:540": {
+              "shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "21": {
+          "allow-ip-int-bind": {},
+          "name": "x10_IMS_2_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "2/1/1:541": {
+              "no-shutdown": "active"
+            },
+            "2/1/6:541": {
+              "no-shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "22": {
+          "allow-ip-int-bind": {},
+          "name": "x10_IMS_3_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:544": {
+              "no-shutdown": "active"
+            },
+            "1/1/6:544": {
+              "no-shutdown": "active"
+            },
+            "2/1/6:544": {
+              "shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "309": {
+          "allow-ip-int-bind": {},
+          "name": "VPLS_TP5000_OAM|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:309": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:309": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "311": {
+          "allow-ip-int-bind": {},
+          "name": "VPLS_NTP_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:311": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:311": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "313": {
+          "allow-ip-int-bind": {},
+          "name": "VPLS_PTP_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:313": {
+              "no-shutdown": "active"
+            },
+            "2/1/1:313": {
+              "no-shutdown": "active"
+            }
+          },
+          "service-mtu": "9000",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "4001": {
+          "allow-ip-int-bind": {},
+          "name": "X1_NDS_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/5:530": {
+              "no-shutdown": "active"
+            },
+            "1/2/13": {
+              "no-shutdown": "active"
+            },
+            "1/2/9": {
+              "no-shutdown": "active"
+            },
+            "2/1/5:530": {
+              "no-shutdown": "active"
+            },
+            "2/2/9": {
+              "no-shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "50": {
+          "allow-ip-int-bind": {},
+          "local-age": "60",
+          "name": "CMU-1-2_3260-LTE-Signal-OAM|customer|10",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/3:0": {
+              "no-shutdown": "active"
+            },
+            "1/1/4:0": {
+              "no-shutdown": "active"
+            },
+            "1/2/39": {
+              "no-shutdown": "active"
+            },
+            "2/1/3:0": {
+              "no-shutdown": "active"
+            },
+            "2/1/4:0": {
+              "no-shutdown": "active"
+            },
+            "2/2/39": {
+              "no-shutdown": "active"
+            }
+          },
+          "send-flush-on-failure": "active",
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "5001": {
+          "allow-ip-int-bind": {},
+          "name": "X1_HSS_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/5:500": {
+              "no-shutdown": "active"
+            },
+            "1/2/33": {
+              "no-shutdown": "active"
+            },
+            "2/1/5:500": {
+              "no-shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "601": {
+          "allow-ip-int-bind": {},
+          "name": "X5_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:670": {
+              "no-shutdown": "active"
+            },
+            "1/1/8:670": {
+              "no-shutdown": "active"
+            },
+            "2/1/8:670": {
+              "shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        },
+        "7001": {
+          "allow-ip-int-bind": {},
+          "name": "X2_3260|customer|1",
+          "no-shutdown": "active",
+          "saps": {
+            "1/1/1:570": {
+              "no-shutdown": "active"
+            },
+            "1/1/7:570": {
+              "no-shutdown": "active"
+            },
+            "2/1/7:570": {
+              "no-shutdown": "active"
+            }
+          },
+          "stp": {
+            "shutdown": "active"
+          }
+        }
+      },
+      "vprns": {
+        "10": {
+          "auto-bind-tunnel": {
+            "resolution": "any"
+          },
+          "description": "VPRN_LTE_S1",
+          "enable-bgp-vpn-backup": "ipv4",
+          "grt-lookup": {
+            "enable-grt": {
+              "allow-local-management": "active"
+            },
+            "export-grt": "exp-MGMT-CMU-3260",
+            "export-limit": "0"
+          },
+          "interfaces": {
+            "HSS_APP_X10_IMS_3": {
+              "address": "10.127.47.177/28",
+              "vplss": {
+                "x10_IMS_3_3260": {}
+              }
+            },
+            "HSS_S6a_PRIM-A_X10_IMS_1": {
+              "address": "10.127.47.193/28",
+              "vplss": {
+                "x10_IMS_1_3260": {}
+              }
+            },
+            "HSS_S6a_PRIM-B_X10_IMS_2": {
+              "address": "10.127.47.209/28",
+              "vplss": {
+                "x10_IMS_2_3260": {}
+              }
+            },
+            "IDS_DATA_X5": {
+              "address": "10.127.45.177/28",
+              "vplss": {
+                "X5_3260": {}
+              }
+            },
+            "NDS_APP_X2": {
+              "address": "10.127.45.161/28",
+              "vplss": {
+                "X2_3260": {}
+              }
+            },
+            "TDS_PCRF_DIAM": {
+              "address": "10.127.34.193/27",
+              "vplss": {
+                "TDS_PCRF_DIAM": {}
+              }
+            },
+            "TDS_PCRF_S2S": {
+              "address": "10.127.34.225/27",
+              "vplss": {
+                "TDS_PCRF_HA": {}
+              }
+            },
+            "to_CMU_3260-LTE_Signal-OAM": {
+              "address": "10.127.37.254/24",
+              "secondary": "10.127.47.30/28",
+              "vplss": {
+                "CMU-1-2_3260-LTE-Signal-OAM": {}
+              }
+            }
+          },
+          "name": "10|customer|1",
+          "no-shutdown": "active",
+          "route-distinguisher": "65000:10",
+          "spoke-sdps": {
+            "102:10": {}
+          },
+          "static-route-entrys": {
+            "10.127.35.2/32": {
+              "next-hops": {
+                "10.127.47.23": {
+                  "no-shutdown": "active"
+                }
+              }
+            },
+            "10.127.39.248/30": {
+              "grt": {
+                "no-shutdown": "active"
+              }
+            }
+          },
+          "vrf-export": "EXPORT_VRF",
+          "vrf-import": "IMPORT_VRF",
+          "vrf-target": "target:65000:10"
+        },
+        "101": {
+          "auto-bind-tunnel": {
+            "resolution": "any"
+          },
+          "autonomous-system": "65000",
+          "bgp": {
+            "groups": {
+              "3260-CMU-MEL-APPS-APN-SGi": {
+                "connect-retry": "1",
+                "family": "ipv4",
+                "hold-time": "30",
+                "initial-send-delay-zero": "active",
+                "keepalive": "10",
+                "local-address": "10.127.47.70",
+                "loop-detect": "discard-route",
+                "min-route-advertisement": "1",
+                "neighbors": {
+                  "10.127.47.69": {}
+                },
+                "peer-as": "65002",
+                "preference": "20",
+                "type": "external"
+              }
+            },
+            "no-shutdown": "active"
+          },
+          "interfaces": {
+            "MEL-APPS-APN-SGi": {
+              "address": "10.127.47.70/30",
+              "vplss": {
+                "MEL-APPS-APN-SGi_VPLS": {}
+              }
+            },
+            "PXC-to-Base": {
+              "address": "10.127.46.19/31",
+              "saps": {
+                "pxc-1.b:101": {}
+              }
+            }
+          },
+          "name": "MEL-APPS-APN-SGi|customer|1",
+          "no-shutdown": "active",
+          "ospfs": {
+            "10.127.47.70": {
+              "areas": {
+                "0.0.0.0": {
+                  "interfaces": {
+                    "PXC-to-Base": {
+                      "interface-type": "point-to-point",
+                      "no-shutdown": "active"
+                    }
+                  }
+                }
+              },
+              "export": "export-Base-MEL-APPS-APN",
+              "no-shutdown": "active"
+            }
+          },
+          "route-distinguisher": "65000:101",
+          "vrf-target": "target:65000:101"
+        },
+        "500": {
+          "auto-bind-tunnel": {
+            "resolution": "any"
+          },
+          "grt-lookup": {
+            "enable-grt": {
+              "allow-local-management": "active"
+            },
+            "export-grt": "exp-MGMT-CMU-3260",
+            "export-limit": "0"
+          },
+          "interfaces": {
+            "DNS_OAM": {
+              "address": "10.127.47.145/29",
+              "vplss": {
+                "OAM_DNS": {}
+              }
+            },
+            "TDS_DNS": {
+              "address": "10.127.47.153/29",
+              "vplss": {
+                "TDS_DNS": {}
+              }
+            },
+            "TDS_PCRF_OAM": {
+              "address": "10.127.34.161/27",
+              "vplss": {
+                "TDS_PCRF_OAM": {}
+              }
+            },
+            "TO_WAVELITE_3260_MGMT": {
+              "address": "10.127.46.141/30",
+              "saps": {
+                "1/1/1:1900": {}
+              }
+            },
+            "TP5000_0AM": {
+              "address": "10.127.39.233/29",
+              "vplss": {
+                "VPLS_TP5000_OAM": {}
+              }
+            },
+            "TP5000_NTP": {
+              "address": "10.127.39.185/29",
+              "vplss": {
+                "VPLS_NTP_3260": {}
+              }
+            },
+            "TP5000_PTP": {
+              "address": "10.127.39.217/29",
+              "vplss": {
+                "VPLS_PTP_3260": {}
+              }
+            },
+            "VSL_PCRF_ILO": {
+              "address": "10.127.34.129/27",
+              "vplss": {
+                "VSL_PCRF_ILO": {}
+              }
+            },
+            "X1_HSS_OAM_3260": {
+              "address": "10.127.47.161/28",
+              "vplss": {
+                "X1_HSS_3260": {}
+              }
+            },
+            "X1_NDS_OAM_3260": {
+              "address": "10.127.45.193/26",
+              "vplss": {
+                "X1_NDS_3260": {}
+              }
+            }
+          },
+          "name": "500|customer|10",
+          "no-shutdown": "active",
+          "route-distinguisher": "65000:500",
+          "spoke-sdps": {
+            "102:500": {}
+          },
+          "vrf-export": "EXPORT_VRF_O&M",
+          "vrf-import": "IMPORT_VRF_O&M",
+          "vrf-target": "target:65000:500"
+        }
+      }
+    },
+    "system": {
+      "location": "BHP",
+      "name": "ESCC2RTR19",
+      "security": {
+        "dist-cpu-protection": {
+          "policys": {
+            "_default-access-policy": {},
+            "_default-network-policy": {}
+          }
+        },
+        "ftp-server": "active",
+        "per-peer-queuing": "active",
+        "snmp": {
+          "access": "group|nmsPriv|security-model|usm|security-level|privacy|read|iso|write|iso|notify|iso",
+          "communitys": {
+            "76HzdddhlPpRo1Vql+ZB5spLqccgYQ==": "hash2|r|version|both",
+            "cV3ISTw2V5pbEWmVEA9jXgB/1EERXQA=": "hash2|rwa|version|both"
+          }
+        },
+        "telnet-server": "active",
+        "users": {
+          "AuthPriv_MD5": {
+            "access": "snmp",
+            "password": "$2y$10$fmXrFMK854eGolXvUQtpc.Uu9F68UuTTaEgsuJlYYDbwJG5WBnMLa",
+            "snmp": {
+              "authentication": "hash2|md5|7DLc7BOTxidNIQ4dFSE+QyERQhtAGEejEvgiQz6zJw8=|privacy|des-key|OHfHDWjykfgq266lIfTqwh3oxG2IVvZUkmMGNGxo+t8=",
+              "group": "nmsPriv"
+            }
+          },
+          "admin": {
+            "access": "console|ftp",
+            "console": {
+              "member": "administrative"
+            },
+            "password": "$2y$10$TQrZlpBDra86.qoexZUzQeBXDY1FcdDhGWdD9lLxMuFyPVSm0OGy6"
+          },
+          "bhp_admin": {
+            "access": "console|ftp",
+            "console": {
+              "member": "administrative",
+              "no-member": "default"
+            },
+            "password": "$2y$10$sMdd9DcsNR93MZSILXWIQ.BVtSLWTy9R92OS4py6tiGz7OwULoOHm"
+          }
+        }
+      },
+      "snmp": {
+        "packet-size": "9216",
+        "streaming": {
+          "no-shutdown": "active"
+        }
+      },
+      "sync-if-timing": {},
+      "time": {
+        "ntp": {
+          "no-shutdown": "active",
+          "servers": {
+            "10.127.39.186": "active",
+            "10.127.39.58": "active"
+          }
+        },
+        "sntp": {
+          "shutdown": "active"
+        },
+        "zone": "CLT|-04"
+      }
+    }
+  }
+}

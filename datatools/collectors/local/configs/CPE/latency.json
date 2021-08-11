@@ -1,0 +1,40 @@
+{
+    "columns":["hostname", "time", "remote_ip", "packet_loss", "latency_min", "latency_avg", "latency_max", "latency_dev"],    
+    "key":"hostname",
+    "size":"latency",
+    "multiplier":["hostname", "timestamp"],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "latency":"(\\S+) PING[^,]+,[^,]+, (\\S+)%.+\n(round-trip min = (\\S+)ms, avg = (\\S+)ms, max = (\\S+)ms, stddev = (\\S+)ms)?"
+    },
+    "split":{
+        "remote_ip":{
+            "field":"latency", "index": 0
+        },
+        "packet_loss":{
+            "field":"latency", "index": 1
+        },
+        "latency_min":{
+            "field":"latency", "index": 3
+        },
+        "latency_avg":{
+            "field":"latency", "index": 4
+        },
+        "latency_max":{
+            "field":"latency", "index": 5
+        },
+        "latency_dev":{
+            "field":"latency", "index": 6
+        }
+    },
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        }
+    }
+}

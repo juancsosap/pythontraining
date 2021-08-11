@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="Data Analizer Tools">
+        <base href="." target="_self" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="" />
+        <script type="text/javascript" src=""></script>
+        {% block title %}{% endblock %}
+    </head>
+    <body>
+        <header class="container">
+            {% block header %}{% endblock %}
+        </header>
+        <section class="container">
+            {% block body %}{% endblock %}
+        </section>
+        <footer class="container">
+            {% block footer %}{% endblock %}            
+        </footer>
+    </body>
+</html>

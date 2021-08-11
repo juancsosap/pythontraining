@@ -1,0 +1,79 @@
+{
+    "dtypes":{
+        "node-infos":{
+            "hostname":"object", 
+            "time":"object", 
+            "imsi":"object", 
+            "imei":"object", 
+            "apn":"object", 
+            "address":"object", 
+            "mtu":"int16"
+        },
+        "node-status":{
+            "hostname":"object", 
+            "time":"object", 
+            "state":"object", 
+            "status":"object", 
+            "radiomode":"object",
+            "band":"object", 
+            "channel":"object",
+            "cellid":"object",           
+            "rssi":"int16",
+            "rsrp":"int16",
+            "fdb_macs":"int32"
+        },
+        "latency":{
+            "hostname":"object", 
+            "time":"object", 
+            "remote_ip":"object",
+            "packet_loss":"int16",
+            "latency_min":"float16", 
+            "latency_avg":"float16", 
+            "latency_max":"float16", 
+            "latency_dev":"float16"
+        },
+        "gnss":{
+            "hostname":"object", 
+            "time":"object", 
+            "latitude":"float32", 
+            "longitude":"float32", 
+            "altitude":"float16", 
+            "azimud":"float16", 
+            "speed":"float16"
+        },
+        "port-states":{
+            "hostname":"object", 
+            "time":"object", 
+            "port_id":"object",
+            "link":"object",
+            "admin_state":"object", 
+            "oper_state":"object", 
+            "admin_mtu":"int16", 
+            "oper_mtu":"int16", 
+            "mode":"object", 
+            "encap":"object", 
+            "media":"object"
+        },
+        "port-stats":{
+            "hostname":"object", 
+            "time":"object", 
+            "port_id":"object", 
+            "ingress_packets":"int64", 
+            "ingress_bytes":"int64", 
+            "egress_packets":"int64", 
+            "egress_bytes":"int64"
+        }
+    },
+    "outputs":{
+        "node-infos": ["hostname", "group", "time", "imsi", "imei", "apn", "address", "mtu"],
+        "node-status":["hostname", "group", "time", "state", "status", "radiomode", "band", "channel", "cellid", 
+                       "cellname", "rssi", "rsrp", "fdb_macs"],
+        "latency":    ["hostname", "group", "time", "remote_ip", "packet_loss", "latency_min", "latency_avg", "latency_max", 
+                       "latency_dev"],
+        "gnss":       ["hostname", "group", "time", "latitude", "longitude", "altitude", "azimud", "speed"],
+        "port-states":["hostname", "group", "time", "timediff", "date", "week", "port_id", "app", "link", "admin_state", "oper_state", 
+                       "admin_mtu", "oper_mtu", "mode", "encap", "media"],
+        "port-stats": ["hostname", "group", "time", "timediff", "port_id", "app", "ingress_bandwidth", "egress_bandwidth", 
+                       "ingress_mtu", "egress_mtu"]
+    }
+}

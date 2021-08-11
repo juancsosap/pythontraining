@@ -1,0 +1,31 @@
+{
+    "columns":["hostname", "time", "latitude", "longitude", "altitude", "azimud", "speed"],
+    "key":"hostname",
+    "size":"hostname",
+    "multiplier":[],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "coordinates":"Position [^:]+: (\\S+), (\\S+)",
+        "altitude":"Altitude [^:]+: (\\S+) meters",
+        "azimud":"Heading\\s+: (\\S+) degrees",
+        "speed":"Speed\\s+: (\\S+) kph"
+    },
+    "split":{
+        "latitude":{
+            "field":"coordinates", "index": 0
+        },
+        "longitude":{
+            "field":"coordinates", "index": 1
+        }
+    },
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        }
+    }
+}

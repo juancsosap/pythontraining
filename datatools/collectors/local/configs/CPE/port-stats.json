@@ -1,0 +1,42 @@
+{
+    "columns":["hostname", "time", "port_id", "ingress_packets", "ingress_bytes", "egress_packets", "egress_bytes"],
+    "key":"hostname",
+    "size":"port_stats",
+    "multiplier":["hostname", "timestamp"],
+    "regex":{
+        "hostname":":(\\S+)# show port 1/1/1 statistics",
+        "timestamp":"Time\\s+: (\\S+) (\\S+)",
+        "port_stats":"Egress Octets\\s+[-]+\\s+(1)/([1-2]+)/([1-9]+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)"
+    },
+    "split":{
+        "ingress_packets":{
+            "field":"port_stats", "index": 3
+        },
+        "ingress_bytes":{
+            "field":"port_stats", "index": 4
+        },
+        "egress_packets":{
+            "field":"port_stats", "index": 5
+        },
+        "egress_bytes":{
+            "field":"port_stats", "index": 6
+        }
+    },
+    "transform":{
+        "time":{
+            "items":[
+                {"field":"timestamp", "index": 0},
+                {"field":"timestamp", "index": 1}
+            ],
+            "template":"{0} {1}"
+        },
+        "port_id":{
+            "items":[
+                {"field":"port_stats", "index": 0},
+                {"field":"port_stats", "index": 1},
+                {"field":"port_stats", "index": 2}
+            ],
+            "template":"{0}/{1}/{2}"
+        }
+    }
+}
